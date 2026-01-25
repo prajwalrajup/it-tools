@@ -696,6 +696,7 @@ tools:
       label-remove-duplicates: Yinelenenleri kaldır
       label-convert-to-lowercase: Küçük harfe dönüştür
       label-keep-line-breaks: Satır sonlarını koruyun
+      label-output-as-column: Output as column
       label-sort-list: Sıralama listesi
       placeholder-sort-alphabetically: Alfabetik olarak sırala
       label-items-separator: Öğe Ayırıcı

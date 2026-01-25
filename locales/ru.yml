@@ -765,6 +765,7 @@ tools:
       label-remove-duplicates: Удалить дубликаты
       label-convert-to-lowercase: Преобразовать в нижний регистр
       label-keep-line-breaks: Сохраняйте разрывы строк
+      label-output-as-column: Output as column
       label-sort-list: Сортировать список
       placeholder-sort-alphabetically: Сортировать по алфавиту
       label-items-separator: Разделитель элементов

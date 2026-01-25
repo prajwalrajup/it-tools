@@ -765,6 +765,7 @@ tools:
       label-remove-duplicates: Xóa các bản sao
       label-convert-to-lowercase: Chuyển đổi thành chữ thường
       label-keep-line-breaks: Giữ ngắt dòng
+      label-output-as-column: Output as column
       label-sort-list: Sắp xếp danh sách
       placeholder-sort-alphabetically: Sắp xếp theo thứ tự bảng chữ cái
       label-items-separator: Bộ phân tách mục

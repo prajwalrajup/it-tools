@@ -3856,6 +3856,7 @@ tools:
       label-convert-to-lowercase: Convertir en minuscules
       label-items-separator: Séparateur d'articles
       label-keep-line-breaks: Gardez les pauses de ligne
+      label-output-as-column: Output as column
       label-no-sort: Pas de tri
       label-remove-duplicates: Supprimer les doublons
       label-sort-asc-binary: Trier ASC (binaire)

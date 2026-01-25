@@ -494,6 +494,7 @@ tools:
       label-remove-duplicates: Usuń duplikaty
       label-convert-to-lowercase: Zamień na małe litery
       label-keep-line-breaks: Zachowaj podziały wierszy
+      label-output-as-column: Output as column
       label-sort-list: Sortuj listę
       placeholder-sort-alphabetically: Sortuj alfabetycznie
       label-items-separator: Separator elementów

@@ -717,6 +717,7 @@ tools:
       label-remove-duplicates: Duplicaten verwijderen
       label-convert-to-lowercase: Omzetten naar kleine letters
       label-keep-line-breaks: Regeleinden behouden
+      label-output-as-column: Uitvoer als kolom
       label-sort-list: Lijst sorteren
       placeholder-sort-alphabetically: Alfabetisch sorteren
       label-items-separator: Items scheidingsteken

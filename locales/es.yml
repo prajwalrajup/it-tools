@@ -501,6 +501,7 @@ tools:
       label-remove-duplicates: Eliminar duplicados
       label-convert-to-lowercase: Convertir a minúsculas
       label-keep-line-breaks: Mantener saltos de línea
+      label-output-as-column: Output as column
       label-sort-list: Ordenar lista
       placeholder-sort-alphabetically: Ordenar alfabéticamente
       label-items-separator: Separador de artículos

@@ -479,6 +479,7 @@ tools:
       label-remove-duplicates: Remove duplicates
       label-convert-to-lowercase: Convert to lowercase
       label-keep-line-breaks: Keep line breaks
+      label-output-as-column: Output as column
       label-sort-list: Sort list
       placeholder-sort-alphabetically: Sort alphabetically
       label-items-separator: Items Separator

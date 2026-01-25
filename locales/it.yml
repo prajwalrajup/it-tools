@@ -746,6 +746,7 @@ tools:
       label-remove-duplicates: Rimuovi i duplicati
       label-convert-to-lowercase: Converti in minuscolo
       label-keep-line-breaks: Mantieni le interruzioni di riga
+      label-output-as-column: Output as column
       label-sort-list: Ordina elenco
       placeholder-sort-alphabetically: Ordina alfabeticamente
       label-items-separator: Separatore di elementi

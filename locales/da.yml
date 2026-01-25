@@ -725,6 +725,7 @@ tools:
       label-remove-duplicates: Fjern dubletter
       label-convert-to-lowercase: Konvertér til små bogstaver
       label-keep-line-breaks: Behold linjeskift
+      label-output-as-column: Output as column
       label-sort-list: Sortér liste
       placeholder-sort-alphabetically: Sortér alfabetisk
       label-items-separator: Elementseparator

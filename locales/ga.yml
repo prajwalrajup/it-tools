@@ -822,6 +822,7 @@ tools:
       label-remove-duplicates: Bain dúblaigh
       label-convert-to-lowercase: Tiontaigh go litreacha beaga
       label-keep-line-breaks: Coinnigh briseadh líne
+      label-output-as-column: Output as column
       label-sort-list: Liosta sórtála
       placeholder-sort-alphabetically: Sórtáil in ord aibítre
       label-items-separator: Deighilteoir Míreanna

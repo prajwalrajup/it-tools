@@ -615,6 +615,7 @@ tools:
       label-remove-duplicates: 중복 제거
       label-convert-to-lowercase: 소문자로 변환
       label-keep-line-breaks: 줄 바꿈을 유지하세요
+      label-output-as-column: Output as column
       label-sort-list: 목록 정렬
       placeholder-sort-alphabetically: 알파벳순으로 정렬
       label-items-separator: 항목 구분 기호

@@ -756,6 +756,7 @@ tools:
       label-remove-duplicates: Видалити дублікати
       label-convert-to-lowercase: Перетворити на малі регістри
       label-keep-line-breaks: Зберігати розриви рядків
+      label-output-as-column: Output as column
       label-sort-list: Сортувати список
       placeholder-sort-alphabetically: Сортувати за алфавітом
       label-items-separator: Роздільник елементів

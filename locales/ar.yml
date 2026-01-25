@@ -730,6 +730,7 @@ tools:
       label-remove-duplicates: إزالة التكرارات
       label-convert-to-lowercase: تحويل إلى أحرف صغيرة
       label-keep-line-breaks: الحفاظ على فواصل الأسطر
+      label-output-as-column: Output as column
       label-sort-list: قائمة الفرز
       placeholder-sort-alphabetically: فرز أبجديًا
       label-items-separator: فاصل العناصر

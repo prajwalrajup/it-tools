@@ -818,6 +818,7 @@ tools:
       label-remove-duplicates: Duplikate entfernen
       label-convert-to-lowercase: In Kleinbuchstaben umwandeln
       label-keep-line-breaks: Zeilenumbrüche beibehalten
+      label-output-as-column: Output as column
       label-sort-list: Liste sortieren
       placeholder-sort-alphabetically: Alphabetisch sortieren
       label-items-separator: Elementtrennzeichen

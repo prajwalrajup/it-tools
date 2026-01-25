@@ -438,6 +438,7 @@ tools:
       label-remove-duplicates: 移除重复项
       label-convert-to-lowercase: 转换为小写
       label-keep-line-breaks: 保留换行符
+      label-output-as-column: Output as column
       label-sort-list: 排序列表
       placeholder-sort-alphabetically: 按字母顺序排序
       label-items-separator: 项分隔符

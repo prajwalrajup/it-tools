@@ -500,6 +500,7 @@ tools:
       label-remove-duplicates: Remover duplicatas
       label-convert-to-lowercase: Converter para minúsculas
       label-keep-line-breaks: Manter quebras de linha
+      label-output-as-column: Output as column
       label-sort-list: Lista de classificação
       placeholder-sort-alphabetically: Classificar em ordem alfabética
       label-items-separator: Separador de Itens

@@ -39,6 +39,19 @@ declare module 'vite-plugin-splash-screen/runtime' {
   export function hideSplashScreen();
 }
 
+declare module 'units-converter' {
+  interface ITo{
+    to(unit: string): { value: number }
+  }
+  interface IFrom{
+    from(unit: string): ITo
+  }
+  export function frequency(value: number): IFrom;
+  export function volumeFlowRate(value: number): IFrom;
+  export function acceleration(value: number): IFrom;
+  export function speed(value: number): IFrom;
+}
+
 interface BigInt {
   toJSON: () => string;
 }

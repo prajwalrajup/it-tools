@@ -4787,6 +4787,8 @@ tools:
         email-1: Email
         email-0: Email
         email: Email
+        otpauth: OTP Auth
+        otpmigration: OTP Migration
   SplashScreen:
     text:
       pomodoro-timer: Pomodoro Timer

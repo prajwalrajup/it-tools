@@ -795,6 +795,9 @@ importers:
       rekcod:
         specifier: ^3.0.0
         version: 3.0.0
+      remove-markdown:
+        specifier: ^0.6.3
+        version: 0.6.3
       resistor-data:
         specifier: ^1.1.1
         version: 1.1.1
@@ -9782,6 +9785,9 @@ packages:
     resolution: {integrity: sha512-EjV3CooK3rakY5mnGxJNeKrMpUQLI5YnbP3POFkTlyK+MrPB3RrsHwCkA6JPrKIO1DAaQt7v2PvwIwDdZd+TPw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  remove-markdown@0.6.3:
+    resolution: {integrity: sha512-Qvp2p0Q1irE7AaJO7QemJe04HdObHylJrG+q4hszvPlYp7q4EvfINpEIaIEFdB+3XTDp1h6fiyT60ae00gmRow==}
 
   remove-trailing-separator@1.1.0:
     resolution: {integrity: sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==}
@@ -21755,6 +21761,8 @@ snapshots:
       jsesc: 3.0.2
 
   rekcod@3.0.0: {}
+
+  remove-markdown@0.6.3: {}
 
   remove-trailing-separator@1.1.0: {}
 

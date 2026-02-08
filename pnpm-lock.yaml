@@ -330,6 +330,9 @@ importers:
       diceware-wordlist-jp:
         specifier: ^1.0.1
         version: 1.0.1
+      diceware-wordlist-ru:
+        specifier: ^1.0.0
+        version: 1.0.0
       diceware-wordlist-sp:
         specifier: ^1.0.0
         version: 1.0.0
@@ -6248,6 +6251,9 @@ packages:
 
   diceware-wordlist-jp@1.0.1:
     resolution: {integrity: sha512-tG1apGoJLvIQMgJZ87Rx1pYmg7+tgGrA1B9Un1ZZ6Eq0i49Lval6qOZUT9GLUhgHxq74PKul1yFSjz1pyS+XLQ==}
+
+  diceware-wordlist-ru@1.0.0:
+    resolution: {integrity: sha512-J13lwiisXy3I5x0JjcDRTsTj53EoNxJkXx0a11jNBNshlzD/jFfGIMUxSeAPA6lI/FxWyYquNB4ueURq3i34Qw==}
 
   diceware-wordlist-sp@1.0.0:
     resolution: {integrity: sha512-lKXwov3PPCDbRcSTkcJwgjDbWVzDR92hesieARK853uYI7r5VGSlhlZg97NgwpKMOexqW3P/e7P7fNhkNEIhxg==}
@@ -17731,6 +17737,8 @@ snapshots:
   diceware-wordlist-en@1.0.0: {}
 
   diceware-wordlist-jp@1.0.1: {}
+
+  diceware-wordlist-ru@1.0.0: {}
 
   diceware-wordlist-sp@1.0.0: {}
 

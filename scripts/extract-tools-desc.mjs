@@ -18,6 +18,7 @@ function processFile(filePath) {
   // Extract existing name and description values
   const nameMatch = originalContent.match(/name: '(.*?)'/);
   const descriptionMatch = originalContent.match(/description: '(.*?)'/);
+  const externAccessDescriptionMatch = originalContent.match(/externAccessDescription: '(.*?)'/);
 
   if (!nameMatch || !descriptionMatch) {
     console.warn(`Skipping ${filePath}: Unable to extract name or description.`);
@@ -26,11 +27,13 @@ function processFile(filePath) {
 
   const nameValue = nameMatch[1];
   const descriptionValue = descriptionMatch[1];
+  const externAccessDescriptionValue = externAccessDescriptionMatch ? externAccessDescriptionMatch[1] : null;
 
   // Modify name and description to use the translate function
   const transformedContent = originalContent
     .replace(/name: '((?:[^']+|(?<=\\)')+)'/, `name: t('tools.${parentDir}.title')`)
-    .replace(/description: '((?:[^']+|(?<=\\)')+)'/, `description: t('tools.${parentDir}.description')`);
+    .replace(/description: '((?:[^']+|(?<=\\)')+)'/, `description: t('tools.${parentDir}.description')`)
+    .replace(/externAccessDescription: '((?:[^']+|(?<=\\)')+)'/, `externAccessDescription: t('tools.${parentDir}.externalAccess')`);
 
   fs.writeFileSync(filePath, `import { translate as t } from '@/plugins/i18n.plugin';\n${transformedContent}`, 'utf-8');
   console.log(`Transformed: ${filePath}`);
@@ -43,6 +46,7 @@ function processFile(filePath) {
     ...localesData.tools[parentDir],
     title: nameValue,
     description: descriptionValue,
+    externalAccess: externAccessDescriptionValue,
   };
 }
 

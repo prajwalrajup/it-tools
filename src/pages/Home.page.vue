@@ -8,6 +8,7 @@ import ColoredCard from '../components/ColoredCard.vue';
 import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 import { config } from '@/config';
+import { useTheme } from '../ui/c-link/c-link.theme';
 
 const base = import.meta.env.BASE_URL ?? '/';
 const homeCustomMarkdown = computedAsync(async () => {
@@ -61,6 +62,8 @@ useHead({
 const { t } = useI18n();
 
 const favoriteTools = computed(() => toolStore.favoriteTools);
+
+const linkTheme = useTheme();
 
 const isOrderingFavorites = ref(false);
 
@@ -187,7 +190,7 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <div v-if="homeCustomMarkdown">
+      <div v-if="homeCustomMarkdown" class="home-custom-md">
         <VueMarkdown :source="homeCustomMarkdown" />
       </div>
 
@@ -241,6 +244,33 @@ onUnmounted(() => {
   100% {
     opacity: 0.4;
     transform: scale(1.0);
+  }
+}
+
+::v-deep(.home-custom-md) a {
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+  color: v-bind('linkTheme.default.textColor');
+  border-radius: 4px;
+  transition: color cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+
+  outline-offset: 1px;
+
+  &:hover {
+    color: v-bind('linkTheme.default.hover.textColor');
+  }
+
+  &:active {
+    color: v-bind('linkTheme.default.textColor');
+  }
+
+  &:focus {
+    color: v-bind('linkTheme.default.outline.color');
   }
 }
 </style>

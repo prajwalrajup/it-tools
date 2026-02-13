@@ -14,6 +14,7 @@ export interface Tool {
   externAccessDescription?: string
   footer?: string
   category: string
+  externalHTMLContent?: string
 }
 
 export interface ExternalTool {

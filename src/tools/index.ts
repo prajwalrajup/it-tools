@@ -22,19 +22,18 @@ try {
     allModules = [
       ...allModules,
       ...((await remoteConfigResponse.json()) as ExternalTool[])
-        .map(externalTool => ({
-          icon: IconExternalLink,
-          ...externalTool,
-          component: () => new Promise((resolve) => {
-            const html = markdownit().render(externalTool.markdownContent
+        .map((externalTool) => {
+          const html = markdownit().render(externalTool.markdownContent
               || (externalTool.href
-                ? `${t('tools.external-link-goto')}[${externalTool.href}](${externalTool.href})`
+                ? `${t('tools.external-link-goto')} [${externalTool.href}](${externalTool.href})`
                 : ''));
-            resolve({
-              template: `<div class="external-tool">${html}</div>`,
-            });
-          }),
-        } as ToolWithCategory))];
+          return ({
+            icon: IconExternalLink,
+            ...externalTool,
+            component: () => import('@/components/ExternalToolContent.vue'),
+            externalHTMLContent: html,
+          }) as ToolWithCategory;
+        })];
   }
 }
 catch {}

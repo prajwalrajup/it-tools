@@ -10,9 +10,9 @@ const props = withDefaults(defineProps<{ toolsByCategory?: ToolCategory[] }>(), 
 const { toolsByCategory } = toRefs(props);
 const route = useRoute();
 
-// Memoize component creation functions
-const makeLabel = (tool: Tool) => () => h(MenuItemWithTooltip, { tool, key: tool.path });
-const makeIcon = (tool: Tool) => () => h(MenuIconItem, { tool, key: tool.path });
+// Memoize component creation functions - wrap in markRaw to prevent reactivity
+const makeLabel = (tool: Tool) => () => markRaw(h(MenuItemWithTooltip, { tool, key: tool.path }));
+const makeIcon = (tool: Tool) => () => markRaw(h(MenuIconItem, { tool, key: tool.path }));
 
 const collapsedCategories = useStorage<Record<string, boolean>>(
   'menu-tool-option:collapsed-categories',
@@ -45,6 +45,7 @@ watchEffect(() => {
 });
 
 const isToggling = ref(false);
+const menuContainerRefs = ref<Record<string, HTMLElement>>({});
 
 function toggleCategoryCollapse({ name }: { name: string }) {
   collapsedCategories.value[name] = !collapsedCategories.value[name];
@@ -84,10 +85,16 @@ function getAnimationDuration(itemCount: number): number {
   return baseDuration + (Math.min(itemCount, 30) * durationIncrement);
 }
 
+// Function to check if any tool in the category is active
+function isCategoryActive(components: Tool[]): boolean {
+  return components.some(tool => tool.path === route.path);
+}
+
 const menuOptions = computed(() =>
   toolsByCategory.value.map(({ name, components }) => ({
     name,
     isCollapsed: collapsedCategories.value[name],
+    isActive: isCategoryActive(components),
     animationDuration: getAnimationDuration(components.length),
     tools: components.map(tool => ({
       label: makeLabel(tool),
@@ -96,6 +103,37 @@ const menuOptions = computed(() =>
     })),
   })),
 );
+
+async function scrollToActiveItem() {
+  const activeCategory = toolsByCategory.value.find(({ components }) =>
+    isCategoryActive(components),
+  );
+
+  if (activeCategory) {
+    // Expand the active category
+    collapsedCategories.value[activeCategory.name] = false;
+
+    // Wait for the entire animation to complete
+    await new Promise(resolve => setTimeout(resolve, getAnimationDuration(activeCategory.components.length) + 50));
+
+    // Scroll to the active menu item
+    const menuContainer = menuContainerRefs.value[activeCategory.name];
+    if (menuContainer) {
+      const activeItem = menuContainer.querySelector('.router-link-exact-active, .router-link-active');
+      if (activeItem) {
+        activeItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  scrollToActiveItem();
+});
+
+watch(() => route.path, () => {
+  scrollToActiveItem();
+});
 
 const themeVars = useThemeVars();
 </script>
@@ -112,9 +150,10 @@ const themeVars = useThemeVars();
     </c-button>
   </div>
 
-  <div v-for="{ name, tools, isCollapsed, animationDuration } of menuOptions" :key="name" class="category-container">
+  <div v-for="{ name, tools, isCollapsed, isActive, animationDuration } of menuOptions" :key="name" class="category-container">
     <button
       class="category-button"
+      :class="{ 'category-active': isActive }"
       flex cursor-pointer items-center op-60
       @click="toggleCategoryCollapse({ name })"
     >
@@ -128,6 +167,7 @@ const themeVars = useThemeVars();
     </button>
 
     <div
+      :ref="el => { if (el) menuContainerRefs[name] = el as HTMLElement }"
       class="menu-container"
       :class="{ collapsed: isCollapsed }"
       :style="{ '--animation-duration': `${animationDuration}ms` }"
@@ -162,6 +202,16 @@ const themeVars = useThemeVars();
   &:hover {
     background-color: v-bind('themeVars.buttonColor2Hover');
     opacity: 0.8;
+  }
+
+  &.category-active {
+    background-color: color-mix(in srgb, v-bind('themeVars.primaryColor') 40%, transparent);
+    opacity: 1;
+    color: white;
+
+    &:hover {
+      background-color: color-mix(in srgb, v-bind('themeVars.primaryColorHover') 50%, transparent);
+    }
   }
 }
 .category-container {

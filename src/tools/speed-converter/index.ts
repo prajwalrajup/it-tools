@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Speedboat } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Speed Converter',
+  name: t('tools.speed-converter.title'),
   path: '/speed-converter',
-  description: 'Convert values between speed units',
+  description: t('tools.speed-converter.description'),
   keywords: ['speed', 'converter',
     'units', 'm/s', 'km/h', 'm/h', 'knot', 'ft/s',
   ],

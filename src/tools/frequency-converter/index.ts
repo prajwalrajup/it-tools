@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { AntennaBars4 } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Frequency Converter',
+  name: t('tools.frequency-converter.title'),
   path: '/frequency-converter',
-  description: 'Convert values between frequency units',
+  description: t('tools.frequency-converter.description'),
   keywords: ['frequency', 'converter',
     'units', 'hz', 'hertz', 'rpm', 'deg/s', 'rad/s',
   ],

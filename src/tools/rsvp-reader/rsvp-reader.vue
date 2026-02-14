@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useIDBKeyval } from '@vueuse/integrations/useIDBKeyval';
 import { extractTextFromEPUB, extractTextFromPDF } from './rsvp-reader.service';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const message = useMessage();
 
@@ -253,24 +256,24 @@ onBeforeUnmount(() => {
     <n-tabs type="line" animated>
       <n-tab-pane name="display" tab="Display">
         <NAlert v-if="!words.length" type="warning">
-          No text to read. Please input some text in Text tab.
+          {{ t('tools.rsvp-reader.texts.tag-no-text-to-read-please-input-some-text-in-text-tab') }}
         </NAlert>
         <div v-else>
           <NSpace justify="center" mb-2>
             <NButton type="primary" :disabled="isPlaying" @click="start">
-              Play (space)
+              {{ t('tools.rsvp-reader.texts.tag-play-space') }}
             </NButton>
             <NButton :disabled="!isPlaying" @click="pause">
-              Pause (space)
+              {{ t('tools.rsvp-reader.texts.tag-pause-space') }}
             </NButton>
             <NButton @click="moveLeft">
-              Back (←)
+              {{ t('tools.rsvp-reader.texts.tag-back') }}
             </NButton>
             <NButton @click="moveRight">
-              Next (→)
+              {{ t('tools.rsvp-reader.texts.tag-next') }}
             </NButton>
             <NButton tertiary @click="reset">
-              Reset
+              {{ t('tools.rsvp-reader.texts.tag-reset') }}
             </NButton>
           </NSpace>
 
@@ -300,9 +303,7 @@ onBeforeUnmount(() => {
             </div>
           </NCard>
           <n-space justify="center" mt-1>
-            <NText>{{ currentIndex + 1 }} / {{ words.length }} words</NText>
-            -
-            <NText>{{ wpm }} WPM</NText>
+            <NText>{{ currentIndex + 1 }} / {{ words.length }} words</NText>{{ t('tools.rsvp-reader.texts.tag-') }}<NText>{{ wpm }} WPM</NText>
           </n-space>
         </div>
       </n-tab-pane>
@@ -310,19 +311,19 @@ onBeforeUnmount(() => {
       <n-tab-pane name="text" tab="Text">
         <c-input-text
           v-model:value="rawText"
-          label="Text to read:"
+          :label="t('tools.rsvp-reader.texts.label-text-to-read')"
           multiline
           rows="6"
-          placeholder="Paste or type your text here..."
+          :placeholder="t('tools.rsvp-reader.texts.placeholder-paste-or-type-your-text-here')"
           :disabled="isProcessingFile"
           mb-2
         />
         <n-space justify="center">
           <n-spin v-if="isProcessingFile" size="small" />
         </n-space>
-        <n-divider>- OR -</n-divider>
+        <n-divider>{{ t('tools.rsvp-reader.texts.tag-or') }}</n-divider>
         <c-file-upload
-          title="Drop an PDF, EPUB or txt file here or click to select a file"
+          :title="t('tools.rsvp-reader.texts.title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file')"
           accept=".pdf,.epub,.txt"
           :disabled="isProcessingFile"
           @file-upload="onUpload"
@@ -331,41 +332,41 @@ onBeforeUnmount(() => {
 
       <n-tab-pane name="settings" tab="Settings">
         <NForm label-placement="left" label-width="150px">
-          <NFormItem label="Word per minute:">
+          <NFormItem :label="t('tools.rsvp-reader.texts.label-word-per-minute')">
             <NInputNumber v-model:value="wpm" :min="50" :max="2000" mr-1 />
             <NSlider v-model:value="wpm" :min="50" :max="2000" />
           </NFormItem>
 
-          <NFormItem label="Chunk size:">
+          <NFormItem :label="t('tools.rsvp-reader.texts.label-chunk-size')">
             <NInputNumber v-model:value="chunkSize" :min="1" :max="10" />
           </NFormItem>
 
-          <NFormItem label="Large chunk slowdown (%)">
+          <NFormItem :label="t('tools.rsvp-reader.texts.label-large-chunk-slowdown')">
             <NInputNumber v-model:value="chunkSlowdownPct" :min="0" :max="300" />
           </NFormItem>
 
-          <NCard title="Pauses (%)" mb-2>
+          <NCard :title="t('tools.rsvp-reader.texts.title-pauses')" mb-2>
             <NSpace justify="center">
-              <NFormItem label="Sentence end">
+              <NFormItem :label="t('tools.rsvp-reader.texts.label-sentence-end')">
                 <NInputNumber v-model:value="pauseSentencePct" :min="0" :max="300" />
               </NFormItem>
-              <NFormItem label="Paragraph end">
+              <NFormItem :label="t('tools.rsvp-reader.texts.label-paragraph-end')">
                 <NInputNumber v-model:value="pauseParagraphPct" :min="0" :max="300" />
               </NFormItem>
-              <NFormItem label="Punctuation">
+              <NFormItem :label="t('tools.rsvp-reader.texts.label-punctuation')">
                 <NInputNumber v-model:value="punctuationPausePct" :min="0" :max="300" />
               </NFormItem>
             </NSpace>
           </NCard>
 
-          <NCard title="Appearance" mb-2>
-            <NFormItem label="Font size:">
+          <NCard :title="t('tools.rsvp-reader.texts.title-appearance')" mb-2>
+            <NFormItem :label="t('tools.rsvp-reader.texts.label-font-size')">
               <NInputNumber v-model:value="fontSize" :min="16" :max="120" />
             </NFormItem>
-            <NFormItem label="Font color:">
+            <NFormItem :label="t('tools.rsvp-reader.texts.label-font-color')">
               <NColorPicker v-model:value="fontColor" />
             </NFormItem>
-            <NFormItem label="Background:">
+            <NFormItem :label="t('tools.rsvp-reader.texts.label-background')">
               <NColorPicker v-model:value="bgColor" />
             </NFormItem>
           </NCard>
@@ -375,52 +376,52 @@ onBeforeUnmount(() => {
       <n-tab-pane name="keyboard" tab="Keyboard Shortcuts">
         <n-space vertical size="medium">
           <n-text depth="3">
-            Control playback and navigation without touching the mouse.
+            {{ t('tools.rsvp-reader.texts.tag-control-playback-and-navigation-without-touching-the-mouse') }}
           </n-text>
 
           <n-table :bordered="false" :single-line="false" size="small">
             <thead>
               <tr>
                 <th style="width: 160px;">
-                  Shortcut
+                  {{ t('tools.rsvp-reader.texts.tag-shortcut') }}
                 </th>
-                <th>Action</th>
+                <th>{{ t('tools.rsvp-reader.texts.tag-action') }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><kbd>Space</kbd></td>
-                <td>Play / Pause</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-space') }}</kbd></td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-play-pause') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>→</kbd> (Right Arrow)</td>
-                <td>Skip forward one chunk</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-') }}</kbd>{{ t('tools.rsvp-reader.texts.tag-right-arrow') }}</td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-skip-forward-one-chunk') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>←</kbd> (Left Arrow)</td>
-                <td>Skip backward one chunk</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-') }}</kbd>{{ t('tools.rsvp-reader.texts.tag-left-arrow') }}</td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-skip-backward-one-chunk') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>↑</kbd> (Up Arrow)</td>
-                <td>Increase WPM</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-') }}</kbd>{{ t('tools.rsvp-reader.texts.tag-up-arrow') }}</td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-increase-wpm') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>↓</kbd> (Down Arrow)</td>
-                <td>Decrease WPM</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-') }}</kbd>{{ t('tools.rsvp-reader.texts.tag-down-arrow') }}</td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-decrease-wpm') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>Home</kbd></td>
-                <td>Jump to start</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-home') }}</kbd></td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-jump-to-start') }}</td>
               </tr>
 
               <tr>
-                <td><kbd>End</kbd></td>
-                <td>Jump to end</td>
+                <td><kbd>{{ t('tools.rsvp-reader.texts.tag-end') }}</kbd></td>
+                <td>{{ t('tools.rsvp-reader.texts.tag-jump-to-end') }}</td>
               </tr>
             </tbody>
           </n-table>

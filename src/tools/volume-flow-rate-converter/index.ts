@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Wind } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Volume Flow Rate Converter',
+  name: t('tools.volume-flow-rate-converter.title'),
   path: '/volume-flow-rate-converter',
-  description: 'Convert values between volume flow rate units',
+  description: t('tools.volume-flow-rate-converter.description'),
   keywords: ['volume', 'flow', 'rate', 'converter',
     'units', 'm3/s', 'l/s', 'tsp/s', 'in3/s', 'fl-oz/s', 'gal/s', 'ft3/s', 'yd3/s',
   ],

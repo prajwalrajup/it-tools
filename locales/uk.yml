@@ -923,6 +923,9 @@ tools:
   json-prettify:
     title: Форматування JSON
     description: Перетворіть свій JSON-рядок у зручний для читання формат.
+    externalAccess: Цей інструмент може завантажити схему JSON з
+      https://www.schemastore.org, коли запитується перевірка. Дані не
+      надсилаються зовні.
   docker-run-to-docker-compose-converter:
     title: Конвертер Docker run в Docker compose
     description: Перетворюйте команди "docker run" у файли docker-compose!
@@ -1532,6 +1535,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const ПеренесенняСлів = ref(false);
       tag-word-wrap: Перенос слів?
+      tag-ignore-whitespaces: Ігнорувати пробіли в кінці?
   otp-generator:
     title: Генератор OTP кодів
     description: Генеруйте та перевіряйте одноразові паролі (OTP) на основі часу для
@@ -1754,6 +1758,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Не вдалося отримати {0}
         failed-to-fetch-linkurl: Не вдалося отримати {0}
+    externalAccess: Цей інструмент завантажує надані URL-адреси лише у вашому браузері.
   unicode-to-java-entities:
     title: Конвертер символів Unicode у Java сутності
     description: Конвертуйте символи Unicode у Java сутності та навпаки.
@@ -1844,6 +1849,8 @@ tools:
       tag-add-a-new-query-parameter: Додати новий параметр запиту
       tag-no-cors: Без CORS
       tag-call-api: API викликів
+    externalAccess: Цей інструмент викликає кінцеву точку API, яку ви надаєте у
+      своєму браузері.
   area-converter:
     title: Конвертер одиниць площі
     description: Конвертуйте значення між одиницями площі
@@ -2216,6 +2223,8 @@ tools:
       label-country: Країна
       title-currencies-to-countries: Валюти для країн
       label-currency: Валюта
+    externalAccess: Цей інструмент завантажує свіжі дані про валюту з
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Конвертер одиниць зберігання даних
     description: Конвертуйте одиниці зберігання або передачі даних (байти, біти,
@@ -2437,6 +2446,9 @@ tools:
       label-dns-record-type: "Тип DNS-запису:"
       title-query-results: Результати запиту
       tag-send-dns-query: Надіслати DNS-запит
+    externalAccess: "Цей інструмент надсилає DNS-запит через кінцеву точку DOH, що
+      відповідає, зі списку нижче:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Конвертер формату Docker Compose
     description: Конвертуйте файл Docker Compose між V1, 2.x, 3.x або CommonSpec і
@@ -3084,6 +3096,8 @@ tools:
       tag-signup-for-a-free-token: Зареєструйтесь, щоб отримати безкоштовний токен
       tag-click-on-button-above-to-get-latest-infos: Натисніть кнопку вище, щоб отримати найактуальнішу інформацію
       tag-localize-on-open-street-map: Локалізувати на Open Street Map
+    externalAccess: Цей інструмент надсилає надані IP-адреси на https://ipinfo.io/
+      для отримання інформації про геолокацію IP-адреси
   ip-include-exclude:
     title: Калькулятор виключення підмереж IP
     description: Віднімайте заборонені діапазони/маски/CIDR IP з дозволених
@@ -3251,6 +3265,9 @@ tools:
       title-schema-validation-errors: Помилки перевірки схеми
       label-indent-size-0-compact: "Розмір відступу (0 = Компактний):"
       repair-json: Відновлення JSON
+    externalAccess: Цей інструмент може завантажити схему JSON з
+      https://www.schemastore.org, коли запитується перевірка. Дані не
+      надсилаються зовні.
   json-escaper:
     title: Екранування/Розекранування JSON
     description: Екрануйте та розекрануйте JSON рядки
@@ -3280,6 +3297,9 @@ tools:
       label-indent-size-0-compact: "Розмір відступу (0 = Компактний):"
       title-repaired-version: Автоматично відремонтована та відформатована версія
       label-auto-repair-json: "JSON для авторемонту:"
+    externalAccess: Цей інструмент може завантажити схему JSON з
+      https://www.schemastore.org, коли запитується перевірка. Дані не
+      надсилаються зовні.
   json-size-analyzer:
     title: Аналізатор розміру JSON
     description: Вимірюйте відносну вагу вузлів JSON
@@ -3542,6 +3562,9 @@ tools:
         Для цього інструменту потрібне підключення до Інтернету (для доступу до
         моделей)
       tag-latex-result: Результат латексу
+    externalAccess: Цей інструмент завантажує MathJaX з https://cdnjs.cloudflare.com
+      та модель розпізнавання Latex OCR (Xenova/texify) з
+      https://huggingface.co/
   mermaid-exporter:
     title: Експортер Mermaid
     description: Конвертуйте Markdown (Mermaid) у зображення та експортуйте у PNG,
@@ -3609,6 +3632,9 @@ tools:
       label-country-name: "Назва країни:"
       label-continent-name: "Назва континенту:"
       tag-refresh: Оновити
+    externalAccess: Цей інструмент отримує IPv4/6 за допомогою API
+      https://www.ipify.org/ та завантажує дані IP-адреси з
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: Шпаргалка Nano
     description: Шпаргалка редактора Nano
@@ -3640,6 +3666,7 @@ tools:
       label-spaces-chars: Пробіли символів
       label-word-count-no-punct: Кількість слів (без крапки)
       tag-ocr: Розпізнавання символів (OCR)
+    externalAccess: Цей інструмент завантажує моделі мов OCR на https://cdn.jsdelivr.net
   option43-generator:
     title: Генератор Option43
     description: Генеруйте конфігурацію DHCP Option43 для WiFi
@@ -5698,6 +5725,8 @@ tools:
         email-1: Електронна пошта
         email-0: Електронна пошта
         email: Електронна пошта
+        otpauth: Аутентифікація за одноразовим паролем
+        otpmigration: Міграція одноразових паролів
   SplashScreen:
     text:
       pomodoro-timer: Таймер Помідора
@@ -6020,10 +6049,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Натисніть, щоб скопіювати ім&#39;я: {0}"
       click-to-copy-completecodepoints: "Натисніть, щоб скопіювати: {0}"
       click-to-copy-emojiinfo-unicode: "Натисніть, щоб скопіювати: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Зроблено з {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Ключі сортування:"
@@ -6227,6 +6252,8 @@ tools:
         Дізнайтеся більше
       tag-this-dnsbl-explanation-and-removal-guide: це пояснення та посібник з видалення DNSBL
       tag-: .
+    externalAccess: Цей інструмент перевіряє та надсилає надану IP-адресу до DNSBL
+      через https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: Шпаргалка по Docker Compose
     description: Шпаргалка з формату Docker Compose
@@ -6814,6 +6841,8 @@ tools:
       placeholder-to: До
       placeholder-translation-will-appear-here: Переклад з&#39;явиться тут...
       tag-translate: Перекласти
+    externalAccess: Цей інструмент завантажує моделі перекладу
+      (Xenova/opus-mt-[source]-[target]) на https://huggingface.co/
   unicode-to-gsm7:
     title: Юнікод до GSM-7
     description: Кодування тексту Unicode для SMS GSM-7 та відображення
@@ -7063,6 +7092,7 @@ tools:
       placeholder-diceware-passwords: Паролі для гри в косці...
       tag-copy: Копіювати
       tag-refresh: Оновити
+      label-russian: Російська
   gtin-validator:
     title: Валідатор GTIN
     description: Перевіряти та відображати інформацію про GTIN (глобальний торговий
@@ -7083,6 +7113,8 @@ tools:
       label-domain-to-check: "Домен для перевірки:"
       placeholder-enter-a-domain-e-g-example-com: Введіть домен (наприклад, example.com)
       tag-lookup-whois: Пошук WHOIS
+    externalAccess: Цей інструмент відкриває нову вкладку з доменом для перевірки за
+      адресою https://www.iana.org/whois
   keyboard-layout-converter:
     title: Конвертер розкладки клавіатури
     description: Перетворення послідовності клавіш з однієї розкладки клавіатури на іншу
@@ -7297,6 +7329,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Виберіть шаблони (наприклад, node, python, vue)
       title-gitignore: .gitignore
       tag-generate: Згенерувати
+    externalAccess: Цей інструмент можна завантажити з файлу .gitignore з
+      https://github.com/github/gitignore за допомогою Github API.
   i-and-l-checker:
     title: Перевірка I та L
     description: Перевірка пароля або тексту з підсвічуванням 1, l, I, 0, O
@@ -7466,6 +7500,10 @@ tools:
       failed: Не вдалося
       no-redirect: Без перенаправлення
       expanded: Розгорнуто
+    externalAccess: Цей інструмент використовує екземпляр CORS Anywhere (за
+      замовчуванням https://cors.outils-libre.org) для надсилання http-запиту
+      HEAD (дані не завантажуються) для отримання HTTP-заголовків та
+      перенаправлень.
   amortization-calculator:
     title: Калькулятор амортизації
     description: Розрахуйте графіки амортизації кредиту з щомісячною розбивкою платежів
@@ -7565,6 +7603,9 @@ tools:
       placeholder-select-templates: Вибрати шаблони
       title-preview: Попередній перегляд
       tag-fetch-generate: Отримати та згенерувати
+    externalAccess: Цей інструмент можна завантажити з файлу .gitattributes за
+      посиланням https://github.com/gitattributes/gitattributes за допомогою
+      Github API.
   html-to-xhtml:
     title: З HTML до XHTML
     description: Конвертувати HTML у строгий XHTML (XML, що піддається аналізу,
@@ -7603,6 +7644,8 @@ tools:
       placeholder-select-a-language: Виберіть мову
       tag-search-on-wiktionary: Пошук у Вікісловнику
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Введіть слово та виберіть мову для завантаження Вікісловника
+    externalAccess: Цей інструмент шукає визначення слів на сайті
+      https://www.wiktionary.org/ (за мовою) у фреймі iframe.
   ptr-dns-generator:
     title: Генератор DNS PTR
     description: Генерація PTR-записів DNS
@@ -7715,6 +7758,198 @@ tools:
       label-thousand-separators: "Роздільники тисяч:"
       label-to: "До:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Зроблено з {0}
+  acceleration-converter:
+    title: Конвертер прискорення
+    description: Перетворення значень між одиницями прискорення
+    externalAccess: нульовий
+  docker-image-downloader:
+    title: Завантажувач образів Docker
+    description: Завантажити образ Docker, враховуючи реєстр Docker, архітектуру та
+      назву образу
+    externalAccess: Цей інструмент завантажує образи Docker з реєстру (і за
+      допомогою наданого вами імені користувача, пароля або токена)
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: windows/amd64
+      label-docker-image-download-service-url: "URL-адреса служби завантаження образів Docker:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Базова автентифікація:"
+      placeholder-username-password: "ім'я користувача: пароль"
+      label-docker-image: "Зображення Докера:"
+      placeholder-alpine-latest: альпійський:останнє
+      label-platform: "Платформа:"
+      label-registry-url: "URL-адреса реєстру:"
+      placeholder-myregistry-com-optional: myregistry.com (необов'язково)
+      label-username: "Ім'я користувача:"
+      placeholder-optional: Необов'язково
+      label-password: "Пароль:"
+      title-error: Помилка
+      tag-docker-image-download-service-configuration-self-hosted: Конфігурація служби завантаження образів Docker (власне розміщена)
+      tag-you-must-self-host-docker-image-download-service-see: "Ви повинні самостійно
+        розміщувати службу завантаження образів Docker. Див.:"
+      tag-docker-image-download-service-install: Встановлення служби завантаження образів Docker
+      tag-download-image: Завантажити зображення
+  epub-to-markdown:
+    title: Epub у Markdown
+    description: Конвертувати файл EPUB у повний вміст Markdown
+    externalAccess: нульовий
+    texts:
+      label-markdown: Уцінка
+      label-plain-text: Звичайний текст
+      label-format: "Формат:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Перетягніть сюди файл EPUB або натисніть, щоб вибрати файл
+      title-metadata: Метадані
+      label-title: "Назва:"
+      label-creator: "Творець:"
+      label-language: "Мова:"
+      label-publisher: "Видавець:"
+      label-identifier: "Ідентифікатор:"
+      label-rights: "Права:"
+      label-description: "Опис:"
+      title-epub-content: Вміст EPUB
+  explainshell:
+    title: Поясніть команду оболонки
+    description: Використовуйте explainshell.com (або власний хостинг), щоб пояснити
+      команду оболонки
+    externalAccess: Цей інструмент викликає https://explainshell.com (якщо ви не
+      розміщуєте його самостійно) через цю надану команду оболонки.
+    texts:
+      label-custom-explain-shell-url: "URL-адреса оболонки власного пояснення:"
+      placeholder-put-your-custom-explainshell-url-here: Вставте тут свою URL-адресу пояснення...
+      label-shell-command: "Команда оболонки:"
+      placeholder-shell-command-to-explain: Команда оболонки для пояснення
+      tag-explain-shell-configuration: Поясніть конфігурацію оболонки
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see:
+        "Ви можете самостійно розмістити Explain Shell, щоб отримати повну
+        конфіденційність. Див.:"
+      tag-local-explain-shell-docker-install: Встановлення докера локальної оболонки Explain Shell
+      tag-explain: Поясніть
+      tag-enter-a-shell-command-to-explain: Введіть команду оболонки для пояснення
+  frequency-converter:
+    title: Перетворювач частоти
+    description: Перетворення значень між одиницями частоти
+    externalAccess: нульовий
+  markdown-to-text:
+    title: Розцінка в текст
+    description: Перетворити markdown на звичайний текст
+    externalAccess: нульовий
+    texts:
+      label-input-mardown: "Вхідний код:"
+      placeholder-enter-your-markdown-here: Введіть тут свою маржу...
+      title-output-text: Вихідний текст
+  rj45-memo:
+    title: Шпаргалка з підключення RJ45 Cat6
+    description: Повна шпаргалка з підключення RJ45 Cat6
+    externalAccess: нульовий
+  rsvp-reader:
+    title: Зчитувач RSVP
+    description: Інструмент швидкої послідовної візуальної презентації (RSVP), який
+      дозволяє вставляти текст і відображати слова по одному з налаштованим
+      значенням кількості слів за хвилину (WPM).
+    externalAccess: нульовий
+    texts:
+      label-text-to-read: "Текст для читання:"
+      placeholder-paste-or-type-your-text-here: Вставте або введіть тут свій текст...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: Перетягніть сюди PDF-, EPUB- або txt-файл або натисніть, щоб вибрати файл
+      label-word-per-minute: "Слова за хвилину:"
+      label-chunk-size: "Розмір шматка:"
+      label-large-chunk-slowdown: Уповільнення великої частини (%)
+      title-pauses: Паузи (%)
+      label-sentence-end: Кінець речення
+      label-paragraph-end: Кінець абзацу
+      label-punctuation: Пунктуація
+      title-appearance: Зовнішній вигляд
+      label-font-size: "Розмір шрифту:"
+      label-font-color: "Колір шрифту:"
+      label-background: "Передумова:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Немає тексту для читання. Будь ласка, введіть текст у вкладку «Текст».
+      tag-play-space: Грати (простір)
+      tag-pause-space: Пауза (пробіл)
+      tag-back: Назад (←)
+      tag-next: Далі (→)
+      tag-reset: Скинути
+      tag-: ↓
+      tag-or: "- АБО -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Керуйте відтворенням та навігацією, не торкаючись миші.
+      tag-shortcut: Скорочення
+      tag-action: Дія
+      tag-space: Космос
+      tag-play-pause: Відтворення / Пауза
+      tag-right-arrow: (Стрілка вправо)
+      tag-skip-forward-one-chunk: Перейти на один фрагмент вперед
+      tag-left-arrow: (Стрілка ліворуч)
+      tag-skip-backward-one-chunk: Перейти на один фрагмент назад
+      tag-up-arrow: (Стрілка вгору)
+      tag-increase-wpm: Збільшити значення за тисячу очок (WPM)
+      tag-down-arrow: (Стрілка вниз)
+      tag-decrease-wpm: Зменшити значення за тисячу очок (WPM)
+      tag-home: Дім
+      tag-jump-to-start: Перейти до початку
+      tag-end: Кінець
+      tag-jump-to-end: Перейти до кінця
+  speed-converter:
+    title: Конвертер швидкості
+    description: Перетворення значень між одиницями швидкості
+    externalAccess: нульовий
+  tab-to-spaces:
+    title: Tab до пробілів
+    description: Перетворити табуляцію на кілька пробілів
+    externalAccess: нульовий
+    texts:
+      label-spaces-per-tab: Пробіли на табуляцію
+      label-convert-only-leading-tabs: Конвертувати лише початкові табуляції
+      label-normalize-inner-spacing: Нормалізувати внутрішній інтервал
+      title-input-with-tabs: Введення (за допомогою табуляції)
+      placeholder-paste-text-with-tabs-here: Вставити текст із табуляцією сюди...
+      title-output-with-spaces: Вивід (з пробілами)
+      tag-0x00-chr: = 0x00 && хр
+      tag-0xa0-chr: = 0xA0 && хр
+      tag-0xff61-chr: = 0xFF61 && хр
+      tag-0xf8f1-chr: = 0xF8F1 && символ
+  tcp-udp-port-tester:
+    title: Тестер портів TCP/UDP
+    description: Дозволяє тестувати TCP/UDP (використовуючи проксі-сервер websocket
+      на стороні сервера)
+    externalAccess: Цьому інструменту потрібен сервер WebSocket на стороні сервера
+      (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: ТСР
+      label-udp: Уніфікований діловий процес (UDP)
+      label-websocket-tcp-udp-bridge-url: "URL-адреса мосту WebSocket TCP/UDP:"
+      placeholder-websocket-url: URL-адреса вебсокета
+      label-target: "Ціль:"
+      placeholder-target-ip: Цільова IP-адреса
+      placeholder-port: Порт
+      placeholder-protocol: Протокол
+      title-logs: Журнали
+      title-payload-builder: Конструктор корисного навантаження
+      label-send-text-payload-can-add-r-n: "Надіслати текстове корисне навантаження (можна додати \\r \\n):"
+      placeholder-text-payload: Текстове корисне навантаження
+      label-send-hex-payload: "Надіслати шістнадцяткове корисне навантаження:"
+      placeholder-hex-payload-e-g-48656c6c6f: Шістнадцяткове корисне навантаження (наприклад, 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: Конфігурація мосту WebSocket TCP/UDP
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        Щоб скористатися цим інструментом, вам потрібно розмістити міст
+        WebSocket TCP/UDP на основі
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Підключитися
+      tag-disconnect: Відключитися
+      tag-apply-configuration: Застосувати конфігурацію
+      tag-clear-logs: Очистити журнали
+      tag-send: Надіслати
+  volume-flow-rate-converter:
+    title: Конвертер об'ємної витрати
+    description: Перетворення значень між одиницями об'ємної витрати
+    externalAccess: нульовий
 spanCopyable:
   copy: Копіювати в буфер обміну
   copied: Скопійовано!

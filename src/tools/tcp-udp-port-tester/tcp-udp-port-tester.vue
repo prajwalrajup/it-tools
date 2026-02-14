@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useITStorage, useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const wsUrl = useITStorage('tcp-udp-port-tester:ws', 'ws://localhost:8080');
 const socket = ref<WebSocket | null>(null);
@@ -11,8 +14,8 @@ const targetPort = useQueryParamOrStorage({ name: 'port', storageName: 'tcp-udp-
 const protocol = useQueryParamOrStorage({ name: 'proto', storageName: 'tcp-udp-port-tester:o', defaultValue: 'tcp' });
 
 const protocolOptions = [
-  { label: 'TCP', value: 'tcp' },
-  { label: 'UDP', value: 'udp' },
+  { label: t('tools.tcp-udp-port-tester.texts.label-tcp'), value: 'tcp' },
+  { label: t('tools.tcp-udp-port-tester.texts.label-udp'), value: 'udp' },
 ];
 
 const textPayload = useQueryParamOrStorage({ name: 'text', storageName: 'tcp-udp-port-tester:e', defaultValue: '' });
@@ -135,22 +138,21 @@ onBeforeUnmount(() => {
     <div mb-1>
       <details mb-2>
         <summary mb-1>
-          WebSocket TCP/UDP Bridge Configuration
+          {{ t('tools.tcp-udp-port-tester.texts.tag-websocket-tcp-udp-bridge-configuration') }}
         </summary>
-        <c-input-text v-model:value="wsUrl" label="WebSocket TCP/UDP Bridge Url:" label-position="left" placeholder="WebSocket URL" mb-1 />
+        <c-input-text v-model:value="wsUrl" :label="t('tools.tcp-udp-port-tester.texts.label-websocket-tcp-udp-bridge-url')" label-position="left" :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-websocket-url')" mb-1 />
         <n-p mb-1>
-          To use this tool, you need to host a WebSocket TCP/UDP Bridge based on
-          <c-link target="_blank" href="https://github.com/sharevb/ws-tcp-udp-bridge?tab=readme-ov-file#running-with-it-tools">
-            https://github.com/sharevb/ws-tcp-udp-bridge
+          {{ t('tools.tcp-udp-port-tester.texts.tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on') }}<c-link target="_blank" href="https://github.com/sharevb/ws-tcp-udp-bridge?tab=readme-ov-file#running-with-it-tools">
+            {{ t('tools.tcp-udp-port-tester.texts.tag-https-github-com-sharevb-ws-tcp-udp-bridge') }}
           </c-link>
         </n-p>
 
         <n-space justify="center">
           <n-button type="primary" :disabled="isConnected" @click="connect">
-            Connect
+            {{ t('tools.tcp-udp-port-tester.texts.tag-connect') }}
           </n-button>
           <n-button type="error" :disabled="!isConnected" @click="disconnect">
-            Disconnect
+            {{ t('tools.tcp-udp-port-tester.texts.tag-disconnect') }}
           </n-button>
         </n-space>
       </details>
@@ -162,26 +164,26 @@ onBeforeUnmount(() => {
       </n-space>
     </div>
 
-    <n-form-item label="Target:" label-placement="left">
-      <n-input v-model:value="targetHost" placeholder="Target IP" mr-1 />
-      <n-input-number v-model:value="targetPort" placeholder="Port" style="width: 250px" mr-1 />
+    <n-form-item :label="t('tools.tcp-udp-port-tester.texts.label-target')" label-placement="left">
+      <n-input v-model:value="targetHost" :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-target-ip')" mr-1 />
+      <n-input-number v-model:value="targetPort" :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-port')" style="width: 250px" mr-1 />
 
       <n-select
         v-model:value="protocol"
         :options="protocolOptions"
-        placeholder="Protocol"
+        :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-protocol')"
         style="width: 250px"
         mr-1
       />
       <n-button type="primary" :disabled="!isConnected" @click="configureTarget">
-        Apply Configuration
+        {{ t('tools.tcp-udp-port-tester.texts.tag-apply-configuration') }}
       </n-button>
     </n-form-item>
 
-    <n-card title="Logs" mb-1>
+    <n-card :title="t('tools.tcp-udp-port-tester.texts.title-logs')" mb-1>
       <n-space justify="center" mb-1>
         <n-button @click="clearLogs">
-          Clear logs
+          {{ t('tools.tcp-udp-port-tester.texts.tag-clear-logs') }}
         </n-button>
       </n-space>
       <div ref="logsRef" style="font-size: .8em; height: 250px; overflow-y: scroll">
@@ -189,26 +191,26 @@ onBeforeUnmount(() => {
       </div>
     </n-card>
 
-    <n-card title="Payload Builder" mb-1>
-      <n-form-item label="Send Text payload (can add \r \n):" label-placement="left">
+    <n-card :title="t('tools.tcp-udp-port-tester.texts.title-payload-builder')" mb-1>
+      <n-form-item :label="t('tools.tcp-udp-port-tester.texts.label-send-text-payload-can-add-r-n')" label-placement="left">
         <n-input
           v-model:value="textPayload"
-          placeholder="Text payload"
+          :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-text-payload')"
           mr-1
         />
         <n-button :disabled="!isConnected" @click="sendText">
-          Send
+          {{ t('tools.tcp-udp-port-tester.texts.tag-send') }}
         </n-button>
       </n-form-item>
 
-      <n-form-item label="Send Hex payload:" label-placement="left">
+      <n-form-item :label="t('tools.tcp-udp-port-tester.texts.label-send-hex-payload')" label-placement="left">
         <n-input
           v-model:value="hexPayload"
-          placeholder="Hex payload (e.g. 48656c6c6f)"
+          :placeholder="t('tools.tcp-udp-port-tester.texts.placeholder-hex-payload-e-g-48656c6c6f')"
           mr-1
         />
         <n-button :disabled="!isConnected" @click="sendHex">
-          Send
+          {{ t('tools.tcp-udp-port-tester.texts.tag-send') }}
         </n-button>
       </n-form-item>
     </n-card>

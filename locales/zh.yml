@@ -572,6 +572,7 @@ tools:
   json-prettify:
     title: JSON格式化与美化
     description: 将JSON字符串格式化为友好、易读的格式。
+    externalAccess: 当需要进行验证时，此工具可能会从 https://www.schemastore.org 下载 JSON 模式。不会向外部发送任何数据。
   docker-run-to-docker-compose-converter:
     title: Docker运行命令转Docker Compose转换器
     description: 将"docker run"命令转换为Docker Compose文件！
@@ -1014,6 +1015,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = ref(false);
       tag-word-wrap: 自动换行？
+      tag-ignore-whitespaces: 忽略尾随空格？
   otp-generator:
     title: OTP代码生成器
     description: 生成并验证基于时间和事件的OTP（一次性密码），用于多因素认证。
@@ -1184,6 +1186,7 @@ tools:
       tag-add-a-new-query-parameter: 添加新的查询参数
       tag-no-cors: 无CORS
       tag-call-api: 调用API
+    externalAccess: 此工具仅调用您在浏览器中提供的 API 端点。
   area-converter:
     title: 面积单位转换器
     description: 在面积单位之间转换值。
@@ -1468,6 +1471,7 @@ tools:
       label-country: 国家
       title-currencies-to-countries: 货币到国家
       label-currency: 货币
+    externalAccess: 此工具从 https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api 下载最新的货币数据
   data-storage-unit-converter:
     title: 数据存储单位转换器
     description: |
@@ -1685,6 +1689,8 @@ tools:
       label-dns-record-type: DNS记录类型：
       title-query-results: 查询结果
       tag-send-dns-query: 发送DNS查询
+    externalAccess: 此工具通过以下列表中的响应式 DOH 端点发送 DNS
+      查询：https://martinheidegger.github.io/dns-query/resolvers.json
   docker-compose-converter:
     title: Docker Compose格式转换器
     description: |
@@ -2137,6 +2143,7 @@ tools:
       tag-signup-for-a-free-token: 注册免费令牌
       tag-click-on-button-above-to-get-latest-infos: 点击上方按钮获取最新信息
       tag-localize-on-open-street-map: 在OpenStreetMap上定位
+    externalAccess: 此工具会将提供的 IP 地址发送到 https://ipinfo.io/ 以获取 IP 地理位置信息。
   ip-include-exclude:
     title: IP子网排除计算器
     description: 从允许的IP范围/掩码/CIDR列表中减去不允许的IP范围/掩码/CIDR列表
@@ -2298,6 +2305,7 @@ tools:
       title-schema-validation-errors: 模式验证错误
       label-indent-size-0-compact: 缩进大小（0 = 紧凑格式）：
       repair-json: 修复JSON
+    externalAccess: 当需要进行验证时，此工具可能会从 https://www.schemastore.org 下载 JSON 模式。不会向外部发送任何数据。
   json-escaper:
     title: JSON转义器/反转义器
     description: 转义和反转义JSON字符串
@@ -2327,6 +2335,7 @@ tools:
       label-indent-size-0-compact: 缩进大小（0 = 紧凑）：
       title-repaired-version: 自动修复和格式化版本
       label-auto-repair-json: 汽车维修 JSON：
+    externalAccess: 当需要进行验证时，此工具可能会从 https://www.schemastore.org 下载 JSON 模式。不会向外部发送任何数据。
   json-size-analyzer:
     title: JSON大小分析器
     description: 测量JSON节点的相对权重
@@ -2557,6 +2566,8 @@ tools:
       tag-nb-processing-is-done-in-your-browser-so-be-patient-processing-can-take-a-while: 注意：处理在浏览器中进行，请耐心等待，处理可能需要一段时间
       tag-this-tool-required-internet-connection-to-access-models: 此工具需要互联网连接（以访问模型）
       tag-latex-result: LaTeX结果
+    externalAccess: 该工具从 https://cdnjs.cloudflare.com 下载 MathJaX，并从
+      https://huggingface.co/ 下载 Latex OCR 识别模型 (Xenova/texify)。
   mermaid-exporter:
     title: Mermaid导出器
     description: 将Markdown（Mermaid）转换为图像并允许导出为PNG、JPG和SVG
@@ -2622,6 +2633,8 @@ tools:
       label-country-name: 国家名称：
       label-continent-name: 大洲名称：
       tag-refresh: 刷新
+    externalAccess: 该工具使用 https://www.ipify.org/ 的 API 获取 IPv4/6 地址，并从
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/ 下载 IP 信息数据。
   nano-memo:
     title: Nano备忘单
     description: Nano编辑器备忘单
@@ -2653,6 +2666,7 @@ tools:
       label-spaces-chars: 空格字符数
       label-word-count-no-punct: 无标点单词数
       tag-ocr: 光学字符识别
+    externalAccess: 此工具从 https://cdn.jsdelivr.net 下载 OCR 语言模型。
   option43-generator:
     title: Option43生成器
     description: 生成Option43 Wifi DHCP配置
@@ -4540,6 +4554,8 @@ tools:
         email-1: 邮箱
         email-0: 邮箱
         email: 邮箱
+        otpauth: 一次性密码认证
+        otpmigration: OTP迁移
   SplashScreen:
     text:
       pomodoro-timer: 番茄钟计时器
@@ -4861,6 +4877,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: 无法获取{0}
         failed-to-fetch-linkurl: 无法获取{0}
+    externalAccess: 此工具仅会在您的浏览器中下载所提供的网址。
   mic-tester:
     title: 麦克风测试器
     description: 回放并可视化来自您麦克风的声音，附带一秒延迟。
@@ -5530,10 +5547,6 @@ tools:
     text:
       loading-more-groups: 加载更多分组...
       displayedsearchresults-length-found: ({0} 找到)
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: 使用{0}制作
   json-viewer:
     texts:
       label-sort-keys: 排序键：
@@ -5982,6 +5995,7 @@ tools:
       tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: 想了解 IP 为何会被列入黑名单？查看
       tag-this-dnsbl-explanation-and-removal-guide: 此 DNSBL 解释和删除指南
       tag-: 。
+    externalAccess: 此工具会检查提供的 IP 地址，并通过 https://cloudflare-dns.com/dns-query 将 IP 地址发送给 DNSBL。
   docker-compose-memo:
     title: Docker Compose 备忘单
     description: Docker Compose 格式备忘单
@@ -6522,6 +6536,7 @@ tools:
       placeholder-to: 到
       placeholder-translation-will-appear-here: 翻译将出现在这里...
       tag-translate: 翻译
+    externalAccess: 此工具从 https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源]-[目标]）。
   unicode-to-gsm7:
     title: Unicode 转 GSM-7
     description: 将unicode文本编码为短信GSM-7编码并显示相关的短信发送信息
@@ -6763,6 +6778,7 @@ tools:
       placeholder-diceware-passwords: Diceware 密码...
       tag-copy: 复制
       tag-refresh: 刷新
+      label-russian: 俄语
   gtin-validator:
     title: GTIN验证器
     description: 验证并显示有关 GTIN（全球贸易识别码，以前称为 EAN 编号）、UPC 和其他产品代码格式的信息
@@ -6782,6 +6798,7 @@ tools:
       label-domain-to-check: 要检查的域名：
       placeholder-enter-a-domain-e-g-example-com: 输入域名（例如 example.com）
       tag-lookup-whois: 查询 WHOIS
+    externalAccess: 此工具会打开一个新标签页，显示要查询的域名，网址为 https://www.iana.org/whois
   keyboard-layout-converter:
     title: 键盘布局转换器
     description: 将按键序列从一种键盘布局转换为另一种键盘布局
@@ -6994,6 +7011,7 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: 选择模板（例如 node、python、vue）
       title-gitignore: .gitignore
       tag-generate: 产生
+    externalAccess: 此工具使用 GitHub API 从 https://github.com/github/gitignore 下载 .gitignore 文件。
   i-and-l-checker:
     title: 我和 L 检查器
     description: 检查密码或文本，其中高亮显示的字母为 1、l、I、0、O。
@@ -7159,6 +7177,8 @@ tools:
       failed: 失败的
       no-redirect: 无重定向
       expanded: 扩展
+    externalAccess: 该工具使用 CORS Anywhere 实例（默认情况下为 https://cors.outils-libre.org）发送
+      HEAD HTTP 请求（不下载数据）以获取 HTTP 标头和重定向信息。
   copy:
     text:
       copied-to-the-clipboard: 已复制到剪贴板
@@ -7234,6 +7254,8 @@ tools:
       placeholder-select-templates: 选择模板
       title-preview: 预览
       tag-fetch-generate: 获取并生成
+    externalAccess: 此工具使用 GitHub API 从
+      https://github.com/gitattributes/gitattributes 下载 .gitattributes 文件。
   html-to-xhtml:
     title: HTML 转 XHTML
     description: 将 HTML 转换为严格的 XHTML（可解析 XML，带有自闭合标签……）
@@ -7271,6 +7293,7 @@ tools:
       placeholder-select-a-language: 选择一种语言
       tag-search-on-wiktionary: 在维基词典上搜索
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: 输入单词并选择语言以加载维基词典
+    externalAccess: 该工具在 iframe 中搜索 https://www.wiktionary.org/（按语言）中的单词定义。
   ptr-dns-generator:
     title: PTR DNS生成器
     description: 生成 DNS PTR 记录
@@ -7381,3 +7404,182 @@ tools:
       label-thousand-separators: 千位分隔符：
       label-to: 到：
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: 使用 {0} 制作
+  acceleration-converter:
+    title: 加速转换器
+    description: 加速度单位之间的数值转换
+    externalAccess: 无效的
+  docker-image-downloader:
+    title: Docker镜像下载器
+    description: 根据 Docker 镜像仓库、架构和镜像名称下载 Docker 镜像
+    externalAccess: 此工具从镜像仓库下载 Docker 镜像（需要您提供用户名、密码或令牌）。
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: windows/amd64
+      label-docker-image-download-service-url: Docker镜像下载服务网址：
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: 基本身份验证：
+      placeholder-username-password: 用户名:密码
+      label-docker-image: Docker镜像：
+      placeholder-alpine-latest: 高山：最新
+      label-platform: 平台：
+      label-registry-url: 注册网址：
+      placeholder-myregistry-com-optional: myregistry.com（可选）
+      label-username: 用户名：
+      placeholder-optional: 选修的
+      label-password: 密码：
+      title-error: 错误
+      tag-docker-image-download-service-configuration-self-hosted: Docker镜像下载服务配置（自托管）
+      tag-you-must-self-host-docker-image-download-service-see: 您必须自行托管 Docker 镜像下载服务。请参阅：
+      tag-docker-image-download-service-install: Docker 镜像下载服务安装
+      tag-download-image: 下载图片
+  epub-to-markdown:
+    title: Epub 转 Markdown
+    description: 将 EPUB 文件转换为完整的 Markdown 内容
+    externalAccess: 无效的
+    texts:
+      label-markdown: Markdown
+      label-plain-text: 纯文本
+      label-format: 格式：
+      title-drop-an-epub-file-here-or-click-to-select-a-file: 将 EPUB 文件拖放到此处，或点击选择文件。
+      title-metadata: 元数据
+      label-title: 标题：
+      label-creator: 创作者：
+      label-language: 语言：
+      label-publisher: 出版商：
+      label-identifier: 标识符：
+      label-rights: 权利：
+      label-description: 描述：
+      title-epub-content: Epub 内容
+  explainshell:
+    title: 解释 Shell 命令
+    description: 使用 explainshell.com（或自建服务器）来解释 shell 命令
+    externalAccess: 该工具调用 https://explainshell.com（除非您自行托管）提供的 shell 命令。
+    texts:
+      label-custom-explain-shell-url: 自定义 Explain Shell URL：
+      placeholder-put-your-custom-explainshell-url-here: 在此处输入您的自定义 explainshell URL...
+      label-shell-command: Shell 命令：
+      placeholder-shell-command-to-explain: 解释Shell命令
+      tag-explain-shell-configuration: 解释 Shell 配置
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: 您可以自行托管 Explain Shell，以获得完全的隐私保护。参见：
+      tag-local-explain-shell-docker-install: 本地解释 Shell docker 安装
+      tag-explain: 解释
+      tag-enter-a-shell-command-to-explain: 输入 shell 命令以进行解释
+  frequency-converter:
+    title: 变频器
+    description: 在频率单位之间转换值
+    externalAccess: 无效的
+  markdown-to-text:
+    title: Markdown 转文本
+    description: 将 Markdown 转换为纯文本
+    externalAccess: 无效的
+    texts:
+      label-input-mardown: 输入 Mardown：
+      placeholder-enter-your-markdown-here: 请在此处输入您的 Markdown 代码……
+      title-output-text: 输出文本
+  rj45-memo:
+    title: RJ45 Cat6 接线速查表
+    description: 完整的 RJ45 Cat6 接线速查表
+    externalAccess: 无效的
+  rsvp-reader:
+    title: RSVP 阅读器
+    description: 快速串行视觉演示 (RSVP) 工具，可让您粘贴文本，并以可配置的每分钟字数 (WPM) 值一次显示一个单词。
+    externalAccess: 无效的
+    texts:
+      label-text-to-read: 阅读文本：
+      placeholder-paste-or-type-your-text-here: 在这里粘贴或输入您的文本……
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: 将 PDF、EPUB 或 txt 文件拖放到此处，或点击选择文件。
+      label-word-per-minute: 每分钟字数：
+      label-chunk-size: 块大小：
+      label-large-chunk-slowdown: 大块数据处理速度降低 (%)
+      title-pauses: 暂停次数（%）
+      label-sentence-end: 句子结束
+      label-paragraph-end: 段落结束
+      label-punctuation: 标点
+      title-appearance: 外貌
+      label-font-size: 字体大小：
+      label-font-color: 字体颜色：
+      label-background: 背景：
+      tag-no-text-to-read-please-input-some-text-in-text-tab: 暂无文本可读。请在“文本”选项卡中输入文本。
+      tag-play-space: 游戏（空间）
+      tag-pause-space: 停顿（空格）
+      tag-back: 返回（←）
+      tag-next: 下一页（→）
+      tag-reset: 重置
+      tag-: ↓
+      tag-or: "- 或者 -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: 无需触碰鼠标即可控制播放和导航。
+      tag-shortcut: 捷径
+      tag-action: 行动
+      tag-space: 空间
+      tag-play-pause: 播放/暂停
+      tag-right-arrow: （右箭头）
+      tag-skip-forward-one-chunk: 跳过上一段
+      tag-left-arrow: （左箭头）
+      tag-skip-backward-one-chunk: 向前跳过一段
+      tag-up-arrow: （向上箭头）
+      tag-increase-wpm: 提高每分钟字数
+      tag-down-arrow: （向下箭头）
+      tag-decrease-wpm: 降低每分钟字数
+      tag-home: 家
+      tag-jump-to-start: 跳转至开头
+      tag-end: 结尾
+      tag-jump-to-end: 跳转至结尾
+  speed-converter:
+    title: 速度转换器
+    description: 速度单位之间的数值转换
+    externalAccess: 无效的
+  tab-to-spaces:
+    title: Tab 键转空格
+    description: 将制表符转换为多个空格
+    externalAccess: 无效的
+    texts:
+      label-spaces-per-tab: 每个制表符的空格数
+      label-convert-only-leading-tabs: 仅转换前导制表符
+      label-normalize-inner-spacing: 规范化内部间距
+      title-input-with-tabs: 输入（使用制表符）
+      placeholder-paste-text-with-tabs-here: 请在此处粘贴带制表符的文本……
+      title-output-with-spaces: 输出（含空格）
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP端口测试器
+    description: 允许测试 TCP/UDP（使用服务器端的 WebSocket 代理）
+    externalAccess: 该工具需要服务器端的 WebSocket 服务器（https://github.com/sharevb/ws-tcp-udp-bridge）
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: WebSocket TCP/UDP 桥接 URL：
+      placeholder-websocket-url: WebSocket URL
+      label-target: 目标：
+      placeholder-target-ip: 目标IP
+      placeholder-port: 港口
+      placeholder-protocol: 协议
+      title-logs: 日志
+      title-payload-builder: 有效载荷构建器
+      label-send-text-payload-can-add-r-n: 发送文本有效载荷（可添加\r\n）：
+      placeholder-text-payload: 文本有效载荷
+      label-send-hex-payload: 发送十六进制有效载荷：
+      placeholder-hex-payload-e-g-48656c6c6f: 十六进制有效载荷（例如 48656c6c6f）
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP 桥接配置
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on: 要使用此工具，您需要托管一个基于 WebSocket TCP/UDP 的桥接器。
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: 连接
+      tag-disconnect: 断开
+      tag-apply-configuration: 应用配置
+      tag-clear-logs: 清除日志
+      tag-send: 发送
+  volume-flow-rate-converter:
+    title: 体积流量转换器
+    description: 在体积流量单位之间转换数值
+    externalAccess: 无效的

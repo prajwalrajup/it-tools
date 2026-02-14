@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useITStorage, useQueryParam } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const command = useQueryParam({ tool: 'explainshell', name: 'command', defaultValue: '' });
 const explainshellUrl = useITStorage('explainchain:url', 'https://explainshell.com');
@@ -14,27 +17,26 @@ function openExplain() {
 <template>
   <div>
     <details mb-1>
-      <summary>Explain Shell Configuration</summary>
+      <summary>{{ t('tools.explainshell.texts.tag-explain-shell-configuration') }}</summary>
       <n-card>
         <c-input-text
           v-model:value="explainshellUrl"
-          label="Custom Explain Shell Url:"
+          :label="t('tools.explainshell.texts.label-custom-explain-shell-url')"
           label-position="left"
-          placeholder="Put your custom explainshell url here..."
+          :placeholder="t('tools.explainshell.texts.placeholder-put-your-custom-explainshell-url-here')"
           mb-1
         />
         <n-p>
-          You can self host Explain Shell, to get total privacy. See:
-          <c-link href="https://github.com/idank/explainshell?tab=readme-ov-file#running-explainshell-locally" target="_blank">
-            Local Explain Shell docker install
+          {{ t('tools.explainshell.texts.tag-you-can-self-host-explain-shell-to-get-total-privacy-see') }}<c-link href="https://github.com/idank/explainshell?tab=readme-ov-file#running-explainshell-locally" target="_blank">
+            {{ t('tools.explainshell.texts.tag-local-explain-shell-docker-install') }}
           </c-link>
         </n-p>
       </n-card>
     </details>
-    <n-form-item label="Shell command:" label-placement="left">
+    <n-form-item :label="t('tools.explainshell.texts.label-shell-command')" label-placement="left">
       <n-input
         v-model:value="command"
-        placeholder="Shell command to explain"
+        :placeholder="t('tools.explainshell.texts.placeholder-shell-command-to-explain')"
         clearable
         mr-1
       />
@@ -46,7 +48,7 @@ function openExplain() {
         :disabled="!command"
         @click="openExplain"
       >
-        Explain
+        {{ t('tools.explainshell.texts.tag-explain') }}
       </n-button>
     </n-space>
 
@@ -59,7 +61,7 @@ function openExplain() {
         style="width: 100%; height: 100%; border: none;"
       />
       <div v-else style="padding: 1rem; text-align: center; color: #888;">
-        Enter a shell command to explain
+        {{ t('tools.explainshell.texts.tag-enter-a-shell-command-to-explain') }}
       </div>
     </div>
   </div>

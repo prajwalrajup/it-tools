@@ -935,6 +935,9 @@ tools:
     title: Định dạng và làm đẹp JSON
     description: Định dạng chuỗi JSON của bạn thành một định dạng dễ đọc và thân
       thiện với con người.
+    externalAccess: Công cụ này có thể tải xuống lược đồ JSON từ
+      https://www.schemastore.org khi yêu cầu xác thực được gửi đi. Không có dữ
+      liệu nào được gửi ra bên ngoài.
   json-sort-master:
     title: Sắp xếp JSON
     description: Sắp xếp JSON của bạn theo các khóa và giá trị.
@@ -1553,6 +1556,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = ref(sai);
       tag-word-wrap: Gói từ?
+      tag-ignore-whitespaces: Bỏ qua khoảng trắng thừa ở cuối dòng?
   otp-generator:
     title: Tạo mã OTP
     description: Tạo và xác thực mã OTP (mật khẩu một lần) dựa trên thời gian cho
@@ -1802,6 +1806,8 @@ tools:
       tag-add-a-new-query-parameter: Thêm Tham số truy vấn mới
       tag-no-cors: Không có CORS
       tag-call-api: Gọi API
+    externalAccess: Công cụ này chỉ gọi điểm cuối API mà bạn cung cấp trong trình
+      duyệt của mình.
   area-converter:
     title: Bộ chuyển đổi đơn vị diện tích
     description: Chuyển đổi giá trị giữa các đơn vị diện tích
@@ -2092,6 +2098,8 @@ tools:
       label-country: Quốc gia
       title-currencies-to-countries: Tiền tệ cho các quốc gia
       label-currency: Tiền tệ
+    externalAccess: Công cụ này tải xuống dữ liệu tiền tệ mới nhất từ
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Bộ chuyển đổi đơn vị lưu trữ dữ liệu
     description: Chuyển đổi đơn vị lưu trữ hoặc truyền dữ liệu (byte, bibyte, bit,
@@ -2312,6 +2320,9 @@ tools:
       label-dns-record-type: "Loại bản ghi DNS:"
       title-query-results: Kết quả truy vấn
       tag-send-dns-query: Gửi truy vấn DNS
+    externalAccess: "Công cụ này gửi truy vấn DNS thông qua điểm cuối DOH phản hồi
+      trong danh sách sau:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Bộ chuyển đổi định dạng Docker Compose
     description: Chuyển đổi tệp Docker Compose giữa V1, 2.x, 3.x hoặc CommonSpec và
@@ -2776,6 +2787,8 @@ tools:
       tag-signup-for-a-free-token: Đăng ký để nhận mã thông báo miễn phí
       tag-click-on-button-above-to-get-latest-infos: Nhấp vào nút ở trên để nhận thông tin mới nhất
       tag-localize-on-open-street-map: Định vị trên Bản đồ Đường phố Mở
+    externalAccess: Công cụ này gửi địa chỉ IP được cung cấp đến https://ipinfo.io/
+      để lấy thông tin định vị địa lý của IP.
   ip-include-exclude:
     title: Máy tính loại trừ mạng con IP
     description: Trừ danh sách IP Ranges/Mask/CIDR không được phép khỏi danh sách IP
@@ -2942,6 +2955,9 @@ tools:
       title-schema-validation-errors: Lỗi xác thực lược đồ
       label-indent-size-0-compact: "Kích thước thụt lề (0 = Thu gọn):"
       repair-json: Sửa chữa JSON
+    externalAccess: Công cụ này có thể tải xuống lược đồ JSON từ
+      https://www.schemastore.org khi yêu cầu xác thực được gửi đi. Không có dữ
+      liệu nào được gửi ra bên ngoài.
   json-escaper:
     title: Json Escaper/Unescaper
     description: Thoát và bỏ thoát chuỗi JSON
@@ -2971,6 +2987,9 @@ tools:
       label-indent-size-0-compact: "Kích thước thụt lề (0 = Nhỏ gọn):"
       title-repaired-version: Phiên bản tự động sửa chữa và định dạng
       label-auto-repair-json: "Tự động sửa chữa JSON:"
+    externalAccess: Công cụ này có thể tải xuống lược đồ JSON từ
+      https://www.schemastore.org khi yêu cầu xác thực được gửi đi. Không có dữ
+      liệu nào được gửi ra bên ngoài.
   json-size-analyzer:
     title: Trình phân tích kích thước JSON
     description: Đo trọng số tương đối của các nút JSON
@@ -3207,6 +3226,9 @@ tools:
         hãy kiên nhẫn, quá trình xử lý có thể mất một lúc"
       tag-this-tool-required-internet-connection-to-access-models: Công cụ này yêu cầu kết nối internet (để truy cập vào các mô hình)
       tag-latex-result: Kết quả Latex
+    externalAccess: Công cụ này tải xuống MathJaX từ https://cdnjs.cloudflare.com và
+      tải xuống mô hình nhận dạng OCR Latex (Xenova/texify) từ
+      https://huggingface.co/
   mermaid-exporter:
     title: Xuất khẩu nàng tiên cá
     description: Chuyển đổi Markdown (Nàng tiên cá) thành hình ảnh và cho phép xuất
@@ -3274,6 +3296,9 @@ tools:
       label-country-name: "Tên quốc gia:"
       label-continent-name: "Tên lục địa:"
       tag-refresh: Làm cho khỏe lại
+    externalAccess: Công cụ này lấy địa chỉ IPv4/6 bằng API của
+      https://www.ipify.org/ và tải dữ liệu thông tin IP từ
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: Nano CheatSheet
     description: Bảng hướng dẫn sử dụng Nano Editor
@@ -3305,6 +3330,8 @@ tools:
       label-spaces-chars: Khoảng trắng ký tự
       label-word-count-no-punct: Số lượng từ (không có dấu chấm)
       tag-ocr: Nhận dạng ký tự quang học
+    externalAccess: Công cụ này tải xuống các mô hình ngôn ngữ OCR trên
+      https://cdn.jsdelivr.net
   option43-generator:
     title: Trình tạo Option43
     description: Tạo cấu hình DHCP Wifi Option43
@@ -5194,6 +5221,8 @@ tools:
         email-1: E-mail
         email-0: E-mail
         email: E-mail
+        otpauth: Xác thực OTP
+        otpmigration: Di chuyển OTP
   SplashScreen:
     text:
       pomodoro-timer: Đồng hồ bấm giờ Pomodoro
@@ -5411,6 +5440,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Không thể tải {0}
         failed-to-fetch-linkurl: Không thể tải {0}
+    externalAccess: Công cụ này chỉ tải xuống các URL được cung cấp trong trình duyệt của bạn.
   mic-tester:
     title: Máy kiểm tra micrô
     description: Phát lại và hình dung âm thanh từ micrô của bạn, với độ trễ thêm một giây
@@ -5924,10 +5954,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Nhấp để sao chép tên: {0}"
       click-to-copy-completecodepoints: "Nhấp để sao chép: {0}"
       click-to-copy-emojiinfo-unicode: "Nhấp để sao chép: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Được tạo bằng {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Sắp xếp các khóa:"
@@ -6200,6 +6226,8 @@ tools:
         Hãy xem
       tag-this-dnsbl-explanation-and-removal-guide: hướng dẫn giải thích và xóa DNSBL này
       tag-: .
+    externalAccess: Công cụ này kiểm tra và gửi địa chỉ IP được cung cấp đến DNSBL
+      thông qua https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: Tài liệu hướng dẫn Docker Compose
     description: Bảng hướng dẫn định dạng Docker Compose
@@ -6781,6 +6809,8 @@ tools:
       placeholder-to: ĐẾN
       placeholder-translation-will-appear-here: Bản dịch sẽ xuất hiện ở đây...
       tag-translate: Dịch
+    externalAccess: Công cụ này tải xuống các mô hình dịch
+      (Xenova/opus-mt-[nguồn]-[mục tiêu]) trên https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode sang GSM-7
     description: Mã hóa văn bản unicode thành mã hóa SMS GSM-7 và hiển thị thông tin
@@ -7029,6 +7059,7 @@ tools:
       placeholder-diceware-passwords: Mật khẩu dễ thương...
       tag-copy: Sao chép
       tag-refresh: Làm cho khỏe lại
+      label-russian: Tiếng Nga
   gtin-validator:
     title: Trình xác thực GTIN
     description: Xác thực và hiển thị thông tin về GTIN (Mã số nhận dạng thương mại
@@ -7049,6 +7080,8 @@ tools:
       label-domain-to-check: "Tên miền cần kiểm tra:"
       placeholder-enter-a-domain-e-g-example-com: "Nhập tên miền (ví dụ: example.com)"
       tag-lookup-whois: Tra cứu WHOIS
+    externalAccess: Công cụ này sẽ mở một tab mới với tên miền cần kiểm tra tại
+      https://www.iana.org/whois
   keyboard-layout-converter:
     title: Bộ chuyển đổi bố cục bàn phím
     description: Chuyển đổi chuỗi phím từ bố cục bàn phím này sang bố cục bàn phím khác
@@ -7263,6 +7296,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: "Chọn mẫu (ví dụ: node, python, vue)"
       title-gitignore: .gitignore
       tag-generate: Phát ra
+    externalAccess: Công cụ này tải xuống tệp .gitignore từ
+      https://github.com/github/gitignore bằng API của Github.
   i-and-l-checker:
     title: Kiểm tra I và L
     description: Kiểm tra mật khẩu hoặc văn bản bằng cách tô sáng 1, l, I, 0, O
@@ -7432,6 +7467,9 @@ tools:
       failed: Thất bại
       no-redirect: Không chuyển hướng
       expanded: Mở rộng
+    externalAccess: Công cụ này sử dụng một phiên bản CORS Anywhere (mặc định là
+      https://cors.outils-libre.org) để gửi yêu cầu HTTP HEAD (không tải xuống
+      dữ liệu) nhằm lấy các tiêu đề HTTP và chuyển hướng.
   amortization-calculator:
     title: Máy tính khấu hao
     description: Tính toán lịch trả nợ vay với phân tích chi tiết các khoản thanh
@@ -7533,6 +7571,8 @@ tools:
       placeholder-select-templates: Chọn mẫu
       title-preview: Xem trước
       tag-fetch-generate: Tìm nạp & Tạo
+    externalAccess: Công cụ này tải xuống tập tin .gitattributes từ
+      https://github.com/gitattributes/gitattributes bằng API của Github.
   html-to-xhtml:
     title: Chuyển đổi HTML sang XHTML
     description: Chuyển đổi HTML sang định dạng XHTML chuẩn (có thể phân tích cú
@@ -7571,6 +7611,8 @@ tools:
       placeholder-select-a-language: Chọn ngôn ngữ
       tag-search-on-wiktionary: Tìm kiếm trên Wiktionary
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Nhập một từ và chọn ngôn ngữ để tải Wiktionary.
+    externalAccess: Công cụ này tìm kiếm định nghĩa từ trong
+      https://www.wiktionary.org/ (theo ngôn ngữ) trong một iframe.
   ptr-dns-generator:
     title: Trình tạo DNS PTR
     description: Tạo bản ghi DNS PTR
@@ -7683,6 +7725,195 @@ tools:
       label-thousand-separators: "Dấu phân cách hàng nghìn:"
       label-to: "ĐẾN:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Được tạo bằng {0}
+  acceleration-converter:
+    title: Bộ chuyển đổi gia tốc
+    description: Chuyển đổi giá trị giữa các đơn vị gia tốc.
+    externalAccess: vô giá trị
+  docker-image-downloader:
+    title: Trình tải xuống ảnh Docker
+    description: Tải xuống ảnh Docker dựa trên tên registry Docker, kiến trúc và tên ảnh.
+    externalAccess: Công cụ này tải xuống các ảnh Docker từ kho lưu trữ (với tên
+      người dùng, mật khẩu hoặc mã thông báo do bạn cung cấp).
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: windows/amd64
+      label-docker-image-download-service-url: "URL dịch vụ tải ảnh Docker:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Xác thực cơ bản:"
+      placeholder-username-password: tên người dùng:mật khẩu
+      label-docker-image: "Ảnh Docker:"
+      placeholder-alpine-latest: "núi cao: mới nhất"
+      label-platform: "Nền tảng:"
+      label-registry-url: "URL đăng ký:"
+      placeholder-myregistry-com-optional: myregistry.com (tùy chọn)
+      label-username: "Tên người dùng:"
+      placeholder-optional: Không bắt buộc
+      label-password: "Mật khẩu:"
+      title-error: Lỗi
+      tag-docker-image-download-service-configuration-self-hosted: Cấu hình dịch vụ tải ảnh Docker (tự lưu trữ)
+      tag-you-must-self-host-docker-image-download-service-see: "Bạn phải tự lưu trữ Dịch vụ Tải xuống Hình ảnh Docker. Xem:"
+      tag-docker-image-download-service-install: Cài đặt dịch vụ tải xuống hình ảnh Docker
+      tag-download-image: Tải xuống hình ảnh
+  epub-to-markdown:
+    title: Chuyển đổi Epub sang Markdown
+    description: Chuyển đổi tệp EPUB thành nội dung Markdown hoàn chỉnh
+    externalAccess: vô giá trị
+    texts:
+      label-markdown: Giảm giá
+      label-plain-text: Văn bản thuần túy
+      label-format: "Định dạng:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Kéo thả tệp EPUB vào đây hoặc nhấp chuột để chọn tệp.
+      title-metadata: Siêu dữ liệu
+      label-title: "Tiêu đề:"
+      label-creator: "Người tạo:"
+      label-language: "Ngôn ngữ:"
+      label-publisher: "Nhà xuất bản:"
+      label-identifier: "Mã định danh:"
+      label-rights: "Quyền:"
+      label-description: "Sự miêu tả:"
+      title-epub-content: Nội dung Epub
+  explainshell:
+    title: Giải thích lệnh Shell
+    description: Sử dụng explainshell.com (hoặc máy chủ tự lưu trữ) để giải thích
+      một lệnh shell.
+    externalAccess: Công cụ này gọi đến https://explainshell.com (trừ khi bạn tự lưu
+      trữ nó) để thực thi lệnh shell được cung cấp.
+    texts:
+      label-custom-explain-shell-url: "URL Shell Explain tùy chỉnh:"
+      placeholder-put-your-custom-explainshell-url-here: Hãy điền URL explainshell tùy chỉnh của bạn vào đây...
+      label-shell-command: "Lệnh shell:"
+      placeholder-shell-command-to-explain: Lệnh shell để giải thích
+      tag-explain-shell-configuration: Giải thích cấu hình Shell
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see:
+        "Bạn có thể tự lưu trữ Explain Shell để đảm bảo tính riêng tư tuyệt đối.
+        Xem thêm:"
+      tag-local-explain-shell-docker-install: Cài đặt Docker bằng Shell Explain cục bộ
+      tag-explain: Giải thích
+      tag-enter-a-shell-command-to-explain: Nhập lệnh shell để giải thích
+  frequency-converter:
+    title: Bộ chuyển đổi tần số
+    description: Chuyển đổi giá trị giữa các đơn vị tần số
+    externalAccess: vô giá trị
+  markdown-to-text:
+    title: Chuyển đổi Markdown thành văn bản
+    description: Chuyển đổi Markdown sang văn bản thuần túy
+    externalAccess: vô giá trị
+    texts:
+      label-input-mardown: "Nhập Mardown:"
+      placeholder-enter-your-markdown-here: Nhập mã Markdown của bạn vào đây...
+      title-output-text: Văn bản đầu ra
+  rj45-memo:
+    title: Hướng dẫn nhanh đấu dây RJ45 Cat6
+    description: Hướng dẫn đấu dây RJ45 Cat6 đầy đủ
+    externalAccess: vô giá trị
+  rsvp-reader:
+    title: RSVP Reader
+    description: Công cụ Trình chiếu Trực quan Nối tiếp Nhanh (RSVP) cho phép bạn
+      dán văn bản và hiển thị từng từ một với tốc độ từ mỗi phút (WPM) có thể
+      cấu hình được.
+    externalAccess: vô giá trị
+    texts:
+      label-text-to-read: "Văn bản cần đọc:"
+      placeholder-paste-or-type-your-text-here: Sao chép hoặc dán văn bản của bạn vào đây...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: Kéo thả tệp PDF, EPUB hoặc txt vào đây hoặc nhấp để chọn tệp.
+      label-word-per-minute: "Số từ mỗi phút:"
+      label-chunk-size: "Kích thước khối:"
+      label-large-chunk-slowdown: Tốc độ chậm lại đáng kể (%)
+      title-pauses: Thời gian tạm dừng (%)
+      label-sentence-end: Kết thúc câu
+      label-paragraph-end: Kết thúc đoạn văn
+      label-punctuation: Dấu chấm câu
+      title-appearance: Vẻ bề ngoài
+      label-font-size: "Cỡ chữ:"
+      label-font-color: "Màu chữ:"
+      label-background: "Lý lịch:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Không có văn bản nào để đọc. Vui lòng nhập văn bản vào tab Văn bản.
+      tag-play-space: Chơi (không gian)
+      tag-pause-space: Tạm dừng (khoảng cách)
+      tag-back: Quay lại (←)
+      tag-next: Tiếp theo (→)
+      tag-reset: Cài lại
+      tag-: ↓
+      tag-or: "- HOẶC -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Điều khiển phát lại và điều hướng mà không cần chạm vào chuột.
+      tag-shortcut: Phím tắt
+      tag-action: Hoạt động
+      tag-space: Không gian
+      tag-play-pause: Phát/Tạm dừng
+      tag-right-arrow: (Mũi tên phải)
+      tag-skip-forward-one-chunk: Chuyển tiếp một đoạn
+      tag-left-arrow: (Mũi tên trái)
+      tag-skip-backward-one-chunk: Quay lại một đoạn
+      tag-up-arrow: (Mũi tên hướng lên)
+      tag-increase-wpm: Tăng số từ mỗi phút (WPM)
+      tag-down-arrow: (Mũi tên xuống)
+      tag-decrease-wpm: Giảm số từ mỗi phút
+      tag-home: Trang chủ
+      tag-jump-to-start: Chuyển đến đầu
+      tag-end: Kết thúc
+      tag-jump-to-end: Chuyển đến cuối
+  speed-converter:
+    title: Bộ chuyển đổi tốc độ
+    description: Chuyển đổi giá trị giữa các đơn vị tốc độ
+    externalAccess: vô giá trị
+  tab-to-spaces:
+    title: Phím Tab để chuyển đến khoảng trắng
+    description: Chuyển đổi tab thành nhiều dấu cách
+    externalAccess: vô giá trị
+    texts:
+      label-spaces-per-tab: Số khoảng trắng trên mỗi tab
+      label-convert-only-leading-tabs: Chỉ chuyển đổi các tab đầu trang
+      label-normalize-inner-spacing: Chuẩn hóa khoảng cách bên trong
+      title-input-with-tabs: Nhập liệu (có tab)
+      placeholder-paste-text-with-tabs-here: Dán văn bản có dấu tab vào đây...
+      title-output-with-spaces: Kết quả đầu ra (có khoảng trắng)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: Công cụ kiểm tra cổng TCP/UDP
+    description: Cho phép kiểm tra TCP/UDP (sử dụng proxy websocket ở phía máy chủ)
+    externalAccess: Công cụ này cần một máy chủ WebSocket phía máy chủ
+      (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "URL cầu nối WebSocket TCP/UDP:"
+      placeholder-websocket-url: URL WebSocket
+      label-target: "Mục tiêu:"
+      placeholder-target-ip: Địa chỉ IP mục tiêu
+      placeholder-port: Cảng
+      placeholder-protocol: Giao thức
+      title-logs: Nhật ký
+      title-payload-builder: Trình tạo tải trọng
+      label-send-text-payload-can-add-r-n: "Gửi nội dung văn bản (có thể thêm \\r \\n):"
+      placeholder-text-payload: Nội dung văn bản
+      label-send-hex-payload: "Gửi dữ liệu Hex:"
+      placeholder-hex-payload-e-g-48656c6c6f: "Dữ liệu dạng thập lục phân (ví dụ: 48656c6c6f)"
+      tag-websocket-tcp-udp-bridge-configuration: Cấu hình cầu nối WebSocket TCP/UDP
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        Để sử dụng công cụ này, bạn cần thiết lập một cầu nối WebSocket TCP/UDP
+        dựa trên...
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Kết nối
+      tag-disconnect: Ngắt kết nối
+      tag-apply-configuration: Áp dụng cấu hình
+      tag-clear-logs: Xóa nhật ký
+      tag-send: Gửi
+  volume-flow-rate-converter:
+    title: Bộ chuyển đổi lưu lượng thể tích
+    description: Chuyển đổi giá trị giữa các đơn vị lưu lượng thể tích
+    externalAccess: vô giá trị
 spanCopyable:
   copy: Sao chép vào bảng tạm
   copied: Đã sao chép!

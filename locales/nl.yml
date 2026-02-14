@@ -886,6 +886,9 @@ tools:
   json-prettify:
     title: JSON opmaken en formatteren
     description: Verfraai je JSON-string in een vriendelijke, mensvriendelijke opmaak.
+    externalAccess: Deze tool kan een JSON-schema downloaden van
+      https://www.schemastore.org wanneer validatie wordt aangevraagd. Er worden
+      geen gegevens extern verzonden.
   docker-run-to-docker-compose-converter:
     title: Docker run naar Docker compose converter
     description: Zet "docker run" commando’s om naar docker-compose-bestanden!
@@ -1441,6 +1444,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = ref(false);
       tag-word-wrap: Woordafbreking?
+      tag-ignore-whitespaces: Negeer spaties aan het einde van een regel?
   otp-generator:
     title: OTP-codegenerator
     description: Genereer en valideer tijdgebaseerde OTP (one-time-password) voor
@@ -1756,6 +1760,7 @@ tools:
       tag-add-a-new-query-parameter: Voeg een nieuwe queryparameter toe
       tag-no-cors: Geen CORS
       tag-call-api: API aanroepen
+    externalAccess: Deze tool roept alleen het API-eindpunt aan dat u in uw browser opgeeft.
   area-converter:
     title: Oppervlakte-eenheden converter
     description: Waarden tussen oppervlakte-eenheden omzetten
@@ -2047,6 +2052,8 @@ tools:
       label-country: Land
       title-currencies-to-countries: Valuta's naar landen
       label-currency: Munteenheid
+    externalAccess: Deze tool downloadt actuele valutagegevens van
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Dataopslageenheid converter
     description: Converteer gegevensopslag- of overdrachtseenheden (bytes, bibytes,
@@ -2268,6 +2275,9 @@ tools:
       label-dns-record-type: "DNS-recordtype:"
       title-query-results: Zoekresultaten
       tag-send-dns-query: DNS-query verzenden
+    externalAccess: "Deze tool verstuurt DNS-query's via een reagerend DOH-eindpunt
+      in de volgende lijst:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Docker Compose-formaatconverter
     description: Converteer Docker Compose-bestanden tussen V1, 2.x, 3.x of
@@ -2741,6 +2751,8 @@ tools:
       tag-signup-for-a-free-token: Meld je aan voor een gratis token
       tag-click-on-button-above-to-get-latest-infos: Klik op de knop hierboven voor de laatste informatie
       tag-localize-on-open-street-map: Lokaliseren op Open Street Map
+    externalAccess: Deze tool stuurt de opgegeven IP-adressen naar
+      https://ipinfo.io/ om IP-geolocatiegegevens te verkrijgen.
   ip-include-exclude:
     title: Calculator voor het uitsluiten van IP-subnetten
     description: Trek een lijst met niet-toegestane IP-bereiken/maskers/CIDR's af
@@ -2908,6 +2920,9 @@ tools:
       title-schema-validation-errors: Schemavalidatiefouten
       label-indent-size-0-compact: "Inspringgrootte (0 = Compact):"
       repair-json: JSON repareren
+    externalAccess: Deze tool kan een JSON-schema downloaden van
+      https://www.schemastore.org wanneer validatie wordt aangevraagd. Er worden
+      geen gegevens extern verzonden.
   json-escaper:
     title: Json Escaper/Unescaper
     description: JSON-string ontsnappen en ontvluchten
@@ -2937,6 +2952,9 @@ tools:
       label-indent-size-0-compact: "Inspringingsgrootte (0 = Compact):"
       title-repaired-version: Automatisch gerepareerde en geformatteerde versie
       label-auto-repair-json: "Autoreparatie JSON:"
+    externalAccess: Deze tool kan een JSON-schema downloaden van
+      https://www.schemastore.org wanneer validatie wordt aangevraagd. Er worden
+      geen gegevens extern verzonden.
   json-size-analyzer:
     title: Json-grootte-analysator
     description: Meet de relatieve gewichten van JSON-knooppunten
@@ -3176,6 +3194,8 @@ tools:
         Voor deze tool is een internetverbinding vereist (om toegang te krijgen
         tot de modellen)
       tag-latex-result: Latexresultaat
+    externalAccess: Deze tool downloadt MathJaX van https://cdnjs.cloudflare.com en
+      het Latex OCR-herkenningsmodel (Xenova/texify) van https://huggingface.co/
   mermaid-exporter:
     title: Zeemeermin exporteur
     description: Converteer Markdown (Mermaid) naar een afbeelding en laat deze
@@ -3244,6 +3264,9 @@ tools:
       label-country-name: "Landnaam:"
       label-continent-name: "Naam van het continent:"
       tag-refresh: Vernieuwen
+    externalAccess: Deze tool verkrijgt IPv4/6-adressen via de API van
+      https://www.ipify.org/ en downloadt IP-infogegevens van
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/.
   nano-memo:
     title: Nano Spiekbriefje
     description: Nano Editor Spiekbriefje
@@ -3277,6 +3300,7 @@ tools:
       label-spaces-chars: Spaties tekens
       label-word-count-no-punct: Woordenaantal (zonder punt)
       tag-ocr: OCR
+    externalAccess: Deze tool downloadt OCR-taalmodellen van https://cdn.jsdelivr.net
   option43-generator:
     title: Optie43 generator
     description: Genereer Option43 Wifi DHCP-configuratie
@@ -5225,6 +5249,8 @@ tools:
         email-1: E-mail
         email-0: E-mail
         email: E-mail
+        otpauth: OTP-authenticatie
+        otpmigration: OTP-migratie
   SplashScreen:
     text:
       pomodoro-timer: Pomodoro-timer
@@ -5442,6 +5468,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Het ophalen van {0} is mislukt
         failed-to-fetch-linkurl: Het ophalen van {0} is mislukt
+    externalAccess: Deze tool downloadt de opgegeven URL's alleen in uw browser.
   mic-tester:
     title: Microfoontester
     description: Speel het geluid van uw microfoon opnieuw af en visualiseer het,
@@ -5952,10 +5979,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Klik om naam te kopiëren: {0}"
       click-to-copy-completecodepoints: "Klik om te kopiëren: {0}"
       click-to-copy-emojiinfo-unicode: "Klik om te kopiëren: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Gemaakt met {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Sorteersleutels:"
@@ -6230,6 +6253,8 @@ tools:
         Bekijk
       tag-this-dnsbl-explanation-and-removal-guide: deze DNSBL-uitleg en verwijderingsgids
       tag-: .
+    externalAccess: Deze tool controleert het opgegeven IP-adres en stuurt het door
+      naar DNSBL via https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: Docker Compose-spiekbriefje
     description: Docker Compose-formaat cheatsheet
@@ -6815,6 +6840,8 @@ tools:
       placeholder-to: Naar
       placeholder-translation-will-appear-here: Vertaling zal hier verschijnen...
       tag-translate: Vertalen
+    externalAccess: Deze tool downloadt vertaalmodellen
+      (Xenova/opus-mt-[source]-[target]) van https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode naar GSM-7
     description: Unicode-tekst coderen naar SMS GSM-7-codering en gerelateerde
@@ -7064,6 +7091,7 @@ tools:
       placeholder-diceware-passwords: Diceware-wachtwoorden...
       tag-copy: Kopiëren
       tag-refresh: Vernieuwen
+      label-russian: Russisch
   gtin-validator:
     title: GTIN-validator
     description: Valideer en toon informatie over GTIN (Global Trade Identifier
@@ -7084,6 +7112,8 @@ tools:
       label-domain-to-check: "Te controleren domein:"
       placeholder-enter-a-domain-e-g-example-com: Voer een domein in (bijv. example.com)
       tag-lookup-whois: WHOIS opzoeken
+    externalAccess: Deze tool opent een nieuw tabblad met het domein dat u kunt
+      controleren op https://www.iana.org/whois
   keyboard-layout-converter:
     title: Toetsenbordindeling converter
     description: Toetsenreeks van de ene toetsenbordindeling naar de andere converteren
@@ -7301,6 +7331,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Selecteer sjablonen (bijv. Node, Python, Vue)
       title-gitignore: .gitignore
       tag-generate: Genereren
+    externalAccess: Deze tool downloadt het .gitignore-bestand van
+      https://github.com/github/gitignore met behulp van de GitHub API.
   i-and-l-checker:
     title: I en L-controleur
     description: Controleer een wachtwoord of tekst met markering van 1, l, I, 0, O
@@ -7472,6 +7504,10 @@ tools:
       failed: Mislukt
       no-redirect: Geen omleiding
       expanded: Uitgebreid
+    externalAccess: Deze tool gebruikt een CORS Anywhere-instantie (standaard
+      https://cors.outils-libre.org) om een HEAD HTTP-verzoek te verzenden (er
+      worden geen gegevens gedownload) om HTTP-headers en omleidingen te
+      verkrijgen.
   amortization-calculator:
     title: Amortisatiecalculator
     description: Bereken aflossingsschema's voor leningen met een overzicht van de
@@ -7572,6 +7608,9 @@ tools:
       placeholder-select-templates: Sjablonen selecteren
       title-preview: Voorbeeld
       tag-fetch-generate: Ophalen en genereren
+    externalAccess: Deze tool downloadt .gitattributes-bestanden van
+      https://github.com/gitattributes/gitattributes met behulp van de GitHub
+      API.
   html-to-xhtml:
     title: HTML naar XHTML
     description: Converteer HTML naar strikte XHTML (XML-parseerbaar, met
@@ -7610,6 +7649,8 @@ tools:
       placeholder-select-a-language: Selecteer een taal
       tag-search-on-wiktionary: Zoeken op Wiktionary
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Voer een woord in en selecteer een taal om Wiktionary te laden.
+    externalAccess: Deze tool zoekt woorddefinities op in
+      https://www.wiktionary.org/ (op taal) in een iframe.
   ptr-dns-generator:
     title: PTR DNS-generator
     description: DNS PTR-records genereren
@@ -7723,6 +7764,197 @@ tools:
       label-thousand-separators: "Duizend scheidingstekens:"
       label-to: "Naar:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Gemaakt met {0}
+  acceleration-converter:
+    title: Acceleratieomvormer
+    description: Waarden omrekenen tussen versnellingseenheden
+    externalAccess: "null"
+  docker-image-downloader:
+    title: Docker-image-downloader
+    description: Download een Docker-image op basis van een Docker-registry, een
+      architectuur en een imagenaam.
+    externalAccess: Deze tool downloadt Docker-images van een registry (met de
+      gebruikersnaam, het wachtwoord of het token dat u opgeeft).
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: windows/amd64
+      label-docker-image-download-service-url: "URL van de Docker-image-downloadservice:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Basisverificatie:"
+      placeholder-username-password: gebruikersnaam:wachtwoord
+      label-docker-image: "Docker-image:"
+      placeholder-alpine-latest: alpine:nieuwste
+      label-platform: "Platform:"
+      label-registry-url: "Register-URL:"
+      placeholder-myregistry-com-optional: myregistry.com (optioneel)
+      label-username: "Gebruikersnaam:"
+      placeholder-optional: Optioneel
+      label-password: "Wachtwoord:"
+      title-error: Fout
+      tag-docker-image-download-service-configuration-self-hosted: Configuratie van de Docker-image-downloadservice (zelf gehost)
+      tag-you-must-self-host-docker-image-download-service-see: "U moet de Docker Image Download Service zelf hosten. Zie:"
+      tag-docker-image-download-service-install: Docker Image Download Service installeren
+      tag-download-image: Afbeelding downloaden
+  epub-to-markdown:
+    title: Epub naar Markdown
+    description: Converteer een EPUB-bestand naar volledige Markdown-inhoud.
+    externalAccess: "null"
+    texts:
+      label-markdown: Markdown
+      label-plain-text: Platte tekst
+      label-format: "Formaat:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Sleep hier een EPUB-bestand naartoe of klik om een bestand te selecteren.
+      title-metadata: Metadata
+      label-title: "Titel:"
+      label-creator: "Schepper:"
+      label-language: "Taal:"
+      label-publisher: "Uitgever:"
+      label-identifier: "Identificatiecode:"
+      label-rights: "Rechten:"
+      label-description: "Beschrijving:"
+      title-epub-content: Epub-inhoud
+  explainshell:
+    title: Leg het shellcommando uit
+    description: Gebruik explainshell.com (of een zelfgehoste versie) om een
+      shell-commando uit te leggen.
+    externalAccess: Deze tool roept https://explainshell.com aan (tenzij je het zelf
+      host) en gebruikt daarbij het opgegeven shellcommando.
+    texts:
+      label-custom-explain-shell-url: "Aangepaste Explain Shell-URL:"
+      placeholder-put-your-custom-explainshell-url-here: Voer hier uw aangepaste explainshell-URL in...
+      label-shell-command: "Shell-opdracht:"
+      placeholder-shell-command-to-explain: Shell-opdracht ter uitleg
+      tag-explain-shell-configuration: Leg de shellconfiguratie uit
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: "Je kunt Explain Shell zelf hosten voor volledige privacy. Zie:"
+      tag-local-explain-shell-docker-install: Lokale uitleg Shell docker installatie
+      tag-explain: Uitleggen
+      tag-enter-a-shell-command-to-explain: Voer een shell-opdracht in om dit uit te leggen.
+  frequency-converter:
+    title: Frequentieomzetter
+    description: Waarden tussen frequentie-eenheden omrekenen
+    externalAccess: "null"
+  markdown-to-text:
+    title: Markdown naar tekst
+    description: Markdown converteren naar platte tekst
+    externalAccess: "null"
+    texts:
+      label-input-mardown: "Invoer Mardown:"
+      placeholder-enter-your-markdown-here: Voer hier uw Markdown in...
+      title-output-text: Uitvoertekst
+  rj45-memo:
+    title: RJ45 Cat6 bedradingsspiekbrief
+    description: Complete RJ45 Cat6 bedradingshandleiding
+    externalAccess: "null"
+  rsvp-reader:
+    title: RSVP-lezer
+    description: Een Rapid Serial Visual Presentation (RSVP)-tool waarmee u tekst
+      kunt plakken en de woorden één voor één kunt laten weergeven met een
+      instelbare woordensnelheid per minuut (WPM).
+    externalAccess: "null"
+    texts:
+      label-text-to-read: "Tekst om te lezen:"
+      placeholder-paste-or-type-your-text-here: Plak of typ hier uw tekst...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file:
+        Sleep hier een PDF-, EPUB- of txt-bestand naartoe of klik om een bestand
+        te selecteren.
+      label-word-per-minute: "Woorden per minuut:"
+      label-chunk-size: "Brokgrootte:"
+      label-large-chunk-slowdown: Grote vertraging (%)
+      title-pauses: Pauzes (%)
+      label-sentence-end: Einde van de zin
+      label-paragraph-end: Einde van de alinea
+      label-punctuation: Interpunctie
+      title-appearance: Verschijning
+      label-font-size: "Lettergrootte:"
+      label-font-color: "Letterkleur:"
+      label-background: "Achtergrond:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Er is geen tekst om voor te lezen. Voer tekst in via het tabblad 'Tekst'.
+      tag-play-space: Speelruimte
+      tag-pause-space: Pauze (spatie)
+      tag-back: Terug (←)
+      tag-next: Volgende (→)
+      tag-reset: Reset
+      tag-: ↓
+      tag-or: "- OF -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Bedien de weergave en navigatie zonder de muis aan te raken.
+      tag-shortcut: Snelkoppeling
+      tag-action: Actie
+      tag-space: Ruimte
+      tag-play-pause: Afspelen / Pauzeren
+      tag-right-arrow: (Pijl naar rechts)
+      tag-skip-forward-one-chunk: Sla een stukje over
+      tag-left-arrow: (Pijl naar links)
+      tag-skip-backward-one-chunk: Sla één stukje terug
+      tag-up-arrow: (Pijl omhoog)
+      tag-increase-wpm: Verhoog het aantal woorden per minuut (WPM).
+      tag-down-arrow: (Pijl omlaag)
+      tag-decrease-wpm: Verlaging van het aantal woorden per minuut
+      tag-home: Thuis
+      tag-jump-to-start: Spring naar de startpagina
+      tag-end: Einde
+      tag-jump-to-end: Spring naar het einde
+  speed-converter:
+    title: Snelheidsomzetter
+    description: Waarden tussen snelheidseenheden omrekenen
+    externalAccess: "null"
+  tab-to-spaces:
+    title: Tab naar Spaces
+    description: Zet tab om in meerdere spaties
+    externalAccess: "null"
+    texts:
+      label-spaces-per-tab: Aantal spaties per tab
+      label-convert-only-leading-tabs: Converteer alleen de voorlooptabbladen
+      label-normalize-inner-spacing: Normaliseer de binnenruimte
+      title-input-with-tabs: Invoer (met tabs)
+      placeholder-paste-text-with-tabs-here: Plak hier tekst met tabs...
+      title-output-with-spaces: Uitvoer (met spaties)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP-poorttester
+    description: Hiermee kan TCP/UDP worden getest (met behulp van een
+      websocket-proxy aan de serverzijde).
+    externalAccess: Deze tool vereist een WebSocket-server aan de serverzijde
+      (https://github.com/sharevb/ws-tcp-udp-bridge).
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "WebSocket TCP/UDP-brug-URL:"
+      placeholder-websocket-url: WebSocket-URL
+      label-target: "Doel:"
+      placeholder-target-ip: Doel-IP-adres
+      placeholder-port: Haven
+      placeholder-protocol: Protocol
+      title-logs: Logboeken
+      title-payload-builder: Payload Builder
+      label-send-text-payload-can-add-r-n: "Verzend tekstpayload (kan \\r \\n toevoegen):"
+      placeholder-text-payload: Tekstpayload
+      label-send-hex-payload: "Verzend Hex-payload:"
+      placeholder-hex-payload-e-g-48656c6c6f: Hexadecimale payload (bijv. 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP-brugconfiguratie
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        Om deze tool te gebruiken, moet u een WebSocket TCP/UDP-brug hosten die
+        gebaseerd is op
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Verbinden
+      tag-disconnect: Verbinding verbreken
+      tag-apply-configuration: Configuratie toepassen
+      tag-clear-logs: Logboeken wissen
+      tag-send: Versturen
+  volume-flow-rate-converter:
+    title: Volumestroomomzetter
+    description: Waarden omrekenen tussen eenheden voor volumestroom.
+    externalAccess: "null"
 about:
   alltools-title: Alle {toolsCount}-hulpmiddelen
   tools:

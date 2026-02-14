@@ -894,6 +894,9 @@ tools:
   json-prettify:
     title: JSON prettify og formatér
     description: Prettify din JSON-streng til et venligt, menneskeligt læsbart format.
+    externalAccess: Dette værktøj kan downloade et JSON-skema fra
+      https://www.schemastore.org, når der anmodes om validering. Der sendes
+      ingen data eksternt.
   docker-run-to-docker-compose-converter:
     title: Docker run til Docker compose konverter
     description: Omform "docker run" kommandoer til docker-compose filer!
@@ -1441,6 +1444,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const ordWrap = ref(falsk);
       tag-word-wrap: Ordombrydning?
+      tag-ignore-whitespaces: Ignorer efterfølgende mellemrum?
   otp-generator:
     title: OTP kode generator
     description: Generer og valider tids-baseret OTP (one time password) til
@@ -1731,6 +1735,7 @@ tools:
       tag-add-a-new-query-parameter: Tilføj en ny forespørgselsparameter
       tag-no-cors: Ingen CORS
       tag-call-api: Opkalds-API
+    externalAccess: Dette værktøj kalder kun API-slutpunkter, som du angiver i din browser.
   area-converter:
     title: Arealenhedsomregner
     description: Konverter værdier mellem arealenheder
@@ -2020,6 +2025,8 @@ tools:
       label-country: Land
       title-currencies-to-countries: Valutaer til lande
       label-currency: Valuta
+    externalAccess: Dette værktøj downloader nye valutadata fra
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Konverter til datalagringsenhed
     description: Konverter datalagrings- eller overførselsenheder (bytes, bibytes,
@@ -2241,6 +2248,9 @@ tools:
       label-dns-record-type: "DNS-posttype:"
       title-query-results: Forespørgselsresultater
       tag-send-dns-query: Send DNS-forespørgsel
+    externalAccess: "Dette værktøj sender DNS-forespørgsler gennem et svarende
+      DOH-slutpunkt på følgende liste:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Docker Compose Format Converter
     description: Konverter Docker Compose-fil mellem V1, 2.x, 3.x eller CommonSpec
@@ -2706,6 +2716,8 @@ tools:
       tag-signup-for-a-free-token: Tilmeld dig for at få en gratis token
       tag-click-on-button-above-to-get-latest-infos: Klik på knappen ovenfor for at få de seneste oplysninger
       tag-localize-on-open-street-map: Lokaliser på Open Street Map
+    externalAccess: Dette værktøj sender angivne IP-adresser til https://ipinfo.io/
+      for at få IP-geolocationsoplysninger
   ip-include-exclude:
     title: IP-undernets ekskluderingsberegner
     description: Træk en liste over ikke-tilladte IP-områder/masker/CIDR fra en
@@ -2872,6 +2884,9 @@ tools:
       title-schema-validation-errors: Fejl ved skemavalidering
       label-indent-size-0-compact: "Indrykningsstørrelse (0 = Kompakt):"
       repair-json: Reparer JSON
+    externalAccess: Dette værktøj kan downloade et JSON-skema fra
+      https://www.schemastore.org, når der anmodes om validering. Der sendes
+      ingen data eksternt.
   json-escaper:
     title: Json Escaper/Unescaper
     description: Escape og unescape JSON-streng
@@ -2901,6 +2916,9 @@ tools:
       label-indent-size-0-compact: "Indrykningsstørrelse (0 = Kompakt):"
       title-repaired-version: Autorepareret og formateret version
       label-auto-repair-json: "Bilreparations-JSON:"
+    externalAccess: Dette værktøj kan downloade et JSON-skema fra
+      https://www.schemastore.org, når der anmodes om validering. Der sendes
+      ingen data eksternt.
   json-size-analyzer:
     title: Json-størrelsesanalysator
     description: Mål JSON-noders relative vægte
@@ -3138,6 +3156,9 @@ tools:
         behandlingen kan tage et stykke tid."
       tag-this-tool-required-internet-connection-to-access-models: Dette værktøj krævede internetforbindelse (for at få adgang til modeller)
       tag-latex-result: Latexresultat
+    externalAccess: Dette værktøj downloader MathJaX fra
+      https://cdnjs.cloudflare.com og downloader Latex OCR-genkendelsesmodellen
+      (Xenova/texify) fra https://huggingface.co/
   mermaid-exporter:
     title: Havfrueeksportør
     description: Konverter Markdown (Mermaid) til billede og tillad eksport til PNG,
@@ -3204,6 +3225,9 @@ tools:
       label-country-name: "Landets navn:"
       label-continent-name: "Kontinentnavn:"
       tag-refresh: Opfriske
+    externalAccess: Dette værktøj henter IPv4/6 ved hjælp af API'en fra
+      https://www.ipify.org/ og downloader IP-infodata fra
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: Nano-snydeark
     description: Nano Editor snydeark
@@ -3237,6 +3261,7 @@ tools:
       label-spaces-chars: Mellemrumstegn
       label-word-count-no-punct: Ordantal (uden punktum)
       tag-ocr: OCR
+    externalAccess: Dette værktøj downloader OCR-sprogmodeller på https://cdn.jsdelivr.net
   option43-generator:
     title: Option43-generator
     description: Generer Option43 Wifi DHCP-konfiguration
@@ -5159,6 +5184,8 @@ tools:
         email-1: E-mail
         email-0: E-mail
         email: E-mail
+        otpauth: OTP-godkendelse
+        otpmigration: OTP-migrering
   SplashScreen:
     text:
       pomodoro-timer: Pomodoro-timer
@@ -5376,6 +5403,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Kunne ikke hente {0}
         failed-to-fetch-linkurl: Kunne ikke hente {0}
+    externalAccess: Dette værktøj downloader kun de angivne URL'er i din browser.
   mic-tester:
     title: Mikrofontester
     description: Genafspil og visualiser lyd fra din mikrofon med et ekstra sekunds
@@ -5883,10 +5911,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Klik for at kopiere navnet: {0}"
       click-to-copy-completecodepoints: "Klik for at kopiere: {0}"
       click-to-copy-emojiinfo-unicode: "Klik for at kopiere: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Lavet med {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Sorteringsnøgler:"
@@ -6159,6 +6183,8 @@ tools:
       tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: Vil du forstå, hvorfor en IP-adresse kan være sortlistet? Tjek ud
       tag-this-dnsbl-explanation-and-removal-guide: denne DNSBL-forklaring og fjernelsesvejledning
       tag-: .
+    externalAccess: Dette værktøj kontrollerer og sender den angivne IP-adresse til
+      DNSBL via https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: Docker Compose cheatsheet
     description: Docker Compose-format snydeark
@@ -6743,6 +6769,8 @@ tools:
       placeholder-to: Til
       placeholder-translation-will-appear-here: Oversættelsen vil blive vist her...
       tag-translate: Oversætte
+    externalAccess: Dette værktøj downloader oversættelsesmodeller
+      (Xenova/opus-mt-[kilde]-[mål]) på https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode til GSM-7
     description: Kod Unicode-tekst til SMS GSM-7-kodning og vis relateret
@@ -6991,6 +7019,7 @@ tools:
       placeholder-diceware-passwords: Diceware-adgangskoder...
       tag-copy: Kopi
       tag-refresh: Opfriske
+      label-russian: Russisk
   gtin-validator:
     title: GTIN-validator
     description: Valider og vis information om GTIN (Global Trade Identifier Number,
@@ -7011,6 +7040,8 @@ tools:
       label-domain-to-check: "Domæne at kontrollere:"
       placeholder-enter-a-domain-e-g-example-com: Indtast et domæne (f.eks. example.com)
       tag-lookup-whois: Søg efter WHOIS
+    externalAccess: Dette værktøj åbner en ny fane med domænet, som skal
+      kontrolleres på https://www.iana.org/whois
   keyboard-layout-converter:
     title: Tastaturlayoutkonverter
     description: Konverter tastesekvens fra ét tastaturlayout til et andet
@@ -7227,6 +7258,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Vælg skabeloner (f.eks. node, python, vue)
       title-gitignore: .gitignore
       tag-generate: Frembringe
+    externalAccess: Dette værktøj kan downloades .gitignore fra
+      https://github.com/github/gitignore ved hjælp af Github API'en.
   i-and-l-checker:
     title: I og L Checker
     description: Tjek en adgangskode eller tekst med fremhævning af 1, l, I, 0, O
@@ -7396,6 +7429,9 @@ tools:
       failed: Mislykkedes
       no-redirect: Ingen omdirigering
       expanded: Udvidet
+    externalAccess: Dette værktøj bruger en CORS Anywhere-instans (som standard
+      https://cors.outils-libre.org) til at sende en HEAD http-anmodning (ingen
+      data downloadet) for at få HTTP-headere og omdirigeringer.
   amortization-calculator:
     title: Amortiseringsberegner
     description: Beregn låneafdragsplaner med månedlige betalingsfordelinger
@@ -7495,6 +7531,8 @@ tools:
       placeholder-select-templates: Vælg skabeloner
       title-preview: Forhåndsvisning
       tag-fetch-generate: Hent og generer
+    externalAccess: Dette værktøj downloader .gitattributes fra
+      https://github.com/gitattributes/gitattributes ved hjælp af Github API
   html-to-xhtml:
     title: HTML til XHTML
     description: Konverter HTML til strict XHTML (XML-parsbar, selvlukkende tags...)
@@ -7532,6 +7570,8 @@ tools:
       placeholder-select-a-language: Vælg et sprog
       tag-search-on-wiktionary: Søg på Wiktionary
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Indtast et ord og vælg et sprog for at indlæse Wiktionary
+    externalAccess: Dette værktøj søger efter orddefinitioner i
+      https://www.wiktionary.org/ (efter sprog) i en iframe.
   ptr-dns-generator:
     title: PTR DNS-generator
     description: Generer DNS PTR-poster
@@ -7644,6 +7684,195 @@ tools:
       label-thousand-separators: "Tusindseparatorer:"
       label-to: "Til:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Lavet med {0}
+  acceleration-converter:
+    title: Accelerationskonverter
+    description: Konverter værdier mellem accelerationsenheder
+    externalAccess: nul
+  docker-image-downloader:
+    title: Docker-billeddownloader
+    description: Download et docker-billede givet et docker-register, en arkitektur
+      og et billedenavn
+    externalAccess: Dette værktøj downloader Docker Images fra
+      registreringsdatabasen (og med brugernavn, adgangskode eller token, du
+      angiver)
+    texts:
+      label-linux-amd64: Linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: Windows/amd64
+      label-docker-image-download-service-url: "URL til Docker-billededownloadtjeneste:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Grundlæggende godkendelse:"
+      placeholder-username-password: brugernavn:adgangskode
+      label-docker-image: "Docker-billede:"
+      placeholder-alpine-latest: alpine:nyeste
+      label-platform: "Platform:"
+      label-registry-url: "Registreringsadresse:"
+      placeholder-myregistry-com-optional: myregistry.com (valgfrit)
+      label-username: "Brugernavn:"
+      placeholder-optional: Valgfri
+      label-password: "Adgangskode:"
+      title-error: Fejl
+      tag-docker-image-download-service-configuration-self-hosted: Konfiguration af Docker Image Download Service (selvhostet)
+      tag-you-must-self-host-docker-image-download-service-see: "Du skal selv hoste Docker Image Download Service. Se:"
+      tag-docker-image-download-service-install: Installation af Docker Image Download Service
+      tag-download-image: Download billede
+  epub-to-markdown:
+    title: Epub til Markdown
+    description: Konverter en EPUB-fil til fuldt markdown-indhold
+    externalAccess: nul
+    texts:
+      label-markdown: Nedsættelse
+      label-plain-text: Almindelig tekst
+      label-format: "Format:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Slip en EPUB-fil her, eller klik for at vælge en fil
+      title-metadata: Metadata
+      label-title: "Titel:"
+      label-creator: "Skaber:"
+      label-language: "Sprog:"
+      label-publisher: "Forlægger:"
+      label-identifier: "Identifikator:"
+      label-rights: "Rettigheder:"
+      label-description: "Beskrivelse:"
+      title-epub-content: Epub-indhold
+  explainshell:
+    title: Forklar Shell-kommandoen
+    description: Brug explainshell.com (eller en selvhostet udbyder) til at forklare
+      en shell-kommando
+    externalAccess: Dette værktøj kalder https://explainshell.com (medmindre du selv
+      hoster det) denne angivne shell-kommando.
+    texts:
+      label-custom-explain-shell-url: "Brugerdefineret Explain Shell-URL:"
+      placeholder-put-your-custom-explainshell-url-here: Indsæt din brugerdefinerede explainshell-url her...
+      label-shell-command: "Shell-kommando:"
+      placeholder-shell-command-to-explain: Shell-kommando for at forklare
+      tag-explain-shell-configuration: Forklar Shell-konfiguration
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: "Du kan hoste Explain Shell selv for at få total privatliv. Se:"
+      tag-local-explain-shell-docker-install: Lokal Explain Shell docker-installation
+      tag-explain: Forklare
+      tag-enter-a-shell-command-to-explain: Indtast en shell-kommando for at forklare
+  frequency-converter:
+    title: Frekvensomformer
+    description: Konverter værdier mellem frekvensenheder
+    externalAccess: nul
+  markdown-to-text:
+    title: Markdown til tekst
+    description: Konverter markdown til almindelig tekst
+    externalAccess: nul
+    texts:
+      label-input-mardown: "Input Mardown:"
+      placeholder-enter-your-markdown-here: Indtast din Markdown her...
+      title-output-text: Udgangstekst
+  rj45-memo:
+    title: RJ45 Cat6-ledningsføringssnydark
+    description: Komplet RJ45 Cat6-ledningsføringssnydark
+    externalAccess: nul
+  rsvp-reader:
+    title: RSVP-læser
+    description: Et værktøj til hurtig seriel visuel præsentation (RSVP), der giver
+      dig mulighed for at indsætte tekst og få ordene vist ét ad gangen med en
+      konfigurerbar værdi for ord pr. minut (WPM).
+    externalAccess: nul
+    texts:
+      label-text-to-read: "Tekst at læse:"
+      placeholder-paste-or-type-your-text-here: Indsæt eller skriv din tekst her...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: Slip en PDF-, EPUB- eller txt-fil her, eller klik for at vælge en fil
+      label-word-per-minute: "Ord pr. minut:"
+      label-chunk-size: "Stykkestørrelse:"
+      label-large-chunk-slowdown: Stor afmatning (%)
+      title-pauses: Pauser (%)
+      label-sentence-end: Sætningsslutning
+      label-paragraph-end: Afsnit slut
+      label-punctuation: Tegnsætning
+      title-appearance: Udseende
+      label-font-size: "Skriftstørrelse:"
+      label-font-color: "Skriftfarve:"
+      label-background: "Baggrund:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Ingen tekst at læse. Indtast venligst tekst i fanen Tekst.
+      tag-play-space: Leg (plads)
+      tag-pause-space: Pause (mellemrum)
+      tag-back: Tilbage (←)
+      tag-next: Næste (→)
+      tag-reset: Nulstil
+      tag-: ↓
+      tag-or: "- ELLER -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Styr afspilning og navigation uden at røre musen.
+      tag-shortcut: Genvej
+      tag-action: Handling
+      tag-space: Plads
+      tag-play-pause: Afspil / Pause
+      tag-right-arrow: (Højre pil)
+      tag-skip-forward-one-chunk: Spring et stykke frem
+      tag-left-arrow: (Venstre pil)
+      tag-skip-backward-one-chunk: Spring et stykke tilbage
+      tag-up-arrow: (Pil op)
+      tag-increase-wpm: Øg WPM
+      tag-down-arrow: (Pil ned)
+      tag-decrease-wpm: Reducer WPM
+      tag-home: Hjem
+      tag-jump-to-start: Gå til start
+      tag-end: Ende
+      tag-jump-to-end: Spring til slutningen
+  speed-converter:
+    title: Hastighedskonverter
+    description: Konverter værdier mellem hastighedsenheder
+    externalAccess: nul
+  tab-to-spaces:
+    title: Tabulator til mellemrum
+    description: Konverter tabulator til flere mellemrum
+    externalAccess: nul
+    texts:
+      label-spaces-per-tab: Mellemrum pr. faneblad
+      label-convert-only-leading-tabs: Konverter kun indledende tabulatorer
+      label-normalize-inner-spacing: Normaliser indvendig afstand
+      title-input-with-tabs: Input (med faner)
+      placeholder-paste-text-with-tabs-here: Indsæt tekst med tabulatorer her...
+      title-output-with-spaces: Output (med mellemrum)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP-porttester
+    description: Tillader test af TCP/UDP (ved hjælp af en websocket-proxy på serversiden)
+    externalAccess: Dette værktøj kræver en WebSocket-server på serversiden
+      (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "WebSocket TCP/UDP-bro-URL:"
+      placeholder-websocket-url: WebSocket-URL
+      label-target: "Mål:"
+      placeholder-target-ip: Mål-IP
+      placeholder-port: Havn
+      placeholder-protocol: Protokol
+      title-logs: Logfiler
+      title-payload-builder: Nyttelastbygger
+      label-send-text-payload-can-add-r-n: "Send tekst-nyttelast (kan tilføje \\r \\n):"
+      placeholder-text-payload: Tekstnyttelast
+      label-send-hex-payload: "Send Hex-nyttelast:"
+      placeholder-hex-payload-e-g-48656c6c6f: Hex-nyttelast (f.eks. 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP-brokonfiguration
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        For at bruge dette værktøj skal du være vært for en WebSocket TCP/UDP
+        Bridge baseret på
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Forbinde
+      tag-disconnect: Afbryde
+      tag-apply-configuration: Anvend konfiguration
+      tag-clear-logs: Ryd logfiler
+      tag-send: Sende
+  volume-flow-rate-converter:
+    title: Volumenstrømningshastighedskonverter
+    description: Konverter værdier mellem volumenstrømningsenheder
+    externalAccess: nul
 about:
   alltools-title: Alle {toolsCount} værktøjer
   tools:

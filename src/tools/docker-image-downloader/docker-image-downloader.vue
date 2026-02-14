@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useITStorage, useQueryParamOrStorage } from '@/composable/queryParams';
 import { Base64 } from 'js-base64';
+
+const { t } = useI18n();
 
 const message = useMessage();
 const notification = useNotification();
@@ -19,13 +22,13 @@ const error = ref<string | null>(null);
 
 // Platform options
 const platformOptions = [
-  { label: 'linux/amd64', value: 'linux/amd64' },
-  { label: 'linux/arm64', value: 'linux/arm64' },
-  { label: 'linux/arm/v7', value: 'linux/arm/v7' },
-  { label: 'linux/arm/v6', value: 'linux/arm/v6' },
-  { label: 'linux/ppc64le', value: 'linux/ppc64le' },
-  { label: 'linux/s390x', value: 'linux/s390x' },
-  { label: 'windows/amd64', value: 'windows/amd64' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-amd64'), value: 'linux/amd64' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-arm64'), value: 'linux/arm64' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-arm-v7'), value: 'linux/arm/v7' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-arm-v6'), value: 'linux/arm/v6' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-ppc64le'), value: 'linux/ppc64le' },
+  { label: t('tools.docker-image-downloader.texts.label-linux-s390x'), value: 'linux/s390x' },
+  { label: t('tools.docker-image-downloader.texts.label-windows-amd64'), value: 'windows/amd64' },
 ];
 
 async function downloadImage() {
@@ -102,28 +105,27 @@ async function downloadImage() {
   <div>
     <NForm label-width="120px" label-placement="left">
       <details mb-2>
-        <summary>Docker Image Download Service Configuration (self hosted)</summary>
+        <summary>{{ t('tools.docker-image-downloader.texts.tag-docker-image-download-service-configuration-self-hosted') }}</summary>
         <n-card>
-          <NFormItem label="Docker Image Download Service Url:" label-placement="top">
-            <NInput v-model:value="serverHost" placeholder="http://localhost:3000" />
+          <NFormItem :label="t('tools.docker-image-downloader.texts.label-docker-image-download-service-url')" label-placement="top">
+            <NInput v-model:value="serverHost" :placeholder="t('tools.docker-image-downloader.texts.placeholder-http-localhost-3000')" />
           </NFormItem>
-          <NFormItem label="Basic Authentication:" label-placement="left" label-width="auto">
-            <NInput v-model:value="serverAuth" placeholder="username:password" />
+          <NFormItem :label="t('tools.docker-image-downloader.texts.label-basic-authentication')" label-placement="left" label-width="auto">
+            <NInput v-model:value="serverAuth" :placeholder="t('tools.docker-image-downloader.texts.placeholder-username-password')" />
           </NFormItem>
           <n-p>
-            You must self host Docker Image Download Service. See:
-            <c-link href="https://github.com/sharevb/docker-image-download-server?tab=readme-ov-file#running-in-docker" target="_blank">
-              Docker Image Download Service install
+            {{ t('tools.docker-image-downloader.texts.tag-you-must-self-host-docker-image-download-service-see') }}<c-link href="https://github.com/sharevb/docker-image-download-server?tab=readme-ov-file#running-in-docker" target="_blank">
+              {{ t('tools.docker-image-downloader.texts.tag-docker-image-download-service-install') }}
             </c-link>
           </n-p>
         </n-card>
       </details>
 
-      <NFormItem label="Docker Image:">
-        <NInput v-model:value="image" placeholder="alpine:latest" />
+      <NFormItem :label="t('tools.docker-image-downloader.texts.label-docker-image')">
+        <NInput v-model:value="image" :placeholder="t('tools.docker-image-downloader.texts.placeholder-alpine-latest')" />
       </NFormItem>
 
-      <NFormItem label="Platform:">
+      <NFormItem :label="t('tools.docker-image-downloader.texts.label-platform')">
         <NSelect
           v-model:value="platform"
           :options="platformOptions"
@@ -131,15 +133,15 @@ async function downloadImage() {
         />
       </NFormItem>
 
-      <NFormItem label="Registry Url:">
-        <NInput v-model:value="registry" placeholder="myregistry.com (optional)" />
+      <NFormItem :label="t('tools.docker-image-downloader.texts.label-registry-url')">
+        <NInput v-model:value="registry" :placeholder="t('tools.docker-image-downloader.texts.placeholder-myregistry-com-optional')" />
       </NFormItem>
 
-      <NFormItem label="Username:">
-        <NInput v-model:value="username" placeholder="Optional" />
+      <NFormItem :label="t('tools.docker-image-downloader.texts.label-username')">
+        <NInput v-model:value="username" :placeholder="t('tools.docker-image-downloader.texts.placeholder-optional')" />
       </NFormItem>
 
-      <NFormItem label="Password:">
+      <NFormItem :label="t('tools.docker-image-downloader.texts.label-password')">
         <NInput
           v-model:value="password"
           type="password"
@@ -154,12 +156,12 @@ async function downloadImage() {
         :loading="loading"
         @click="downloadImage"
       >
-        Download Image
+        {{ t('tools.docker-image-downloader.texts.tag-download-image') }}
       </NButton>
     </n-space>
 
     <div v-if="error" mt-2>
-      <NAlert type="error" title="Error" :bordered="false">
+      <NAlert type="error" :title="t('tools.docker-image-downloader.texts.title-error')" :bordered="false">
         {{ error }}
       </NAlert>
     </div>

@@ -1012,6 +1012,9 @@ tools:
   json-prettify:
     title: JSON ceartaigh agus formáid
     description: Cuir do theaghrán JSON i bhformáid atá cairdiúil agus inléite ag an duine.
+    externalAccess: Féadfaidh an uirlis seo scéim JSON a íoslódáil ó
+      https://www.schemastore.org nuair a iarrtar bailíochtú. Ní sheoltar aon
+      sonraí go seachtrach.
   docker-run-to-docker-compose-converter:
     title: Rith docker chuig tiontaire cumadóireachta Docker
     description: Athraíonn orduithe “rith dugaí” go comhaid cumadóireachta docker!
@@ -1601,6 +1604,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = tag(bréagach);
       tag-word-wrap: Timfhilleadh Focal?
+      tag-ignore-whitespaces: Neamhaird a dhéanamh de spásanna bána ina dhiaidh sin?
   otp-generator:
     title: Gineadóir cóid OTP saor in aisce,
     description: Gin agus bailíochtaigh OTP bunaithe ar am  (focal faire aonuaire)
@@ -1716,6 +1720,8 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Theip ar {0} a fháil
         failed-to-fetch-linkurl: Theip ar {0} a fháil
+    externalAccess: Ní íoslódálann an uirlis seo ach na URLanna a chuirtear ar fáil
+      i do bhrabhsálaí.
   unicode-to-java-entities:
     title: Tiontaire Carachtair Unicode go Eintitis Java
     description: Tiontaire Carachtair Unicode go Eintitis Java agus a mhalairt
@@ -1807,6 +1813,8 @@ tools:
       tag-add-a-new-query-parameter: Cuir Paraiméadar Iarratais nua leis
       tag-no-cors: Gan CORS
       tag-call-api: API Glaonna
+    externalAccess: Glaonn an uirlis seo ar chríochphointe API a sholáthraíonn tú i
+      do bhrabhsálaí amháin.
   area-converter:
     title: Tiontaire Aonaid Achar
     description: Tiontaigh luachanna idir aonaid achair
@@ -2171,6 +2179,8 @@ tools:
       label-country: Tír
       title-currencies-to-countries: Airgeadraí chuig Tíortha
       label-currency: Airgeadra
+    externalAccess: Íoslódálann an uirlis seo sonraí airgeadra úra ó
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Tiontaire Aonaid Stórála Sonraí
     description: Tiontaigh aonaid stórála nó aistrithe sonraí
@@ -2394,6 +2404,9 @@ tools:
       label-dns-record-type: "Cineál taifead DNS:"
       title-query-results: Torthaí fiosrúcháin
       tag-send-dns-query: Seol fiosrúchán DNS
+    externalAccess: "Seolann an uirlis seo fiosrúchán DNS trí chríochphointe DOH
+      freagartha sa liosta seo a leanas:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Tiontaire Formáide Docker Compose
     description: Tiontaigh comhad Docker Compose idir V1, 2.x, 3.x nó  CommonSpec
@@ -3038,6 +3051,8 @@ tools:
       tag-signup-for-a-free-token: Cláraigh le haghaidh comhartha saor in aisce
       tag-click-on-button-above-to-get-latest-infos: Cliceáil ar an gcnaipe thuas chun an fhaisnéis is déanaí a fháil
       tag-localize-on-open-street-map: Logánaigh ar Léarscáil Shráide Oscailte
+    externalAccess: Seolann an uirlis seo na seoltaí IP a chuirtear ar fáil chuig
+      https://ipinfo.io/ chun faisnéis gheolocaíochta IP a fháil
   ip-include-exclude:
     title: Áireamhán Eisiaimh Fo-líonraí IP
     description: Bain liosta Raonta/Masc/CIDR IP neamhcheadaithe  ó liosta
@@ -3207,6 +3222,9 @@ tools:
       title-schema-validation-errors: Earráidí Bailíochtaithe Scéime
       label-indent-size-0-compact: "Méid an línithe (0 = Dlúth):"
       repair-json: Deisigh JSON
+    externalAccess: Féadfaidh an uirlis seo scéim JSON a íoslódáil ó
+      https://www.schemastore.org nuair a iarrtar bailíochtú. Ní sheoltar aon
+      sonraí go seachtrach.
   json-escaper:
     title: Éalú Json/Unescape
     description: Teaghrán JSON éalaithe agus dí-éalaithe
@@ -3236,6 +3254,9 @@ tools:
       label-indent-size-0-compact: "Méid an línithe (0 = Dlúth):"
       title-repaired-version: Leagan Deisithe agus Formáidithe go Gluaisteán
       label-auto-repair-json: "JSON Deisiúcháin Gluaisteán:"
+    externalAccess: Féadfaidh an uirlis seo scéim JSON a íoslódáil ó
+      https://www.schemastore.org nuair a iarrtar bailíochtú. Ní sheoltar aon
+      sonraí go seachtrach.
   json-size-analyzer:
     title: Anailíseoir Méid Json
     description: Tomhas meáchain choibhneasta nóid JSON
@@ -3580,6 +3601,9 @@ tools:
         Bhí nasc idirlín ag teastáil don uirlis seo (chun rochtain a fháil ar
         shamhlacha)
       tag-latex-result: Toradh Laitéis
+    externalAccess: Íoslódálann an uirlis seo MathJaX ó https://cdnjs.cloudflare.com
+      agus íoslódálann sí samhail aitheantais Latex OCR (Xenova/texify) ó
+      https://huggingface.co/
   mermaid-exporter:
     title: Onnmhaireoir maighdeana mara
     description: Tiontaigh Markdown (Mermaid) go híomhá agus lig dó onnmhairiú go
@@ -3647,6 +3671,9 @@ tools:
       label-country-name: "Ainm na Tíre:"
       label-continent-name: "Ainm na Mór-Roinne:"
       tag-refresh: Athnuachan
+    externalAccess: Faigheann an uirlis seo IPv4/6 ag baint úsáide as API
+      https://www.ipify.org/ agus íoslódálann sí sonraí IP Info ó
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: Bileog Cheat Nano
     description: Bileog Cheat Eagarthóra Nano
@@ -3678,6 +3705,8 @@ tools:
       label-spaces-chars: Spásanna carachtair
       label-word-count-no-punct: Líon focal (gan ponc)
       tag-ocr: OCR
+    externalAccess: Íoslódálann an uirlis seo samhlacha teangacha OCR ar
+      https://cdn.jsdelivr.net
   option43-generator:
     title: Gineadóir Option43
     description: Gin cumraíocht DHCP Wifi Option43
@@ -5507,6 +5536,8 @@ tools:
         email-1: Ríomhphost
         email-0: Ríomhphost
         email: Ríomhphost
+        otpauth: Údarú OTP
+        otpmigration: Imirce OTP
   quote-converter:
     title: Tiontaire Lua
     description: Tiontaigh teaghrán athfhriotail ó/go \
@@ -6133,10 +6164,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Cliceáil chun an t-ainm a chóipeáil: {0}"
       click-to-copy-completecodepoints: "Cliceáil chun cóipeáil: {0}"
       click-to-copy-emojiinfo-unicode: "Cliceáil chun cóipeáil: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Déanta le {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Eochracha sórtála:"
@@ -6314,6 +6341,8 @@ tools:
         liosta dubh? Féach ar
       tag-this-dnsbl-explanation-and-removal-guide: an treoir seo maidir le míniú agus baint DNSBL
       tag-: .
+    externalAccess: Seiceálann an uirlis seo an seoladh IP a chuirtear ar fáil agus
+      seolann sí chuig DNSBL trí https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: Bileog cheat Docker Compose
     description: Bileog cheat formáid Docker Compose
@@ -6905,6 +6934,8 @@ tools:
       placeholder-to: Chuig
       placeholder-translation-will-appear-here: Beidh an t-aistriúchán le feiceáil anseo...
       tag-translate: Aistrigh
+    externalAccess: Íoslódálann an uirlis seo samhlacha aistriúcháin
+      (Xenova/opus-mt-[source]-[sprioc]) ar https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode go GSM-7
     description: Ionchódaigh téacs unicode go SMS Ionchódú GSM-7 agus taispeáin
@@ -7153,6 +7184,7 @@ tools:
       placeholder-diceware-passwords: Pasfhocail Diceware...
       tag-copy: Cóipeáil
       tag-refresh: Athnuachan
+      label-russian: Rúisis
   gtin-validator:
     title: Bailíochtóir GTIN
     description: Faisnéis faoi GTIN (Uimhir Aitheantais Trádála Domhanda ar a
@@ -7174,6 +7206,8 @@ tools:
       label-domain-to-check: "Fearann le seiceáil:"
       placeholder-enter-a-domain-e-g-example-com: Cuir isteach fearann (m.sh. example.com)
       tag-lookup-whois: Cuardaigh WHOIS
+    externalAccess: Seolann an uirlis seo cluaisín nua le fearann le seiceáil ag
+      https://www.iana.org/whois
   keyboard-layout-converter:
     title: Tiontaire Leagan Amach Méarchláir
     description: Tiontaigh seicheamh eochracha ó leagan amach méarchláir amháin go
@@ -7390,6 +7424,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Roghnaigh teimpléid (e.g. node, python, vue)
       title-gitignore: .gitignore
       tag-generate: Gin
+    externalAccess: Íoslódáil an uirlis seo .gitignore ó
+      https://github.com/github/gitignore ag baint úsáide as API Github
   i-and-l-checker:
     title: Seiceálaí I agus L
     description: Seiceáil pasfhocal nó téacs le aibhsiú ar 1, l, I, 0, O
@@ -7559,6 +7595,10 @@ tools:
       failed: Theip air
       no-redirect: Gan atreorú
       expanded: Leathnaithe
+    externalAccess: Úsáideann an uirlis seo sampla CORS Anywhere (de réir
+      réamhshocraithe, https://cors.outils-libre.org) chun iarratas HEAD http a
+      sheoladh (gan aon sonraí a íoslódáil) chun ceanntásca agus atreoruithe
+      HTTP a fháil.
   amortization-calculator:
     title: Áireamhán Amúchta
     description: Ríomh sceidil amúchta iasachta le miondealú íocaíochta míosúla
@@ -7658,6 +7698,9 @@ tools:
       placeholder-select-templates: Roghnaigh teimpléid
       title-preview: Réamhamharc
       tag-fetch-generate: Faigh & Gin
+    externalAccess: Íoslódálann an uirlis seo .gitattributes ó
+      https://github.com/gitattributes/gitattributes ag baint úsáide as API
+      Github.
   html-to-xhtml:
     title: HTML go XHTML
     description: Tiontaigh HTML go XHTML dian (parsáil XML, clibeanna féindhúnta...)
@@ -7695,6 +7738,8 @@ tools:
       placeholder-select-a-language: Roghnaigh teanga
       tag-search-on-wiktionary: Cuardaigh ar Vicífhoclóir
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Cuir isteach focal agus roghnaigh teanga chun an Vicífhoclóir a luchtú
+    externalAccess: Cuardaíonn an uirlis seo sainmhínithe focal i
+      https://www.wiktionary.org/ (de réir teanga) in iframe.
   ptr-dns-generator:
     title: Gineadóir DNS PTR
     description: Gin taifid DNS PTR
@@ -7807,5 +7852,198 @@ tools:
       label-thousand-separators: "Míle deighilteoirí:"
       label-to: "Chuig:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Déanta le {0}
+  acceleration-converter:
+    title: Tiontaire Luasghéaraithe
+    description: Tiontaigh luachanna idir aonaid luasghéaraithe
+    externalAccess: nialas
+  docker-image-downloader:
+    title: Íoslódálaí Íomhánna Docker
+    description: Íoslódáil íomhá docker agus clárlann docker, ailtireacht agus ainm
+      íomhá tugtha
+    externalAccess: Íoslódálann an uirlis seo Íomhánna Docker ón gclárlann (agus
+      leis an ainm úsáideora, an pasfhocal nó an comhartha a sholáthraíonn tú)
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: fuinneoga/amd64
+      label-docker-image-download-service-url: "URL Seirbhís Íoslódála Íomhá Docker:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Fíordheimhniú Bunúsach:"
+      placeholder-username-password: "ainm úsáideora: pasfhocal"
+      label-docker-image: "Íomhá Docker:"
+      placeholder-alpine-latest: "alpach: is déanaí"
+      label-platform: "Ardán:"
+      label-registry-url: "URL na Clárlainne:"
+      placeholder-myregistry-com-optional: myregistry.com (roghnach)
+      label-username: "Ainm úsáideora:"
+      placeholder-optional: Roghnach
+      label-password: "Pasfhocal:"
+      title-error: Earráid
+      tag-docker-image-download-service-configuration-self-hosted: Cumraíocht Seirbhís Íoslódála Íomhá Docker (féinóstáilte)
+      tag-you-must-self-host-docker-image-download-service-see: "Ní mór duit Seirbhís Íoslódála Íomhá Docker a óstáil go féin. Féach:"
+      tag-docker-image-download-service-install: Suiteáil Seirbhís Íoslódála Íomhá Docker
+      tag-download-image: Íoslódáil Íomhá
+  epub-to-markdown:
+    title: Epub go Markdown
+    description: Tiontaigh comhad EPUB go hábhar lánmharcála síos
+    externalAccess: nialas
+    texts:
+      label-markdown: Marcáil síos
+      label-plain-text: Téacs Gnáth
+      label-format: "Formáid:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Scaoil comhad EPUB anseo nó cliceáil chun comhad a roghnú
+      title-metadata: Meiteashonraí
+      label-title: "Teideal:"
+      label-creator: "Cruthaitheoir:"
+      label-language: "Teanga:"
+      label-publisher: "Foilsitheoir:"
+      label-identifier: "Aitheantóir:"
+      label-rights: "Cearta:"
+      label-description: "Cur síos:"
+      title-epub-content: Ábhar Epub
+  explainshell:
+    title: Mínigh an tOrdú Shell
+    description: Úsáid explainshell.com (nó ceann féinóstáilte) chun ordú sliogáin a mhíniú
+    externalAccess: Glaonn an uirlis seo ar https://explainshell.com (mura ndéanann
+      tú féin-óstáil air) an t-ordú sliogáin seo a chuirtear ar fáil.
+    texts:
+      label-custom-explain-shell-url: "URL Shell Mínigh Saincheaptha:"
+      placeholder-put-your-custom-explainshell-url-here: Cuir do url míniúcháin saincheaptha anseo...
+      label-shell-command: "Ordú Shell:"
+      placeholder-shell-command-to-explain: Ordú Shell le míniú
+      tag-explain-shell-configuration: Mínigh Cumraíocht an Bhlaosc
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see:
+        "Is féidir leat Explain Shell a óstáil go féin, chun príobháideacht
+        iomlán a fháil. Féach:"
+      tag-local-explain-shell-docker-install: Suiteáil áitiúil Explain Shell docker
+      tag-explain: Mínigh
+      tag-enter-a-shell-command-to-explain: Cuir isteach ordú sliogáin chun míniú a thabhairt
+  frequency-converter:
+    title: Tiontaire Minicíochta
+    description: Tiontaigh luachanna idir aonaid minicíochta
+    externalAccess: nialas
+  markdown-to-text:
+    title: Marcáil síos go Téacs
+    description: Tiontaigh marcáil síos go téacs simplí
+    externalAccess: nialas
+    texts:
+      label-input-mardown: "Ionchur Mardown:"
+      placeholder-enter-your-markdown-here: Cuir isteach do Mharcáil síos anseo...
+      title-output-text: Téacs aschuir
+  rj45-memo:
+    title: Bileog Cheat Sreangaithe RJ45 Cat6
+    description: Bileog cheat iomlán sreangaithe RJ45 Cat6
+    externalAccess: nialas
+  rsvp-reader:
+    title: Léitheoir RSVP
+    description: Uirlis Cur i Láthair Amhairc Sraitheach Thapa (RSVP) a ligeann duit
+      téacs a ghreamú, agus na focail a thaispeáint ceann ar cheann ag luach
+      inchumraithe focal in aghaidh an nóiméid (WPM).
+    externalAccess: nialas
+    texts:
+      label-text-to-read: "Téacs le léamh:"
+      placeholder-paste-or-type-your-text-here: Greamaigh nó clóscríobh do théacs anseo...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: Scaoil comhad PDF, EPUB nó txt anseo nó cliceáil chun comhad a roghnú
+      label-word-per-minute: "Focal in aghaidh an nóiméid:"
+      label-chunk-size: "Méid an phíosa:"
+      label-large-chunk-slowdown: Moilliú i bpíosaí móra (%)
+      title-pauses: Sosanna (%)
+      label-sentence-end: Deireadh abairte
+      label-paragraph-end: Deireadh na míre
+      label-punctuation: Poncaíocht
+      title-appearance: Dealramh
+      label-font-size: "Méid cló:"
+      label-font-color: "Dath cló:"
+      label-background: "Cúlra:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Níl aon téacs le léamh.
+        Cuir isteach roinnt téacs sa chluaisín Téacs, le do thoil.
+      tag-play-space: Súgradh (spás)
+      tag-pause-space: Sos (spás)
+      tag-back: Ar ais (←)
+      tag-next: Ar Aghaidh (→)
+      tag-reset: Athshocraigh
+      tag-: ↓
+      tag-or: "- NÓ -"
+      tag-control-playback-and-navigation-without-touching-the-mouse:
+        Rialú athsheinm agus loingseoireacht gan teagmháil a dhéanamh leis an
+        luch.
+      tag-shortcut: Aicearra
+      tag-action: Gníomh
+      tag-space: Spás
+      tag-play-pause: Seinn / Sos
+      tag-right-arrow: (Saighead ar Dheis)
+      tag-skip-forward-one-chunk: Léim ar aghaidh píosa amháin
+      tag-left-arrow: (Saighead Chlé)
+      tag-skip-backward-one-chunk: Léim siar píosa amháin
+      tag-up-arrow: (Saighead Suas)
+      tag-increase-wpm: Méadaigh WPM
+      tag-down-arrow: (Saighead Síos)
+      tag-decrease-wpm: Laghdaigh WPM
+      tag-home: Baile
+      tag-jump-to-start: Léim go dtí an tús
+      tag-end: Deireadh
+      tag-jump-to-end: Léim go dtí an deireadh
+  speed-converter:
+    title: Tiontaire Luas
+    description: Tiontaigh luachanna idir aonaid luais
+    externalAccess: nialas
+  tab-to-spaces:
+    title: Tabáil go Spásanna
+    description: Tiontaigh cluaisín go spásanna iolracha
+    externalAccess: nialas
+    texts:
+      label-spaces-per-tab: Spásanna in aghaidh an chluaisín
+      label-convert-only-leading-tabs: Tiontaigh na tabanna tosaigh amháin
+      label-normalize-inner-spacing: Normalú an spásáil inmheánach
+      title-input-with-tabs: Ionchur (le cluaisíní)
+      placeholder-paste-text-with-tabs-here: Greamaigh téacs le tabanna anseo...
+      title-output-with-spaces: Aschur (le spásanna)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: Tástálaí Calafoirt TCP/UDP
+    description: Ceadaíonn sé tástáil a dhéanamh ar TCP/UDP (ag baint úsáide as
+      seachfhreastalaí soicéad gréasáin ar thaobh an fhreastalaí)
+    externalAccess: Teastaíonn freastalaí WebSocket taobh an fhreastalaí ón uirlis
+      seo (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "URL Droichead TCP/UDP an tSocáid Ghréasáin:"
+      placeholder-websocket-url: URL Soicéad Gréasáin
+      label-target: "Sprioc:"
+      placeholder-target-ip: IP Sprioc
+      placeholder-port: Calafort
+      placeholder-protocol: Prótacal
+      title-logs: Logaí
+      title-payload-builder: Tógálaí Ualaigh
+      label-send-text-payload-can-add-r-n: "Seol ualach Téacs (is féidir \\r \\n a chur leis):"
+      placeholder-text-payload: Ualach téacs
+      label-send-hex-payload: "Seol ualach Heics:"
+      placeholder-hex-payload-e-g-48656c6c6f: Ualach heicsidheachúlach (m.sh. 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: Cumraíocht Droichead TCP/UDP WebSocket
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        Chun an uirlis seo a úsáid, ní mór duit Droichead TCP/UDP WebSocket a
+        óstáil bunaithe ar
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Ceangail
+      tag-disconnect: Dícheangail
+      tag-apply-configuration: Cuir Cumraíocht i bhFeidhm
+      tag-clear-logs: Glan logaí
+      tag-send: Seol
+  volume-flow-rate-converter:
+    title: Tiontaire Ráta Sreafa Toirte
+    description: Tiontaigh luachanna idir aonaid ráta sreafa toirte
+    externalAccess: nialas
 locale-selector:
   select-a-language: Roghnaigh teanga

@@ -775,6 +775,8 @@ tools:
   json-prettify:
     title: JSON 포매터
     description: JSON 문자열을 사람이 읽기 쉬운 형식으로 변환합니다.
+    externalAccess: 이 도구는 유효성 검사가 요청될 때 https://www.schemastore.org에서 JSON 스키마를
+      다운로드할 수 있습니다. 외부로 데이터가 전송되지는 않습니다.
   docker-run-to-docker-compose-converter:
     title: docker run → docker-compose 변환기
     description: “docker run” 명령을 docker-compose 파일로 변환합니다!
@@ -1348,6 +1350,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: 상수 단어 감싸기 = 참조(거짓);
       tag-word-wrap: 줄바꿈?
+      tag-ignore-whitespaces: 후행 공백을 무시하시겠습니까?
   otp-generator:
     title: OTP 코드 생성기
     description: 시간 기반 OTP를 생성·검증하여 MFA에 사용합니다.
@@ -1600,6 +1603,7 @@ tools:
       tag-add-a-new-query-parameter: 새로운 쿼리 매개변수 추가
       tag-no-cors: CORS 없음
       tag-call-api: API 호출
+    externalAccess: 이 도구는 사용자가 브라우저에 제공하는 API 엔드포인트만 호출합니다.
   area-converter:
     title: 면적 단위 변환기
     description: 면적 단위 간 값 변환
@@ -1883,6 +1887,8 @@ tools:
       label-country: 국가
       title-currencies-to-countries: 국가별 통화
       label-currency: 통화
+    externalAccess: 이 도구는 https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
+      에서 최신 통화 데이터를 다운로드합니다.
   data-storage-unit-converter:
     title: 데이터 저장 장치 변환기
     description: 데이터 저장 또는 전송 단위(바이트, 비바이트, 비트, 킬로바이트 등)를 변환합니다.
@@ -2099,6 +2105,8 @@ tools:
       label-dns-record-type: "DNS 레코드 유형:"
       title-query-results: 쿼리 결과
       tag-send-dns-query: DNS 쿼리 보내기
+    externalAccess: 이 도구는 다음 목록에 있는 응답 DOH 엔드포인트를 통해 DNS 쿼리를 전송합니다.
+      https://martinheidegger.github.io/dns-query/resolvers.json
   docker-compose-converter:
     title: Docker Compose 형식 변환기
     description: Docker Compose 파일을 V1, 2.x, 3.x 또는 CommonSpec 간에 변환하고 포트/볼륨 구문을 확장할 수 있습니다.
@@ -2549,6 +2557,7 @@ tools:
       tag-signup-for-a-free-token: 무료 토큰에 가입하세요
       tag-click-on-button-above-to-get-latest-infos: 최신 정보를 얻으려면 위의 버튼을 클릭하세요
       tag-localize-on-open-street-map: 오픈 스트리트 맵에서 지역화
+    externalAccess: 이 도구는 제공된 IP 주소를 https://ipinfo.io/ 로 전송하여 IP 주소의 지리적 위치 정보를 얻습니다.
   ip-include-exclude:
     title: IP 서브넷 제외 계산기
     description: 허용된 IP 범위/마스크/CIDR 목록에서 허용되지 않는 IP 범위/마스크/CIDR 목록을 빼십시오.
@@ -2711,6 +2720,8 @@ tools:
       title-schema-validation-errors: 스키마 유효성 검사 오류
       label-indent-size-0-compact: "들여쓰기 크기 (0 = 간결함):"
       repair-json: JSON 복구
+    externalAccess: 이 도구는 유효성 검사가 요청될 때 https://www.schemastore.org에서 JSON 스키마를
+      다운로드할 수 있습니다. 외부로 데이터가 전송되지는 않습니다.
   json-escaper:
     title: JSON Escaper/Unescaper
     description: JSON 문자열 이스케이프 및 이스케이프 해제
@@ -2740,6 +2751,8 @@ tools:
       label-indent-size-0-compact: "들여쓰기 크기(0 = 압축):"
       title-repaired-version: 자동 복구 및 포맷 버전
       label-auto-repair-json: "자동 복구 JSON:"
+    externalAccess: 이 도구는 유효성 검사가 요청될 때 https://www.schemastore.org에서 JSON 스키마를
+      다운로드할 수 있습니다. 외부로 데이터가 전송되지는 않습니다.
   json-size-analyzer:
     title: JSON 크기 분석기
     description: JSON 노드의 상대적 가중치 측정
@@ -2971,6 +2984,8 @@ tools:
       tag-nb-processing-is-done-in-your-browser-so-be-patient-processing-can-take-a-while: "참고: 처리가 브라우저에서 이루어지므로 처리에 시간이 걸릴 수 있으니 인내심을 가지십시오."
       tag-this-tool-required-internet-connection-to-access-models: 이 도구에는 인터넷 연결(모델에 접근하기 위해)이 필요합니다.
       tag-latex-result: 라텍스 결과
+    externalAccess: 이 도구는 https://cdnjs.cloudflare.com에서 MathJaX를 다운로드하고
+      https://huggingface.co/에서 LaTeX OCR 인식 모델(Xenova/texify)을 다운로드합니다.
   mermaid-exporter:
     title: 인어 수출업체
     description: Markdown(Mermaid)을 이미지로 변환하고 PNG, JPG 및 SVG로 내보낼 수 있도록 합니다.
@@ -3036,6 +3051,9 @@ tools:
       label-country-name: "국가 이름:"
       label-continent-name: "대륙 이름:"
       tag-refresh: 새로 고치다
+    externalAccess: 이 도구는 https://www.ipify.org/의 API를 사용하여 IPv4/6 주소를 가져오고
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/에서 IP 정보 데이터를
+      다운로드합니다.
   nano-memo:
     title: 나노 치트시트
     description: 나노 에디터 치트시트
@@ -3067,6 +3085,7 @@ tools:
       label-spaces-chars: 공백 문자
       label-word-count-no-punct: 단어 수 (마침표 없음)
       tag-ocr: OCR
+    externalAccess: 이 도구는 https://cdn.jsdelivr.net에서 OCR 언어 모델을 다운로드합니다.
   option43-generator:
     title: Option43 생성기
     description: Option43 Wifi DHCP 구성 생성
@@ -4898,6 +4917,8 @@ tools:
         email-1: 이메일
         email-0: 이메일
         email: 이메일
+        otpauth: OTP 인증
+        otpmigration: OTP 마이그레이션
   SplashScreen:
     text:
       pomodoro-timer: 포모도로 타이머
@@ -5105,6 +5126,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: "{0}을(를) 가져오지 못했습니다."
         failed-to-fetch-linkurl: "{0}을(를) 가져오지 못했습니다."
+    externalAccess: 이 도구는 제공된 URL을 브라우저에서만 다운로드합니다.
   mic-tester:
     title: 마이크 테스터
     description: 마이크에서 나오는 소리를 재생하고 시각화합니다. 지연 시간을 1초 더 추가합니다.
@@ -5603,10 +5625,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "이름을 복사하려면 클릭하세요: {0}"
       click-to-copy-completecodepoints: "복사하려면 클릭하세요: {0}"
       click-to-copy-emojiinfo-unicode: "복사하려면 클릭하세요: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: "{0}\\n으로 만들어졌습니다"
   json-viewer:
     texts:
       label-sort-keys: "정렬 키 :"
@@ -5869,6 +5887,8 @@ tools:
       tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: IP가 블랙리스트에 등록되는 이유를 알고 싶으신가요? 확인해 보세요.
       tag-this-dnsbl-explanation-and-removal-guide: 이 DNSBL 설명 및 제거 가이드
       tag-: .
+    externalAccess: 이 도구는 제공된 IP 주소를 확인하고 https://cloudflare-dns.com/dns-query를 통해
+      DNSBL로 전송합니다.
   docker-compose-memo:
     title: Docker Compose 치트시트
     description: Docker Compose 형식 요약표
@@ -6419,6 +6439,7 @@ tools:
       placeholder-to: 에게
       placeholder-translation-will-appear-here: 번역은 여기에 표시됩니다...
       tag-translate: 번역하다
+    externalAccess: 이 도구는 https://huggingface.co/ 에서 번역 모델(Xenova/opus-mt-[원본]-[대상])을 다운로드합니다.
   unicode-to-gsm7:
     title: 유니코드에서 GSM-7로
     description: 유니코드 텍스트를 SMS GSM-7 인코딩으로 인코딩하고 관련 SMS 전송 정보를 표시합니다.
@@ -6662,6 +6683,7 @@ tools:
       placeholder-diceware-passwords: 다이스웨어 비밀번호...
       tag-copy: 복사
       tag-refresh: 새로 고치다
+      label-russian: 러시아인
   gtin-validator:
     title: GTIN 검증기
     description: GTIN(이전 EAN 번호)과 UPC 및 기타 제품 코드 형식에 대한 정보를 검증하고 표시합니다.
@@ -6681,6 +6703,7 @@ tools:
       label-domain-to-check: "확인할 도메인:"
       placeholder-enter-a-domain-e-g-example-com: "도메인을 입력하세요(예: example.com)"
       tag-lookup-whois: WHOIS 조회
+    externalAccess: 이 도구는 도메인을 확인할 수 있는 새 탭을 https://www.iana.org/whois 에서 엽니다.
   keyboard-layout-converter:
     title: 키보드 레이아웃 변환기
     description: 한 키보드 레이아웃에서 다른 키보드 레이아웃으로 키 시퀀스 변환
@@ -6892,6 +6915,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: "템플릿 선택(예: node, python, vue)"
       title-gitignore: .gitignore
       tag-generate: 생성하다
+    externalAccess: 이 도구는 GitHub API를 사용하여 https://github.com/github/gitignore에서
+      .gitignore 파일을 다운로드합니다.
   i-and-l-checker:
     title: I 및 L 체커
     description: 1, l, I, 0, O를 강조하여 비밀번호 또는 텍스트를 확인하세요.
@@ -7059,6 +7084,8 @@ tools:
       failed: 실패한
       no-redirect: 리디렉션 없음
       expanded: 퍼지는
+    externalAccess: "이 도구는 CORS Anywhere 인스턴스(기본값: https://cors.outils-libre.org)를
+      사용하여 HEAD HTTP 요청(데이터 다운로드 없음)을 전송하여 HTTP 헤더 및 리디렉션을 가져옵니다."
   amortization-calculator:
     title: 상환 계산기
     description: 월별 상환 내역을 포함한 대출 상환 일정을 계산하세요.
@@ -7158,6 +7185,9 @@ tools:
       placeholder-select-templates: 템플릿을 선택하세요
       title-preview: 시사
       tag-fetch-generate: 가져오기 및 생성
+    externalAccess: 이 도구는 GitHub API를 사용하여
+      https://github.com/gitattributes/gitattributes에서 .gitattributes 파일을
+      다운로드합니다.
   html-to-xhtml:
     title: HTML을 XHTML로 변환
     description: HTML을 엄격한 XHTML(XML 파싱 가능, 자체 닫힘 태그 등)로 변환합니다.
@@ -7195,6 +7225,7 @@ tools:
       placeholder-select-a-language: 언어를 선택하세요
       tag-search-on-wiktionary: 위키낱말사전에서 검색
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: 단어를 입력하고 언어를 선택하여 위키낱말사전을 불러오세요.
+    externalAccess: 이 도구는 iframe 내에서 https://www.wiktionary.org/ (언어별)에서 단어 정의를 검색합니다.
   ptr-dns-generator:
     title: PTR DNS 생성기
     description: DNS PTR 레코드 생성
@@ -7305,6 +7336,187 @@ tools:
       label-thousand-separators: "천 단위 구분 기호:"
       label-to: "에게:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: "{0}으로 제작됨"
+  acceleration-converter:
+    title: 가속 변환기
+    description: 가속도 단위 간 값 변환
+    externalAccess: 널
+  docker-image-downloader:
+    title: 도커 이미지 다운로더
+    description: Docker 레지스트리, 아키텍처 및 이미지 이름을 사용하여 Docker 이미지를 다운로드합니다.
+    externalAccess: 이 도구는 사용자가 제공하는 사용자 이름, 비밀번호 또는 토큰을 사용하여 레지스트리에서 Docker 이미지를 다운로드합니다.
+    texts:
+      label-linux-amd64: 리눅스/amd64
+      label-linux-arm64: 리눅스/arm64
+      label-linux-arm-v7: 리눅스/arm/v7
+      label-linux-arm-v6: 리눅스/arm/v6
+      label-linux-ppc64le: 리눅스/ppc64le
+      label-linux-s390x: 리눅스/s390x
+      label-windows-amd64: 윈도우/amd64
+      label-docker-image-download-service-url: "Docker 이미지 다운로드 서비스 URL:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "기본 인증:"
+      placeholder-username-password: 사용자 이름:비밀번호
+      label-docker-image: "도커 이미지:"
+      placeholder-alpine-latest: 알파인:최신
+      label-platform: "플랫폼:"
+      label-registry-url: "레지스트리 URL:"
+      placeholder-myregistry-com-optional: myregistry.com (선택 사항)
+      label-username: "사용자 이름:"
+      placeholder-optional: 선택 과목
+      label-password: "비밀번호:"
+      title-error: 오류
+      tag-docker-image-download-service-configuration-self-hosted: Docker 이미지 다운로드 서비스 구성(자체 호스팅)
+      tag-you-must-self-host-docker-image-download-service-see: Docker 이미지 다운로드 서비스는 직접 호스팅해야 합니다. 자세한 내용은 다음을 참조하세요.
+      tag-docker-image-download-service-install: Docker 이미지 다운로드 서비스 설치
+      tag-download-image: 이미지 다운로드
+  epub-to-markdown:
+    title: Epub을 Markdown으로 변환
+    description: EPUB 파일을 완전한 마크다운 콘텐츠로 변환합니다.
+    externalAccess: 널
+    texts:
+      label-markdown: 가격 인하
+      label-plain-text: 일반 텍스트
+      label-format: "체재:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: EPUB 파일을 여기에 드롭하거나 클릭하여 파일을 선택하세요.
+      title-metadata: 메타데이터
+      label-title: "제목:"
+      label-creator: "창조자:"
+      label-language: "언어:"
+      label-publisher: "발행자:"
+      label-identifier: "식별자:"
+      label-rights: "진상:"
+      label-description: "설명:"
+      title-epub-content: Epub 콘텐츠
+  explainshell:
+    title: Shell 명령어를 설명하세요
+    description: explainshell.com(또는 자체 호스팅 서비스)을 사용하여 셸 명령어를 설명하세요.
+    externalAccess: 이 도구는 (자체 호스팅하지 않는 한) https://explainshell.com을 호출하여 제공된 셸 명령어를 실행합니다.
+    texts:
+      label-custom-explain-shell-url: "사용자 지정 Explain Shell URL:"
+      placeholder-put-your-custom-explainshell-url-here: 여기에 사용자 지정 explainshell URL을 입력하세요...
+      label-shell-command: "셸 명령어:"
+      placeholder-shell-command-to-explain: 셸 명령어를 설명합니다
+      tag-explain-shell-configuration: 셸 구성에 대해 설명하세요
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: Explain Shell을 직접 호스팅하여 완벽한 개인 정보 보호를 누릴 수 있습니다. 자세한 내용은 다음을 참조하세요.
+      tag-local-explain-shell-docker-install: 로컬 Explain Shell docker 설치
+      tag-explain: 설명하다
+      tag-enter-a-shell-command-to-explain: 설명할 셸 명령어를 입력하세요.
+  frequency-converter:
+    title: 주파수 변환기
+    description: 주파수 단위 간 값 변환
+    externalAccess: 널
+  markdown-to-text:
+    title: 마크다운을 텍스트로 변환
+    description: 마크다운 파일을 일반 텍스트로 변환
+    externalAccess: 널
+    texts:
+      label-input-mardown: "입력 Mardown:"
+      placeholder-enter-your-markdown-here: 여기에 마크다운 코드를 입력하세요...
+      title-output-text: 출력 텍스트
+  rj45-memo:
+    title: RJ45 Cat6 배선 요약표
+    description: RJ45 Cat6 배선 완벽 가이드
+    externalAccess: 널
+  rsvp-reader:
+    title: RSVP 독자
+    description: 텍스트를 붙여넣으면 사용자가 설정한 분당 단어 수(WPM)로 단어가 하나씩 순차적으로 표시되는 고속 연속 시각
+      프레젠테이션(RSVP) 도구입니다.
+    externalAccess: 널
+    texts:
+      label-text-to-read: "읽을 텍스트:"
+      placeholder-paste-or-type-your-text-here: 여기에 텍스트를 붙여넣거나 입력하세요...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: PDF, EPUB 또는 txt 파일을 여기에 드롭하거나 클릭하여 파일을 선택하세요.
+      label-word-per-minute: "분당 단어 수:"
+      label-chunk-size: "청크 크기:"
+      label-large-chunk-slowdown: 대용량 청크 처리 속도 저하율(%)
+      title-pauses: 일시 정지(%)
+      label-sentence-end: 문장 끝
+      label-paragraph-end: 단락 끝
+      label-punctuation: 구두
+      title-appearance: 모습
+      label-font-size: "글자 크기:"
+      label-font-color: "글꼴 색상:"
+      label-background: "배경:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: 읽을 텍스트가 없습니다. 텍스트 탭에 텍스트를 입력해 주세요.
+      tag-play-space: 플레이(공간)
+      tag-pause-space: 일시 정지(스페이스)
+      tag-back: 뒤로 (←)
+      tag-next: 다음(→)
+      tag-reset: 다시 놓기
+      tag-: ↓
+      tag-or: "- 또는 -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: 마우스를 사용하지 않고 재생 및 탐색을 제어하세요.
+      tag-shortcut: 지름길
+      tag-action: 행동
+      tag-space: 공간
+      tag-play-pause: 재생/일시정지
+      tag-right-arrow: (오른쪽 화살표)
+      tag-skip-forward-one-chunk: 한 부분 건너뛰기
+      tag-left-arrow: (왼쪽 화살표)
+      tag-skip-backward-one-chunk: 한 덩어리 뒤로 건너뛰기
+      tag-up-arrow: (위쪽 화살표)
+      tag-increase-wpm: 분당 단어 수(WPM) 증가
+      tag-down-arrow: (아래쪽 화살표)
+      tag-decrease-wpm: 분당 단어 수(WPM) 감소
+      tag-home: 집
+      tag-jump-to-start: 시작 부분으로 이동
+      tag-end: 끝
+      tag-jump-to-end: 맨 끝으로 이동
+  speed-converter:
+    title: 속도 변환기
+    description: 속도 단위 간 값 변환
+    externalAccess: 널
+  tab-to-spaces:
+    title: 탭 키를 눌러 공백으로 이동
+    description: 탭을 여러 공백으로 변환
+    externalAccess: 널
+    texts:
+      label-spaces-per-tab: 탭당 공간
+      label-convert-only-leading-tabs: 최상위 탭만 변환
+      label-normalize-inner-spacing: 내부 간격을 정규화합니다
+      title-input-with-tabs: 입력(탭 포함)
+      placeholder-paste-text-with-tabs-here: 탭이 포함된 텍스트를 여기에 붙여넣으세요...
+      title-output-with-spaces: 출력 (공백 포함)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP 포트 테스터
+    description: TCP/UDP 테스트를 허용합니다(서버 측에서 웹소켓 프록시 사용).
+    externalAccess: 이 도구를 사용하려면 서버 측 WebSocket
+      서버(https://github.com/sharevb/ws-tcp-udp-bridge)가 필요합니다.
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "웹소켓 TCP/UDP 브리지 URL:"
+      placeholder-websocket-url: 웹소켓 URL
+      label-target: "목표:"
+      placeholder-target-ip: 대상 IP
+      placeholder-port: 포트
+      placeholder-protocol: 규약
+      title-logs: 로그
+      title-payload-builder: 페이로드 빌더
+      label-send-text-payload-can-add-r-n: 텍스트 페이로드를 전송합니다(\r\n을 추가할 수 있습니다).
+      placeholder-text-payload: 텍스트 페이로드
+      label-send-hex-payload: "16진수 페이로드를 전송하세요:"
+      placeholder-hex-payload-e-g-48656c6c6f: "16진수 페이로드(예: 48656c6c6f)"
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP 브리지 구성
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on: 이 도구를 사용하려면 WebSocket TCP/UDP 브리지를 호스팅해야 합니다.
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: 연결하다
+      tag-disconnect: 연결을 끊으세요
+      tag-apply-configuration: 구성 적용
+      tag-clear-logs: 로그 지우기
+      tag-send: 보내다
+  volume-flow-rate-converter:
+    title: 체적 유량 변환기
+    description: 체적 유량 단위 간 값 변환
+    externalAccess: 널
 about:
   alltools-title: 모든 {toolsCount}개 도구
   tools:

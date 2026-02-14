@@ -858,6 +858,9 @@ tools:
   json-prettify:
     title: JSON güzelleştirme ve biçimlendirme
     description: JSON dizinizi kullanıcı dostu, okunabilir bir biçime dönüştürün.
+    externalAccess: Bu araç, doğrulama isteği yapıldığında
+      https://www.schemastore.org adresinden bir JSON şeması indirebilir.
+      Dışarıya hiçbir veri gönderilmez.
   docker-run-to-docker-compose-converter:
     title: Docker çalıştırma ve Docker oluşturma dönüştürücüsü
     description: '"docker run" komutlarını docker-compose dosyalarına dönüştürür!'
@@ -1328,6 +1331,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: sabit kelime sarma = ref(yanlış);
       tag-word-wrap: Kelime Sarma?
+      tag-ignore-whitespaces: Sondaki boşlukları yok say?
   otp-generator:
     title: OTP kod üreteci
     description: Çok faktörlü kimlik doğrulaması için zaman ve olay tabanlı OTP (tek
@@ -1481,6 +1485,7 @@ tools:
       tag-add-a-new-query-parameter: Yeni bir Sorgu Parametresi ekleyin
       tag-no-cors: CORS yok
       tag-call-api: API'yi çağır
+    externalAccess: Bu araç yalnızca tarayıcınızda belirttiğiniz API uç noktasına çağrı yapar.
   area-converter:
     title: Alan Birimleri Dönüştürücü
     description: Alan birimleri arasındaki değerleri dönüştürün
@@ -1774,6 +1779,9 @@ tools:
       label-country: Ülke
       title-currencies-to-countries: Ülkelere Göre Para Birimleri
       label-currency: Para birimi
+    externalAccess: Bu araç,
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api adresinden
+      güncel döviz verilerini indirir.
   data-storage-unit-converter:
     title: Veri Depolama Birimi dönüştürücü
     description: Veri depolama veya aktarım birimlerini (bayt, bibayt, bit,
@@ -1995,6 +2003,9 @@ tools:
       label-dns-record-type: "DNS kayıt türü:"
       title-query-results: Sorgu sonuçları
       tag-send-dns-query: DNS sorgusu gönder
+    externalAccess: "Bu araç, aşağıdaki listede yer alan yanıt veren bir DOH uç
+      noktası üzerinden DNS sorgusu gönderir:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Docker Compose Format Dönüştürücü
     description: Docker Compose dosyasını V1, 2.x, 3.x veya CommonSpec arasında
@@ -2476,6 +2487,8 @@ tools:
       tag-signup-for-a-free-token: Ücretsiz bir jeton için kaydolun
       tag-click-on-button-above-to-get-latest-infos: En son bilgileri almak için yukarıdaki butona tıklayın
       tag-localize-on-open-street-map: Açık Sokak Haritasında Yerelleştirin
+    externalAccess: Bu araç, verilen IP adreslerini https://ipinfo.io/ adresine
+      göndererek IP coğrafi konum bilgisi alır.
   ip-include-exclude:
     title: IP Alt Ağları Hariç Tutma Hesaplayıcısı
     description: İzin verilmeyen bir IP Aralıkları/Maskesi/CIDR listesini izin
@@ -2642,6 +2655,9 @@ tools:
       title-schema-validation-errors: Şema Doğrulama Hataları
       label-indent-size-0-compact: "Girinti boyutu (0 = Kompakt):"
       repair-json: JSON'u onar
+    externalAccess: Bu araç, doğrulama isteği yapıldığında
+      https://www.schemastore.org adresinden bir JSON şeması indirebilir.
+      Dışarıya hiçbir veri gönderilmez.
   json-escaper:
     title: Json Kaçış/Kaçış Kaldırıcı
     description: JSON dizesinden kaçış ve kaçışı kaldırma
@@ -2671,6 +2687,9 @@ tools:
       label-indent-size-0-compact: "Girinti boyutu (0 = Sıkıştırılmış):"
       title-repaired-version: Otomatik Onarılmış ve Biçimlendirilmiş sürüm
       label-auto-repair-json: "Otomobil Tamir JSON'u:"
+    externalAccess: Bu araç, doğrulama isteği yapıldığında
+      https://www.schemastore.org adresinden bir JSON şeması indirebilir.
+      Dışarıya hiçbir veri gönderilmez.
   json-size-analyzer:
     title: Json Boyut Analizcisi
     description: JSON düğümlerinin göreceli ağırlıklarını ölçün
@@ -2909,6 +2928,9 @@ tools:
         zaman alabilir."
       tag-this-tool-required-internet-connection-to-access-models: Bu araç internet bağlantısı gerektiriyordu (modellere erişmek için)
       tag-latex-result: Lateks Sonucu
+    externalAccess: Bu araç, https://cdnjs.cloudflare.com adresinden MathJaX'i ve
+      https://huggingface.co/ adresinden Latex OCR tanıma modelini
+      (Xenova/texify) indirir.
   mermaid-exporter:
     title: Denizkızı ihracatçısı
     description: Markdown'ı (Deniz Kızı) görüntüye dönüştürün ve PNG, JPG ve SVG'ye
@@ -2976,6 +2998,10 @@ tools:
       label-country-name: "Ülke Adı:"
       label-continent-name: "Kıta Adı:"
       tag-refresh: Yenile
+    externalAccess: Bu araç, https://www.ipify.org/ adresinin API'sini kullanarak
+      IPv4/6 adreslerini alır ve
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/ adresinden IP
+      bilgisi verilerini indirir.
   nano-memo:
     title: Nano Hile Sayfası
     description: Nano Editör Hile Sayfası
@@ -3009,6 +3035,7 @@ tools:
       label-spaces-chars: Boşluk karakterleri
       label-word-count-no-punct: Kelime sayısı (nokta yok)
       tag-ocr: OCR
+    externalAccess: Bu araç, https://cdn.jsdelivr.net adresinden OCR dil modellerini indirir.
   option43-generator:
     title: Option43 jeneratörü
     description: Option43 Wifi DHCP yapılandırmasını oluşturun
@@ -4989,6 +5016,8 @@ tools:
         email-1: E-posta
         email-0: E-posta
         email: E-posta
+        otpauth: OTP Kimlik Doğrulaması
+        otpmigration: OTP Göçü
   SplashScreen:
     text:
       pomodoro-timer: Pomodoro Zamanlayıcısı
@@ -5267,6 +5296,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: "{0} alınamadı"
         failed-to-fetch-linkurl: "{0} alınamadı"
+    externalAccess: Bu araç, belirtilen URL'leri yalnızca tarayıcınızda indirir.
   mic-tester:
     title: Mikrofon Test Cihazı
     description: Mikrofonunuzdan gelen sesi tekrar oynatın ve görselleştirin, bir
@@ -5934,10 +5964,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "Adı kopyalamak için tıklayın: {0}"
       click-to-copy-completecodepoints: "Kopyalamak için tıklayın: {0}"
       click-to-copy-emojiinfo-unicode: "Kopyalamak için tıklayın: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: "{0} ile yapıldı\\n"
   json-viewer:
     texts:
       label-sort-keys: "Sıralama anahtarları :"
@@ -6216,6 +6242,8 @@ tools:
         istiyorsunuz?
       tag-this-dnsbl-explanation-and-removal-guide: bu DNSBL açıklaması ve kaldırma kılavuzu
       tag-: .
+    externalAccess: Bu araç, sağlanan IP adresini kontrol eder ve
+      https://cloudflare-dns.com/dns-query üzerinden DNSBL'ye gönderir.
   docker-compose-memo:
     title: Docker Compose hile sayfası
     description: Docker Compose format hile sayfası
@@ -6801,6 +6829,8 @@ tools:
       placeholder-to: İle
       placeholder-translation-will-appear-here: Çeviri burada görünecek...
       tag-translate: Çevir
+    externalAccess: Bu araç, https://huggingface.co/ adresinden çeviri modellerini
+      (Xenova/opus-mt-[source]-[target]) indirir.
   unicode-to-gsm7:
     title: Unicode'dan GSM-7'ye
     description: Unicode metnini SMS'e kodlayın GSM-7 kodlaması ve ilgili SMS
@@ -7049,6 +7079,7 @@ tools:
       placeholder-diceware-passwords: Zar yazılımı şifreleri...
       tag-copy: Kopyala
       tag-refresh: Yenile
+      label-russian: Rusça
   gtin-validator:
     title: GTIN Doğrulayıcı
     description: GTIN (Küresel Ticaret Tanımlayıcı Numarası, eski adıyla EAN
@@ -7070,6 +7101,8 @@ tools:
       label-domain-to-check: "Kontrol edilecek alan adı:"
       placeholder-enter-a-domain-e-g-example-com: Bir alan adı girin (örneğin example.com)
       tag-lookup-whois: WHOIS'i arayın
+    externalAccess: Bu araç, https://www.iana.org/whois adresinden kontrol edilecek
+      alan adıyla yeni bir sekme açar.
   keyboard-layout-converter:
     title: Klavye Düzeni Dönüştürücü
     description: Tuş sırasını bir klavye düzeninden diğerine dönüştürün
@@ -7286,6 +7319,9 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Şablonları seçin (örneğin node, python, vue)
       title-gitignore: .gitignore
       tag-generate: Oluştur
+    externalAccess: Bu araç, Github API'sini kullanarak
+      https://github.com/github/gitignore adresinden .gitignore dosyasını
+      indirir.
   i-and-l-checker:
     title: I ve L Denetleyicisi
     description: 1, l, I, 0, O vurgulanarak bir şifre veya metin kontrol edilir
@@ -7460,6 +7496,9 @@ tools:
       failed: Arızalı
       no-redirect: Yönlendirme yok
       expanded: Genişletilmiş
+    externalAccess: Bu araç, HTTP başlıklarını ve yönlendirmeleri almak için (veri
+      indirilmeden) HEAD HTTP isteği göndermek üzere bir CORS Anywhere örneği
+      (varsayılan olarak https://cors.outils-libre.org) kullanır.
   amortization-calculator:
     title: Amortisman Hesaplayıcısı
     description: Aylık ödeme dökümleriyle kredi geri ödeme planlarını hesaplayın.
@@ -7559,6 +7598,9 @@ tools:
       placeholder-select-templates: Şablonları seçin
       title-preview: Önizleme
       tag-fetch-generate: Getir ve Oluştur
+    externalAccess: Bu araç, Github API'sini kullanarak
+      https://github.com/gitattributes/gitattributes adresinden .gitattributes
+      dosyasını indirir.
   html-to-xhtml:
     title: HTML'den XHTML'e
     description: HTML'i katı XHTML'e dönüştürün (XML ayrıştırılabilir, kendi kendini
@@ -7597,6 +7639,8 @@ tools:
       placeholder-select-a-language: Bir dil seçin
       tag-search-on-wiktionary: Wiktionary'de arama yapın
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Bir kelime girin ve Wiktionary'yi yüklemek için bir dil seçin.
+    externalAccess: Bu araç, https://www.wiktionary.org/ adresindeki kelimelerin
+      tanımlarını (dile göre) bir iframe içinde arar.
   ptr-dns-generator:
     title: PTR DNS Oluşturucu
     description: DNS PTR kayıtları oluşturun
@@ -7710,6 +7754,201 @@ tools:
       label-thousand-separators: "Bin ayırıcı:"
       label-to: "İle:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: "{0} ile yapıldı"
+  acceleration-converter:
+    title: Hızlanma Dönüştürücü
+    description: Hızlanma birimleri arasında değer dönüştürme
+    externalAccess: hükümsüz
+  docker-image-downloader:
+    title: Docker Görüntü İndirici
+    description: Belirtilen Docker kayıt defteri, mimari ve imaj adına göre bir
+      Docker imajı indirme
+    externalAccess: Bu araç, kayıt defterinden Docker imajlarını indirir (ve sizin
+      sağladığınız kullanıcı adı, parola veya belirteç ile).
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: Windows/amd64
+      label-docker-image-download-service-url: "Docker Görüntüsü İndirme Servisi URL'si:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Temel Kimlik Doğrulama:"
+      placeholder-username-password: kullanıcı adı:şifre
+      label-docker-image: "Docker Görüntüsü:"
+      placeholder-alpine-latest: alp:son
+      label-platform: "Platform:"
+      label-registry-url: "Kayıt URL'si:"
+      placeholder-myregistry-com-optional: myregistry.com (isteğe bağlı)
+      label-username: "Kullanıcı adı:"
+      placeholder-optional: İsteğe bağlı
+      label-password: "Şifre:"
+      title-error: Hata
+      tag-docker-image-download-service-configuration-self-hosted:
+        Docker Görüntü İndirme Servisi Yapılandırması (kendi sunucunuzda
+        barındırılan)
+      tag-you-must-self-host-docker-image-download-service-see: "Docker Görüntü İndirme Hizmetini kendiniz barındırmalısınız. Bkz:"
+      tag-docker-image-download-service-install: Docker Görüntü İndirme Servisi Kurulumu
+      tag-download-image: Resmi İndir
+  epub-to-markdown:
+    title: Epub'dan Markdown'a
+    description: EPUB dosyasını tam Markdown içeriğine dönüştürün
+    externalAccess: hükümsüz
+    texts:
+      label-markdown: Markdown
+      label-plain-text: Düz Metin
+      label-format: "Biçim:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: EPUB dosyasını buraya sürükleyin veya dosya seçmek için tıklayın.
+      title-metadata: Meta Veriler
+      label-title: "Başlık:"
+      label-creator: "Oluşturan:"
+      label-language: "Dil:"
+      label-publisher: "Yayıncı:"
+      label-identifier: "Tanımlayıcı:"
+      label-rights: "Haklar:"
+      label-description: "Tanım:"
+      title-epub-content: Epub İçeriği
+  explainshell:
+    title: Kabuk Komutlarını Açıklayın
+    description: Bir shell komutunun açıklamasını öğrenmek için explainshell.com'u
+      (veya kendi sunucunuzda barındırdığınız bir hizmeti) kullanın.
+    externalAccess: Bu araç, (kendi sunucunuzda barındırmadığınız sürece)
+      https://explainshell.com adresine sağlanan bu shell komutunu çağırır.
+    texts:
+      label-custom-explain-shell-url: "Özel Explain Shell URL'si:"
+      placeholder-put-your-custom-explainshell-url-here: Özel explainshell URL'nizi buraya yazın...
+      label-shell-command: "Kabuk komutu:"
+      placeholder-shell-command-to-explain: Shell komutunu açıklamak
+      tag-explain-shell-configuration: Kabuk Yapılandırmasını Açıklayın
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see:
+        "Tamamen gizlilik sağlamak için Explain Shell'i kendi sunucunuzda
+        barındırabilirsiniz. Bakınız:"
+      tag-local-explain-shell-docker-install: Yerel Açıklama Kabuğu docker kurulumu
+      tag-explain: Açıklamak
+      tag-enter-a-shell-command-to-explain: Açıklamak için bir kabuk komutu girin.
+  frequency-converter:
+    title: Frekans Dönüştürücü
+    description: Frekans birimleri arasında değer dönüştürme
+    externalAccess: hükümsüz
+  markdown-to-text:
+    title: Markdown'dan Metne
+    description: Markdown'ı düz metne dönüştür
+    externalAccess: hükümsüz
+    texts:
+      label-input-mardown: "Mardown'u girin:"
+      placeholder-enter-your-markdown-here: Markdown kodunuzu buraya girin...
+      title-output-text: Çıktı metni
+  rj45-memo:
+    title: RJ45 Cat6 Kablolama Hızlı Referans Kılavuzu
+    description: RJ45 Cat6 Kablolama Kılavuzu
+    externalAccess: hükümsüz
+  rsvp-reader:
+    title: RSVP Okuyucusu
+    description: Hızlı Seri Görsel Sunum (RSVP) aracı; metni yapıştırmanıza ve
+      kelimelerin yapılandırılabilir bir dakikada kelime (WPM) değerinde tek tek
+      görüntülenmesine olanak tanır.
+    externalAccess: hükümsüz
+    texts:
+      label-text-to-read: "Okunacak metin:"
+      placeholder-paste-or-type-your-text-here: Metninizi buraya yapıştırın veya yazın...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file:
+        PDF, EPUB veya TXT dosyasını buraya sürükleyip bırakın veya dosya seçmek
+        için tıklayın.
+      label-word-per-minute: "Dakikada kelime sayısı:"
+      label-chunk-size: "Parça boyutu:"
+      label-large-chunk-slowdown: Büyük dilim yavaşlaması (%)
+      title-pauses: Duraklamalar (%)
+      label-sentence-end: Cümle sonu
+      label-paragraph-end: Paragraf sonu
+      label-punctuation: Noktalama
+      title-appearance: Dış görünüş
+      label-font-size: "Yazı tipi boyutu:"
+      label-font-color: "Yazı rengi:"
+      label-background: "Arka plan:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Okunacak metin yok. Lütfen Metin sekmesine bir metin girin.
+      tag-play-space: Oyun (alanı)
+      tag-pause-space: Duraklat (boşluk)
+      tag-back: Geri (←)
+      tag-next: Sonraki (→)
+      tag-reset: Sıfırla
+      tag-: ↓
+      tag-or: "- VEYA -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Fareye dokunmadan oynatma ve gezinmeyi kontrol edin.
+      tag-shortcut: Kısayol
+      tag-action: Aksiyon
+      tag-space: Uzay
+      tag-play-pause: Oynat / Duraklat
+      tag-right-arrow: (Sağ Ok)
+      tag-skip-forward-one-chunk: Bir sonraki bölüme geçelim
+      tag-left-arrow: (Sol Ok)
+      tag-skip-backward-one-chunk: Bir adım geriye atla
+      tag-up-arrow: (Yukarı Ok)
+      tag-increase-wpm: Dakikadaki kelime sayısını artırın
+      tag-down-arrow: (Aşağı Ok)
+      tag-decrease-wpm: Dakikadaki kelime sayısını azaltın
+      tag-home: Ev
+      tag-jump-to-start: Başlamak için atla
+      tag-end: Son
+      tag-jump-to-end: Sonuna atla
+  speed-converter:
+    title: Hız Dönüştürücü
+    description: Hız birimleri arasında değer dönüştürme
+    externalAccess: hükümsüz
+  tab-to-spaces:
+    title: Sekme tuşuyla boşluklara geçin
+    description: Sekmeyi birden fazla boşluğa dönüştür
+    externalAccess: hükümsüz
+    texts:
+      label-spaces-per-tab: Sekme başına boşluk
+      label-convert-only-leading-tabs: Yalnızca baştaki sekmeleri dönüştürün
+      label-normalize-inner-spacing: İç boşluğu normalleştirin
+      title-input-with-tabs: Giriş (sekmelerle birlikte)
+      placeholder-paste-text-with-tabs-here: Sekmeli metni buraya yapıştırın...
+      title-output-with-spaces: Çıktı (boşluklarla birlikte)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP Port Test Cihazı
+    description: TCP/UDP'yi test etmeyi sağlar (sunucu tarafında bir websocket proxy
+      kullanarak).
+    externalAccess: Bu araç, sunucu tarafında bir WebSocket sunucusuna ihtiyaç duyar
+      (https://github.com/sharevb/ws-tcp-udp-bridge).
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "WebSocket TCP/UDP Köprü URL'si:"
+      placeholder-websocket-url: WebSocket URL
+      label-target: "Hedef:"
+      placeholder-target-ip: Hedef IP
+      placeholder-port: Liman
+      placeholder-protocol: Protokol
+      title-logs: Günlükler
+      title-payload-builder: Yük Oluşturucu
+      label-send-text-payload-can-add-r-n: "Metin içeriği gönder (ek olarak \\r \\n de eklenebilir):"
+      placeholder-text-payload: Metin yükü
+      label-send-hex-payload: "Hex veri paketini gönder:"
+      placeholder-hex-payload-e-g-48656c6c6f: Hex veri yükü (ör. 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP Köprü Yapılandırması
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on:
+        Bu aracı kullanmak için, WebSocket TCP/UDP Köprüsü tabanlı bir sunucuya
+        sahip olmanız gerekmektedir.
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Bağlamak
+      tag-disconnect: Bağlantıyı kes
+      tag-apply-configuration: Yapılandırmayı Uygula
+      tag-clear-logs: Günlükleri temizle
+      tag-send: Göndermek
+  volume-flow-rate-converter:
+    title: Hacim Akış Hızı Dönüştürücü
+    description: Hacimsel akış hızı birimleri arasında değerleri dönüştürün.
+    externalAccess: hükümsüz
 about:
   alltools-title: Tüm {toolsCount} Araç
   tools:

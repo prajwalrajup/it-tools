@@ -636,6 +636,9 @@ tools:
     title: Upiększanie i formatowanie JSON
     description: Upiększ swój ciąg JSON, aby uzyskać przyjazny i czytelny dla
       człowieka format.
+    externalAccess: To narzędzie może pobrać schemat JSON z
+      https://www.schemastore.org po otrzymaniu prośby o weryfikację. Żadne dane
+      nie są wysyłane na zewnątrz.
   docker-run-to-docker-compose-converter:
     title: Konwerter Docker Run na Docker Compose
     description: Przekształca polecenia „docker run” w pliki docker-compose!
@@ -1110,6 +1113,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = ref(false);
       tag-word-wrap: Zawijanie wyrazów?
+      tag-ignore-whitespaces: Zignorować końcowe spacje?
   otp-generator:
     title: Generator kodu OTP
     description: Generuj i weryfikuj jednorazowe hasła OTP (Time- i Event-Always
@@ -1263,6 +1267,8 @@ tools:
       tag-add-a-new-query-parameter: Dodaj nowy parametr zapytania
       tag-no-cors: Brak CORS
       tag-call-api: API połączeń
+    externalAccess: To narzędzie wywołuje wyłącznie punkt końcowy API podany przez
+      Ciebie w przeglądarce.
   area-converter:
     title: Konwerter jednostek powierzchni
     description: Konwertuj wartości między jednostkami powierzchni
@@ -1557,6 +1563,8 @@ tools:
       label-country: Kraj
       title-currencies-to-countries: Waluty do krajów
       label-currency: Waluta
+    externalAccess: To narzędzie pobiera nowe dane walutowe z
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: Konwerter jednostek pamięci danych
     description: Konwertuj jednostki przechowywania lub przesyłania danych (bajty,
@@ -1782,6 +1790,9 @@ tools:
       label-dns-record-type: "Typ rekordu DNS:"
       title-query-results: Wyniki zapytania
       tag-send-dns-query: Wyślij zapytanie DNS
+    externalAccess: "To narzędzie wysyła zapytanie DNS przez odpowiadający punkt
+      końcowy DOH z następującej listy:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Konwerter formatów Docker Compose
     description: Konwertuj plik Docker Compose pomiędzy wersjami V1, 2.x, 3.x lub
@@ -2250,6 +2261,8 @@ tools:
       tag-signup-for-a-free-token: Zarejestruj się, aby otrzymać darmowy token
       tag-click-on-button-above-to-get-latest-infos: Kliknij przycisk powyżej, aby uzyskać najnowsze informacje
       tag-localize-on-open-street-map: Zlokalizuj na Open Street Map
+    externalAccess: To narzędzie wysyła dostarczone adresy IP do https://ipinfo.io/
+      w celu uzyskania informacji o geolokalizacji IP
   ip-include-exclude:
     title: Kalkulator wykluczeń podsieci IP
     description: Odejmij niedozwolone zakresy adresów IP/maski/listę CIDR od
@@ -2419,6 +2432,9 @@ tools:
       title-schema-validation-errors: Błędy walidacji schematu
       label-indent-size-0-compact: "Rozmiar wcięcia (0 = Kompaktowy):"
       repair-json: Napraw JSON
+    externalAccess: To narzędzie może pobrać schemat JSON z
+      https://www.schemastore.org po otrzymaniu prośby o weryfikację. Żadne dane
+      nie są wysyłane na zewnątrz.
   json-escaper:
     title: Json Escaper/Unescaper
     description: Ucieczka i usunięcie ucieczki z ciągu JSON
@@ -2448,6 +2464,9 @@ tools:
       label-indent-size-0-compact: "Rozmiar wcięcia (0 = Kompaktowy):"
       title-repaired-version: Wersja naprawiona i sformatowana automatycznie
       label-auto-repair-json: "Naprawa samochodów JSON:"
+    externalAccess: To narzędzie może pobrać schemat JSON z
+      https://www.schemastore.org po otrzymaniu prośby o weryfikację. Żadne dane
+      nie są wysyłane na zewnątrz.
   json-size-analyzer:
     title: Analizator rozmiaru JSON
     description: Pomiar względnych wag węzłów JSON
@@ -2687,6 +2706,9 @@ tools:
         Do korzystania z tego narzędzia wymagane jest połączenie internetowe (w
         celu uzyskania dostępu do modeli)
       tag-latex-result: Wynik lateksu
+    externalAccess: To narzędzie pobiera MathJaX ze strony
+      https://cdnjs.cloudflare.com i model rozpoznawania OCR Latex
+      (Xenova/texify) ze strony https://huggingface.co/
   mermaid-exporter:
     title: Eksporter syren
     description: Konwertuj Markdown (Syrenę) na obraz i pozwól na eksport do PNG, JPG i SVG
@@ -2755,6 +2777,9 @@ tools:
       label-country-name: "Nazwa kraju:"
       label-continent-name: "Nazwa kontynentu:"
       tag-refresh: Odświeżać
+    externalAccess: To narzędzie pobiera adresy IPv4/6 za pomocą interfejsu API
+      https://www.ipify.org/ i dane informacyjne dotyczące adresu IP z
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: Nano CheatSheet
     description: Nano Editor Cheatsheet
@@ -2786,6 +2811,7 @@ tools:
       label-spaces-chars: Spacje
       label-word-count-no-punct: Liczba słów (bez kropki)
       tag-ocr: OCR
+    externalAccess: To narzędzie pobiera modele języków OCR ze strony https://cdn.jsdelivr.net
   option43-generator:
     title: Generator Option43
     description: Wygeneruj konfigurację DHCP Wi-Fi Option43
@@ -4748,6 +4774,8 @@ tools:
         email-1: E-mail
         email-0: E-mail
         email: E-mail
+        otpauth: Autoryzacja OTP
+        otpmigration: Migracja OTP
   SplashScreen:
     text:
       pomodoro-timer: Timer Pomodoro
@@ -5088,6 +5116,8 @@ tools:
       text:
         failed-to-fetch-linkurl-0: Nie udało się pobrać {0}
         failed-to-fetch-linkurl: Nie udało się pobrać {0}
+    externalAccess: To narzędzie pobiera wyłącznie dostarczone adresy URL w Twojej
+      przeglądarce.
   qr-code-generator:
     texts:
       label-text: "Tekst:"
@@ -5763,10 +5793,6 @@ tools:
     text:
       loading-more-groups: Ładowanie większej liczby grup...
       displayedsearchresults-length-found: (znaleziono {0})
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: Wykonano z {0}\n
   json-viewer:
     texts:
       label-sort-keys: "Klucze sortowania:"
@@ -6248,6 +6274,8 @@ tools:
         liście? Sprawdź
       tag-this-dnsbl-explanation-and-removal-guide: ten przewodnik wyjaśniający i usuwający DNSBL
       tag-: .
+    externalAccess: To narzędzie sprawdza i wysyła podany adres IP do DNSBL poprzez
+      https://cloudflare-dns.com/dns-query
   docker-compose-memo:
     title: ściągawka Docker Compose
     description: Arkusz ściągawek dotyczący formatu Docker Compose
@@ -6831,6 +6859,8 @@ tools:
       placeholder-to: Do
       placeholder-translation-will-appear-here: Tłumaczenie pojawi się tutaj...
       tag-translate: Tłumaczyć
+    externalAccess: To narzędzie pobiera modele tłumaczeń
+      (Xenova/opus-mt-[źródło]-[cel]) ze strony https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode do GSM-7
     description: Zakoduj tekst Unicode do kodowania SMS GSM-7 i wyświetl powiązane
@@ -7079,6 +7109,7 @@ tools:
       placeholder-diceware-passwords: Hasła Diceware...
       tag-copy: Kopia
       tag-refresh: Odświeżać
+      label-russian: rosyjski
   gtin-validator:
     title: Walidator GTIN
     description: Sprawdzanie i wyświetlanie informacji o GTIN (Global Trade
@@ -7099,6 +7130,8 @@ tools:
       label-domain-to-check: "Domena do sprawdzenia:"
       placeholder-enter-a-domain-e-g-example-com: Wprowadź domenę (np. example.com)
       tag-lookup-whois: Wyszukaj WHOIS
+    externalAccess: To narzędzie uruchamia nową kartę z domeną do sprawdzenia pod
+      adresem https://www.iana.org/whois
   keyboard-layout-converter:
     title: Konwerter układu klawiatury
     description: Konwersja sekwencji klawiszy z jednego układu klawiatury na inny
@@ -7316,6 +7349,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: Wybierz szablony (np. node, python, vue)
       title-gitignore: .gitignore
       tag-generate: Spowodować
+    externalAccess: To narzędzie pobiera .gitignore ze strony
+      https://github.com/github/gitignore za pomocą interfejsu API Github
   i-and-l-checker:
     title: Kontroler I i L
     description: Sprawdź hasło lub tekst z zaznaczeniem 1, l, I, 0, O
@@ -7485,6 +7520,9 @@ tools:
       failed: Przegrany
       no-redirect: Brak przekierowania
       expanded: Rozszerzony
+    externalAccess: To narzędzie korzysta z instancji CORS Anywhere (domyślnie
+      https://cors.outils-libre.org) w celu wysłania żądania HEAD http (bez
+      pobierania danych) w celu pobrania nagłówków HTTP i przekierowań
   amortization-calculator:
     title: Kalkulator amortyzacji
     description: Oblicz harmonogramy spłat kredytu z podziałem na miesięczne raty
@@ -7584,6 +7622,9 @@ tools:
       placeholder-select-templates: Wybierz szablony
       title-preview: Zapowiedź
       tag-fetch-generate: Pobierz i wygeneruj
+    externalAccess: To narzędzie pobiera .gitattributes ze strony
+      https://github.com/gitattributes/gitattributes za pomocą interfejsu API
+      Github
   html-to-xhtml:
     title: HTML do XHTML
     description: Konwertuj HTML na ścisły XHTML (parsowalny XML, samozamykające się
@@ -7622,6 +7663,8 @@ tools:
       placeholder-select-a-language: Wybierz język
       tag-search-on-wiktionary: Szukaj w Wikisłowniku
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: Wprowadź słowo i wybierz język, aby załadować Wiktionary
+    externalAccess: To narzędzie wyszukuje definicje słów w
+      https://www.wiktionary.org/ (według języka) w ramce iframe.
   ptr-dns-generator:
     title: Generator DNS PTR
     description: Generuj rekordy DNS PTR
@@ -7735,6 +7778,194 @@ tools:
       label-thousand-separators: "Separatory tysięcy:"
       label-to: "Do:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: Wykonano z {0}
+  acceleration-converter:
+    title: Konwerter przyspieszenia
+    description: Konwertuj wartości między jednostkami przyspieszenia
+    externalAccess: nieważny
+  docker-image-downloader:
+    title: Docker Image Downloader
+    description: Pobierz obraz Dockera, podając rejestr Dockera, architekturę i nazwę obrazu
+    externalAccess: To narzędzie pobiera obrazy Docker z rejestru (za pomocą podanej
+      nazwy użytkownika, hasła lub tokena)
+    texts:
+      label-linux-amd64: Linux/AMD64
+      label-linux-arm64: Linux/arm64
+      label-linux-arm-v7: Linux/arm/v7
+      label-linux-arm-v6: Linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: Linux/s390x
+      label-windows-amd64: okna/amd64
+      label-docker-image-download-service-url: "Adres URL usługi pobierania obrazów Docker:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "Uwierzytelnianie podstawowe:"
+      placeholder-username-password: nazwa użytkownika:hasło
+      label-docker-image: "Obraz Dockera:"
+      placeholder-alpine-latest: alpejski:najnowszy
+      label-platform: "Platforma:"
+      label-registry-url: "Adres URL rejestru:"
+      placeholder-myregistry-com-optional: myregistry.com (opcjonalnie)
+      label-username: "Nazwa użytkownika:"
+      placeholder-optional: Fakultatywny
+      label-password: "Hasło:"
+      title-error: Błąd
+      tag-docker-image-download-service-configuration-self-hosted: Konfiguracja usługi pobierania obrazów Docker (hostowana samodzielnie)
+      tag-you-must-self-host-docker-image-download-service-see: "Musisz samodzielnie hostować usługę pobierania obrazów Docker. Zobacz:"
+      tag-docker-image-download-service-install: Instalacja usługi pobierania obrazów Docker
+      tag-download-image: Pobierz obraz
+  epub-to-markdown:
+    title: Epub do Markdown
+    description: Konwertuj plik EPUB na pełną zawartość Markdown
+    externalAccess: nieważny
+    texts:
+      label-markdown: Obniżka cen
+      label-plain-text: Zwykły tekst
+      label-format: "Format:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: Upuść tutaj plik EPUB lub kliknij, aby wybrać plik
+      title-metadata: Metadane
+      label-title: "Tytuł:"
+      label-creator: "Twórca:"
+      label-language: "Język:"
+      label-publisher: "Wydawca:"
+      label-identifier: "Identyfikator:"
+      label-rights: "Prawa:"
+      label-description: "Opis:"
+      title-epub-content: Zawartość Epub
+  explainshell:
+    title: Wyjaśnij polecenie powłoki
+    description: Użyj explainshell.com (lub hostowanego samodzielnie), aby wyjaśnić
+      polecenie powłoki
+    externalAccess: To narzędzie wywołuje https://explainshell.com (chyba że sam go
+      hostujesz) to udostępnione polecenie powłoki.
+    texts:
+      label-custom-explain-shell-url: "Niestandardowy adres URL powłoki wyjaśniającej:"
+      placeholder-put-your-custom-explainshell-url-here: Wpisz tutaj swój własny adres URL explainshell...
+      label-shell-command: "Polecenie powłoki:"
+      placeholder-shell-command-to-explain: Polecenie powłoki do wyjaśnienia
+      tag-explain-shell-configuration: Wyjaśnij konfigurację powłoki
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see:
+        "Możesz samodzielnie hostować Explain Shell, aby zapewnić sobie
+        całkowitą prywatność. Zobacz:"
+      tag-local-explain-shell-docker-install: Instalacja lokalnej powłoki dokera Explain
+      tag-explain: Wyjaśnić
+      tag-enter-a-shell-command-to-explain: Wprowadź polecenie powłoki, aby wyjaśnić
+  frequency-converter:
+    title: Konwerter częstotliwości
+    description: Konwertuj wartości między jednostkami częstotliwości
+    externalAccess: nieważny
+  markdown-to-text:
+    title: Markdown na tekst
+    description: Konwertuj markdown na zwykły tekst
+    externalAccess: nieważny
+    texts:
+      label-input-mardown: "Wejście Mardown:"
+      placeholder-enter-your-markdown-here: Wprowadź tutaj swoją obniżkę...
+      title-output-text: Tekst wyjściowy
+  rj45-memo:
+    title: Arkusz informacyjny okablowania RJ45 Cat6
+    description: Kompletna ściągawka dotycząca okablowania RJ45 Cat6
+    externalAccess: nieważny
+  rsvp-reader:
+    title: Czytnik RSVP
+    description: Narzędzie RSVP (Rapid Serial Visual Presentation) umożliwiające
+      wklejanie tekstu i wyświetlanie wyrazów pojedynczo z konfigurowalną liczbą
+      słów na minutę (WPM).
+    externalAccess: nieważny
+    texts:
+      label-text-to-read: "Tekst do przeczytania:"
+      placeholder-paste-or-type-your-text-here: Wklej lub wpisz tutaj swój tekst...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: Przeciągnij plik PDF, EPUB lub txt tutaj lub kliknij, aby wybrać plik
+      label-word-per-minute: "Słowa na minutę:"
+      label-chunk-size: "Wielkość kawałka:"
+      label-large-chunk-slowdown: Spowolnienie dużego fragmentu (%)
+      title-pauses: Pauzy (%)
+      label-sentence-end: Koniec zdania
+      label-paragraph-end: Koniec akapitu
+      label-punctuation: Interpunkcja
+      title-appearance: Wygląd
+      label-font-size: "Rozmiar czcionki:"
+      label-font-color: "Kolor czcionki:"
+      label-background: "Tło:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: Brak tekstu do odczytania. Wpisz tekst w zakładce Tekst.
+      tag-play-space: Gra (przestrzeń)
+      tag-pause-space: Pauza (spacja)
+      tag-back: Wstecz (←)
+      tag-next: Dalej (→)
+      tag-reset: Nastawić
+      tag-: ↓
+      tag-or: "- LUB -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: Steruj odtwarzaniem i nawigacją bez dotykania myszy.
+      tag-shortcut: Skrót
+      tag-action: Działanie
+      tag-space: Przestrzeń
+      tag-play-pause: Odtwórz / Pauza
+      tag-right-arrow: (Strzałka w prawo)
+      tag-skip-forward-one-chunk: Przewiń o jeden fragment do przodu
+      tag-left-arrow: (Strzałka w lewo)
+      tag-skip-backward-one-chunk: Przeskocz o jeden fragment do tyłu
+      tag-up-arrow: (Strzałka w górę)
+      tag-increase-wpm: Zwiększ WPM
+      tag-down-arrow: (Strzałka w dół)
+      tag-decrease-wpm: Zmniejsz WPM
+      tag-home: Dom
+      tag-jump-to-start: Przejdź do początku
+      tag-end: Koniec
+      tag-jump-to-end: Przejdź do końca
+  speed-converter:
+    title: Konwerter prędkości
+    description: Konwertuj wartości między jednostkami prędkości
+    externalAccess: nieważny
+  tab-to-spaces:
+    title: Tab do spacji
+    description: Konwertuj tabulator na wiele spacji
+    externalAccess: nieważny
+    texts:
+      label-spaces-per-tab: Spacje na tabulator
+      label-convert-only-leading-tabs: Konwertuj tylko wiodące tabulatory
+      label-normalize-inner-spacing: Normalizuj odstępy wewnętrzne
+      title-input-with-tabs: Wejście (z kartami)
+      placeholder-paste-text-with-tabs-here: Wklej tutaj tekst z tabulatorami...
+      title-output-with-spaces: Wyjście (ze spacjami)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: Tester portów TCP/UDP
+    description: Umożliwia testowanie protokołu TCP/UDP (używając serwera proxy
+      websocket po stronie serwera)
+    externalAccess: To narzędzie wymaga serwera WebSocket po stronie serwera
+      (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "Adres URL mostu WebSocket TCP/UDP:"
+      placeholder-websocket-url: Adres URL WebSocket
+      label-target: "Cel:"
+      placeholder-target-ip: Docelowy adres IP
+      placeholder-port: Port
+      placeholder-protocol: Protokół
+      title-logs: Dzienniki
+      title-payload-builder: Konstruktor ładunku
+      label-send-text-payload-can-add-r-n: "Wyślij ładunek tekstowy (można dodać \\r \\n):"
+      placeholder-text-payload: Ładunek tekstowy
+      label-send-hex-payload: "Wyślij ładunek heksadecymalny:"
+      placeholder-hex-payload-e-g-48656c6c6f: Ładunek szesnastkowy (np. 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: Konfiguracja mostu WebSocket TCP/UDP
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on: Aby użyć tego narzędzia, musisz hostować most WebSocket TCP/UDP oparty na
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: Łączyć
+      tag-disconnect: Odłączyć
+      tag-apply-configuration: Zastosuj konfigurację
+      tag-clear-logs: Wyczyść dzienniki
+      tag-send: Wysłać
+  volume-flow-rate-converter:
+    title: Przetwornik natężenia przepływu objętościowego
+    description: Konwersja wartości pomiędzy jednostkami natężenia przepływu objętości
+    externalAccess: nieważny
 favoriteButton:
   remove: Usuń z ulubionych
   add: Dodaj do ulubionych

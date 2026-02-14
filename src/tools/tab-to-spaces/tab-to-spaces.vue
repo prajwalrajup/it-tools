@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const input = ref('');
 
@@ -93,30 +96,30 @@ const output = computed(() => {
   <div>
     <n-form label-placement="left" label-width="auto">
       <n-space justify="center">
-        <n-form-item label="Spaces per tab">
+        <n-form-item :label="t('tools.tab-to-spaces.texts.label-spaces-per-tab')">
           <n-input-number v-model:value="spacesPerTab" :min="1" :max="12" />
         </n-form-item>
 
-        <n-form-item label="Convert only leading tabs">
+        <n-form-item :label="t('tools.tab-to-spaces.texts.label-convert-only-leading-tabs')">
           <n-switch v-model:value="convertLeadingOnly" />
         </n-form-item>
 
-        <n-form-item label="Normalize inner spacing">
+        <n-form-item :label="t('tools.tab-to-spaces.texts.label-normalize-inner-spacing')">
           <n-switch v-model:value="normalizeInner" />
         </n-form-item>
       </n-space>
     </n-form>
 
-    <c-card title="Input (with tabs)" mb-2>
+    <c-card :title="t('tools.tab-to-spaces.texts.title-input-with-tabs')" mb-2>
       <c-input-text
         v-model:value="input"
         multiline
         rows="6"
         monospace
-        placeholder="Paste text with tabs here..."
+        :placeholder="t('tools.tab-to-spaces.texts.placeholder-paste-text-with-tabs-here')"
       />
     </c-card>
-    <c-card title="Output (with spaces)">
+    <c-card :title="t('tools.tab-to-spaces.texts.title-output-with-spaces')">
       <textarea-copyable
         :value="output"
       />

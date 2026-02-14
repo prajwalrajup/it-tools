@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Book2 } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Epub to Markdown',
+  name: t('tools.epub-to-markdown.title'),
   path: '/epub-to-markdown',
-  description: 'Convert an EPUB file to full markdown content',
+  description: t('tools.epub-to-markdown.description'),
   keywords: ['epub', 'markdown'],
   component: () => import('./epub-to-markdown.vue'),
   icon: Book2,

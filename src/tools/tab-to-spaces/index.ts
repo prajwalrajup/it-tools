@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { IndentIncrease } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Tab to Spaces',
+  name: t('tools.tab-to-spaces.title'),
   path: '/tab-to-spaces',
-  description: 'Convert tab to multiple spaces',
+  description: t('tools.tab-to-spaces.description'),
   keywords: ['tab', 'space'],
   component: () => import('./tab-to-spaces.vue'),
   icon: IndentIncrease,

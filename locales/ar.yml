@@ -920,6 +920,9 @@ tools:
   json-prettify:
     title: تجميل وتنسيق JSON
     description: تجميل سلسلة نصية بتنسيق JSON إلى صيغة سلسة وسهلة القراءة.
+    externalAccess: قد تقوم هذه الأداة بتنزيل مخطط JSON من
+      https://www.schemastore.org عند طلب التحقق. لا يتم إرسال أي بيانات إلى
+      جهات خارجية.
   docker-run-to-docker-compose-converter:
     title: محول أوامر Docker run إلى Docker compose
     description: تحويل أوامر "docker run" إلى ملفات docker-compose!
@@ -1599,6 +1602,7 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: ثابت wordWrap = ref(خطأ)؛
       tag-word-wrap: التفاف الكلمة؟
+      tag-ignore-whitespaces: هل نتجاهل المسافات البيضاء الزائدة؟
   otp-generator:
     title: مولد رمز كلمة مرور لمرة واحدة (OTP)
     description: توليد والتحقق من صحة رمز كلمة مرور لمرة واحدة (OTP) المعتمد على
@@ -1713,6 +1717,7 @@ tools:
       text:
         failed-to-fetch-linkurl-0: فشل في جلب {0}
         failed-to-fetch-linkurl: فشل في جلب {0}
+    externalAccess: تقوم هذه الأداة بتنزيل عناوين URL المقدمة في متصفحك فقط.
   unicode-to-java-entities:
     title: محول أحرف Unicode إلى كيانات جافا
     description: تحويل أحرف Unicode إلى كيانات جافا وبالعكس
@@ -1803,6 +1808,8 @@ tools:
       tag-add-a-new-query-parameter: إضافة معلمة استعلام جديدة
       tag-no-cors: لا يوجد CORS
       tag-call-api: استدعاء API
+    externalAccess: هذه الأداة تستدعي نقطة نهاية واجهة برمجة التطبيقات (API) التي
+      توفرها في متصفحك فقط.
   area-converter:
     title: محول وحدات المساحة
     description: تحويل القيم بين وحدات المساحة
@@ -2090,6 +2097,8 @@ tools:
       label-country: دولة
       title-currencies-to-countries: العملات إلى البلدان
       label-currency: عملة
+    externalAccess: تقوم هذه الأداة بتنزيل بيانات العملات الحديثة من
+      https://cdn.jsdelivr.net/npm/{'@'}fawazahmed0/currency-api
   data-storage-unit-converter:
     title: محول وحدة تخزين البيانات
     description: تحويل وحدات تخزين البيانات أو نقلها (بايت، بيبيت، بت، كيلوبايت...)
@@ -2310,6 +2319,9 @@ tools:
       label-dns-record-type: "نوع سجل DNS:"
       title-query-results: نتائج الاستعلام
       tag-send-dns-query: إرسال استعلام DNS
+    externalAccess: "تقوم هذه الأداة بإرسال استعلام DNS عبر نقطة نهاية DOH مستجيبة
+      من القائمة التالية:
+      https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: محول تنسيق Docker Compose
     description: تحويل ملف Docker Compose بين V1 و2.x و3.x أو CommonSpec وقد يؤدي
@@ -2768,6 +2780,8 @@ tools:
       tag-signup-for-a-free-token: سجل للحصول على رمز مجاني
       tag-click-on-button-above-to-get-latest-infos: انقر على الزر أعلاه للحصول على أحدث المعلومات
       tag-localize-on-open-street-map: تحديد الموقع على خريطة الشارع المفتوحة
+    externalAccess: تقوم هذه الأداة بإرسال عنوان (عناوين) IP المُقدمة إلى
+      https://ipinfo.io/ للحصول على معلومات الموقع الجغرافي لعنوان IP
   ip-include-exclude:
     title: حاسبة استبعاد شبكات IP الفرعية
     description: طرح قائمة نطاقات IP/الأقنعة/CIDR غير المسموح بها من قائمة نطاقات
@@ -2935,6 +2949,9 @@ tools:
       title-schema-validation-errors: أخطاء التحقق من صحة المخطط
       label-indent-size-0-compact: "حجم المسافة البادئة (0 = مضغوط):"
       repair-json: إصلاح JSON
+    externalAccess: قد تقوم هذه الأداة بتنزيل مخطط JSON من
+      https://www.schemastore.org عند طلب التحقق. لا يتم إرسال أي بيانات إلى
+      جهات خارجية.
   json-escaper:
     title: Json Escaper/Unescaper
     description: الهروب وإلغاء الهروب من سلسلة JSON
@@ -2964,6 +2981,9 @@ tools:
       label-indent-size-0-compact: "حجم المسافة البادئة (0 = مضغوط):"
       title-repaired-version: نسخة تم إصلاحها وتنسيقها تلقائيًا
       label-auto-repair-json: "إصلاح السيارات JSON:"
+    externalAccess: قد تقوم هذه الأداة بتنزيل مخطط JSON من
+      https://www.schemastore.org عند طلب التحقق. لا يتم إرسال أي بيانات إلى
+      جهات خارجية.
   json-size-analyzer:
     title: محلل حجم JSON
     description: قياس الأوزان النسبية لعقد JSON
@@ -3201,6 +3221,9 @@ tools:
         الوقت"
       tag-this-tool-required-internet-connection-to-access-models: تتطلب هذه الأداة اتصالاً بالإنترنت (للوصول إلى النماذج)
       tag-latex-result: نتيجة اللاتكس
+    externalAccess: تقوم هذه الأداة بتنزيل MathJaX من https://cdnjs.cloudflare.com
+      وتنزيل نموذج التعرف الضوئي على الأحرف (OCR) لـ LaTeX (Xenova/texify) من
+      https://huggingface.co/
   mermaid-exporter:
     title: مصدر حورية البحر
     description: تحويل Markdown (حورية البحر) إلى صورة والسماح بالتصدير إلى PNG و JPG و SVG
@@ -3266,6 +3289,9 @@ tools:
       label-country-name: "اسم الدولة:"
       label-continent-name: "اسم القارة:"
       tag-refresh: ينعش
+    externalAccess: تستخدم هذه الأداة واجهة برمجة تطبيقات IPv4/6 من
+      https://www.ipify.org/ لتنزيل بيانات IP Info من
+      https://cdn.jsdelivr.net/npm/{'@'}iplookup/country-extra/
   nano-memo:
     title: ورقة الغش نانو
     description: ورقة الغش لمحرر نانو
@@ -3297,6 +3323,8 @@ tools:
       label-spaces-chars: المسافات والأحرف
       label-word-count-no-punct: عدد الكلمات (بدون نقطة)
       tag-ocr: التعرف الضوئي على الحروف
+    externalAccess: تقوم هذه الأداة بتنزيل نماذج لغات التعرف الضوئي على الحروف (OCR)
+      من الموقع https://cdn.jsdelivr.net
   option43-generator:
     title: مولد الخيار 43
     description: إنشاء تكوين Option43 Wifi DHCP
@@ -5154,6 +5182,8 @@ tools:
         email-1: بريد إلكتروني
         email-0: بريد إلكتروني
         email: بريد إلكتروني
+        otpauth: مصادقة OTP
+        otpmigration: هجرة كلمة المرور لمرة واحدة
   SplashScreen:
     text:
       pomodoro-timer: مؤقت بومودورو
@@ -5831,10 +5861,6 @@ tools:
       click-to-copy-name-emojiinfo-title: "انقر هنا لنسخ الاسم: {0}"
       click-to-copy-completecodepoints: "انقر للنسخ: {0}"
       click-to-copy-emojiinfo-unicode: "انقر للنسخ: {0}"
-  tool:
-    layout:
-      text:
-        made-with-npmpackages-join-n: تم صنعه باستخدام {0}\n
   json-viewer:
     texts:
       label-sort-keys: "مفاتيح الفرز:"
@@ -6103,6 +6129,9 @@ tools:
       tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: هل تريد أن تفهم لماذا قد يُحظر عنوان IP؟ تحقق من
       tag-this-dnsbl-explanation-and-removal-guide: هذا هو دليل الشرح والإزالة لـ DNSBL
       tag-: .
+    externalAccess: "تقوم هذه الأداة بفحص عنوان IP المُقدّم وإرساله إلى قائمة حظر
+      أسماء النطاقات (DNSBL) عبر الرابط التالي:
+      https://cloudflare-dns.com/dns-query"
   docker-compose-memo:
     title: ورقة الغش لـ Docker Compose
     description: ورقة الغش لتنسيق Docker Compose
@@ -6678,6 +6707,8 @@ tools:
       placeholder-to: ل
       placeholder-translation-will-appear-here: ستظهر الترجمة هنا...
       tag-translate: يترجم
+    externalAccess: تقوم هذه الأداة بتنزيل نماذج الترجمة
+      (Xenova/opus-mt-[source]-[target]) على https://huggingface.co/
   unicode-to-gsm7:
     title: Unicode إلى GSM-7
     description: تشفير نص Unicode إلى ترميز SMS GSM-7 وعرض معلومات إرسال SMS ذات الصلة
@@ -6925,6 +6956,7 @@ tools:
       placeholder-diceware-passwords: كلمات مرور Diceware...
       tag-copy: ينسخ
       tag-refresh: ينعش
+      label-russian: الروسية
   gtin-validator:
     title: مُتحقق GTIN
     description: التحقق من صحة وعرض المعلومات حول GTIN (رقم معرف التجارة العالمي
@@ -6945,6 +6977,8 @@ tools:
       label-domain-to-check: "المجال الذي يجب التحقق منه:"
       placeholder-enter-a-domain-e-g-example-com: أدخل المجال (على سبيل المثال example.com)
       tag-lookup-whois: البحث في WHOIS
+    externalAccess: "تفتح هذه الأداة علامة تبويب جديدة تحتوي على اسم النطاق المراد
+      التحقق منه على الرابط التالي: https://www.iana.org/whois"
   keyboard-layout-converter:
     title: محول تخطيط لوحة المفاتيح
     description: تحويل تسلسل المفاتيح من تخطيط لوحة مفاتيح إلى آخر
@@ -7159,6 +7193,8 @@ tools:
       placeholder-select-templates-e-g-node-python-vue: حدد القوالب (على سبيل المثال، node، python، vue)
       title-gitignore: .gitignore
       tag-generate: يولد
+    externalAccess: تقوم هذه الأداة بتنزيل ملف .gitignore من
+      https://github.com/github/gitignore باستخدام واجهة برمجة تطبيقات GitHub.
   i-and-l-checker:
     title: أنا و ل تشيكر
     description: التحقق من كلمة المرور أو النص من خلال تمييز 1، l، I، 0، O
@@ -7326,6 +7362,9 @@ tools:
       failed: فشل
       no-redirect: لا يوجد تحويل
       expanded: موسع
+    externalAccess: تستخدم هذه الأداة مثيل CORS Anywhere (افتراضيًا،
+      https://cors.outils-libre.org) لإرسال طلب HTTP من نوع HEAD (بدون تنزيل أي
+      بيانات) للحصول على رؤوس HTTP وعمليات إعادة التوجيه.
   amortization-calculator:
     title: حاسبة الاستهلاك
     description: احسب جداول سداد القروض مع تفاصيل الدفعات الشهرية
@@ -7425,6 +7464,9 @@ tools:
       placeholder-select-templates: اختر القوالب
       title-preview: معاينة
       tag-fetch-generate: جلب وإنشاء
+    externalAccess: تقوم هذه الأداة بتنزيل ملف .gitattributes من
+      https://github.com/gitattributes/gitattributes باستخدام واجهة برمجة
+      تطبيقات GitHub.
   html-to-xhtml:
     title: تحويل HTML إلى XHTML
     description: تحويل HTML إلى XHTML صارم (قابل للتحليل، علامات إغلاق ذاتي...)
@@ -7462,6 +7504,8 @@ tools:
       placeholder-select-a-language: اختر لغة
       tag-search-on-wiktionary: ابحث في ويكاموس
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: أدخل كلمة واختر لغة لتحميل قاموس ويكشنري
+    externalAccess: تقوم هذه الأداة بالبحث عن تعريفات الكلمات في
+      https://www.wiktionary.org/ (حسب اللغة) في إطار iframe.
   ptr-dns-generator:
     title: مولد نظام أسماء النطاقات PTR
     description: إنشاء سجلات PTR لنظام أسماء النطاقات (DNS)
@@ -7572,6 +7616,189 @@ tools:
       label-thousand-separators: "ألف فاصل:"
       label-to: "ل:"
       tag-: =
+  tool:
+    layout:
+      text:
+        made-with-npmpackages: صُنع باستخدام {0}
+  acceleration-converter:
+    title: محول التسارع
+    description: تحويل القيم بين وحدات التسارع
+    externalAccess: باطل
+  docker-image-downloader:
+    title: برنامج تنزيل صور Docker
+    description: قم بتنزيل صورة Docker باستخدام سجل Docker، وبنية النظام، واسم الصورة.
+    externalAccess: تقوم هذه الأداة بتنزيل صور Docker من السجل (وباستخدام اسم
+      المستخدم أو كلمة المرور أو الرمز المميز الذي تقدمه)
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: ويندوز/amd64
+      label-docker-image-download-service-url: "رابط خدمة تنزيل صور Docker:"
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "المصادقة الأساسية:"
+      placeholder-username-password: "اسم المستخدم: كلمة المرور"
+      label-docker-image: "صورة Docker:"
+      placeholder-alpine-latest: "جبال الألب: أحدث الأخبار"
+      label-platform: "منصة:"
+      label-registry-url: "رابط التسجيل:"
+      placeholder-myregistry-com-optional: myregistry.com (اختياري)
+      label-username: "اسم المستخدم:"
+      placeholder-optional: خياري
+      label-password: "كلمة المرور:"
+      title-error: خطأ
+      tag-docker-image-download-service-configuration-self-hosted: تكوين خدمة تنزيل صور Docker (مستضافة ذاتيًا)
+      tag-you-must-self-host-docker-image-download-service-see: "يجب عليك استضافة خدمة تنزيل صور Docker بنفسك. انظر:"
+      tag-docker-image-download-service-install: تثبيت خدمة تنزيل صور Docker
+      tag-download-image: تنزيل الصورة
+  epub-to-markdown:
+    title: تحويل ملفات epub إلى Markdown
+    description: تحويل ملف EPUB إلى محتوى Markdown كامل
+    externalAccess: باطل
+    texts:
+      label-markdown: تخفيض السعر
+      label-plain-text: نص عادي
+      label-format: "شكل:"
+      title-drop-an-epub-file-here-or-click-to-select-a-file: أسقط ملف EPUB هنا أو انقر لتحديد ملف
+      title-metadata: البيانات الوصفية
+      label-title: "عنوان:"
+      label-creator: "الخالق:"
+      label-language: "لغة:"
+      label-publisher: "الناشر:"
+      label-identifier: "المعرّف:"
+      label-rights: "حقوق:"
+      label-description: "وصف:"
+      title-epub-content: محتوى إيبوب
+  explainshell:
+    title: شرح أوامر shell
+    description: استخدم موقع explainshell.com (أو موقعًا مُستضافًا ذاتيًا) لشرح أمر shell
+    externalAccess: تستدعي هذه الأداة https://explainshell.com (إلا إذا كنت تستضيفها
+      بنفسك) أمر shell المقدم هذا.
+    texts:
+      label-custom-explain-shell-url: "عنوان URL مخصص لشرح Shell:"
+      placeholder-put-your-custom-explainshell-url-here: ضع رابط explainshell المخصص هنا...
+      label-shell-command: "أمر الصدفة:"
+      placeholder-shell-command-to-explain: أمر shell لشرح
+      tag-explain-shell-configuration: شرح تكوين الصدفة
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: "يمكنك استضافة برنامج Explain Shell بنفسك، للحصول على خصوصية تامة. انظر:"
+      tag-local-explain-shell-docker-install: شرح محلي لتثبيت Docker باستخدام Shell
+      tag-explain: يشرح
+      tag-enter-a-shell-command-to-explain: أدخل أمر shell للشرح
+  frequency-converter:
+    title: محول التردد
+    description: تحويل القيم بين وحدات التردد
+    externalAccess: باطل
+  markdown-to-text:
+    title: تحويل Markdown إلى نص
+    description: تحويل Markdown إلى نص عادي
+    externalAccess: باطل
+    texts:
+      label-input-mardown: "إدخال البيانات بتنسيق Mardown:"
+      placeholder-enter-your-markdown-here: أدخل رمز Markdown الخاص بك هنا...
+      title-output-text: نص الإخراج
+  rj45-memo:
+    title: دليل مختصر لتوصيل كابلات RJ45 Cat6
+    description: دليل شامل لتوصيل كابلات RJ45 Cat6
+    externalAccess: باطل
+  rsvp-reader:
+    title: قارئ تأكيد الحضور
+    description: أداة عرض مرئي متسلسل سريع (RSVP) تتيح لك لصق النص، وعرض الكلمات
+      واحدة تلو الأخرى بقيمة قابلة للتكوين لعدد الكلمات في الدقيقة (WPM).
+    externalAccess: باطل
+    texts:
+      label-text-to-read: "نص للقراءة:"
+      placeholder-paste-or-type-your-text-here: ألصق أو اكتب النص هنا...
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: أسقط ملف PDF أو EPUB أو txt هنا أو انقر لتحديد ملف
+      label-word-per-minute: "عدد الكلمات في الدقيقة:"
+      label-chunk-size: "حجم القطعة:"
+      label-large-chunk-slowdown: تباطؤ كبير في نقل البيانات (%)
+      title-pauses: فترات التوقف (%)
+      label-sentence-end: نهاية الجملة
+      label-paragraph-end: فقرة
+      label-punctuation: علامات الترقيم
+      title-appearance: مظهر
+      label-font-size: "حجم الخط:"
+      label-font-color: "لون الخط:"
+      label-background: "خلفية:"
+      tag-no-text-to-read-please-input-some-text-in-text-tab: لا يوجد نص للقراءة. يرجى إدخال نص في علامة تبويب النص.
+      tag-play-space: العب (المسافة)
+      tag-pause-space: توقف (مسافة)
+      tag-back: الرجوع (←)
+      tag-next: التالي (→)
+      tag-reset: إعادة ضبط
+      tag-: ↓
+      tag-or: "- أو -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: تحكم في التشغيل والتنقل دون لمس الماوس.
+      tag-shortcut: اختصار
+      tag-action: فعل
+      tag-space: فضاء
+      tag-play-pause: تشغيل / إيقاف مؤقت
+      tag-right-arrow: (السهم الأيمن)
+      tag-skip-forward-one-chunk: انتقل إلى الجزء التالي
+      tag-left-arrow: (سهم يسار)
+      tag-skip-backward-one-chunk: انتقل إلى الجزء السابق
+      tag-up-arrow: (سهم لأعلى)
+      tag-increase-wpm: زيادة سرعة الكتابة
+      tag-down-arrow: (سهم لأسفل)
+      tag-decrease-wpm: تقليل عدد الكلمات في الدقيقة
+      tag-home: بيت
+      tag-jump-to-start: انتقل إلى البداية
+      tag-end: نهاية
+      tag-jump-to-end: انتقل إلى النهاية
+  speed-converter:
+    title: محول السرعة
+    description: تحويل القيم بين وحدات السرعة
+    externalAccess: باطل
+  tab-to-spaces:
+    title: انتقل إلى المسافات باستخدام زر Tab
+    description: تحويل علامة الجدولة إلى مسافات متعددة
+    externalAccess: باطل
+    texts:
+      label-spaces-per-tab: المسافات لكل علامة تبويب
+      label-convert-only-leading-tabs: قم بتحويل علامات التبويب الرئيسية فقط
+      label-normalize-inner-spacing: توحيد المسافات الداخلية
+      title-input-with-tabs: إدخال (مع علامات الجدولة)
+      placeholder-paste-text-with-tabs-here: ألصق النص مع علامات الجدولة هنا...
+      title-output-with-spaces: الناتج (مع المسافات)
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: أداة اختبار منافذ TCP/UDP
+    description: يسمح باختبار بروتوكول TCP/UDP (باستخدام وكيل websocket على جانب الخادم)
+    externalAccess: تحتاج هذه الأداة إلى خادم WebSocket من جانب الخادم
+      (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: بروتوكول التحكم بالنقل (TCP)
+      label-udp: بروتوكول UDP
+      label-websocket-tcp-udp-bridge-url: "عنوان URL لجسر WebSocket TCP/UDP:"
+      placeholder-websocket-url: عنوان ويب سوكيت
+      label-target: "هدف:"
+      placeholder-target-ip: عنوان IP المستهدف
+      placeholder-port: ميناء
+      placeholder-protocol: بروتوكول
+      title-logs: سجلات
+      title-payload-builder: أداة بناء الحمولة
+      label-send-text-payload-can-add-r-n: "إرسال حمولة نصية (يمكن إضافة \\r \\n):"
+      placeholder-text-payload: حمولة نصية
+      label-send-hex-payload: "إرسال حمولة Hex:"
+      placeholder-hex-payload-e-g-48656c6c6f: حمولة سداسية عشرية (على سبيل المثال 48656c6c6f)
+      tag-websocket-tcp-udp-bridge-configuration: تكوين جسر WebSocket TCP/UDP
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on: لاستخدام هذه الأداة، تحتاج إلى استضافة جسر WebSocket TCP/UDP قائم على
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: يتصل
+      tag-disconnect: قطع الاتصال
+      tag-apply-configuration: تطبيق التكوين
+      tag-clear-logs: مسح السجلات
+      tag-send: يرسل
+  volume-flow-rate-converter:
+    title: محول معدل التدفق الحجمي
+    description: تحويل القيم بين وحدات معدل التدفق الحجمي
+    externalAccess: باطل
 spanCopyable:
   copy: نسخ إلى الحافظة
   copied: تم النسخ!

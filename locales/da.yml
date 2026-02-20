@@ -1045,7 +1045,7 @@ tools:
       label-your-html-to-convert-can-paste-from-clipboard: "Din HTML-fil, der skal konverteres (kan indsættes fra udklipsholderen):"
       label-minify: "Minimer:"
       tag-hey: Hej!
-      tag-welcome-to-this-html-wysiwyg-editor: Velkommen til denne html wysiwyg-editor
+      tag-welcome-to-this-html-wysiwyg-editor: Velkommen til denne HTML wysiwyg-editor
       tag-click-here-to-paste-or-edit-raw-html: Klik her for at indsætte eller redigere rå html
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:
@@ -2583,7 +2583,7 @@ tools:
       label-your-html-to-format-can-paste-from-clipboard: "Din HTML, der skal formateres (kan indsættes fra udklipsholderen):"
       label-output-prettified-html: "Output af prætificeret HTML:"
   html-to-markdown:
-    title: Html til markdown
+    title: HTML til markdown
     description: Konverter HTML (enten fra udklipsholderen) til Markdown
     texts:
       placeholder-your-html-content: Dit HTML-indhold...

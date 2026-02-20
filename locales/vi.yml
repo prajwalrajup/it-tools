@@ -1099,7 +1099,7 @@ tools:
       label-your-html-to-convert-can-paste-from-clipboard: "HTML của bạn cần chuyển đổi (có thể dán từ bảng tạm):"
       label-minify: "Thu nhỏ:"
       tag-hey: Chào!
-      tag-welcome-to-this-html-wysiwyg-editor: Chào mừng đến với trình soạn thảo html wysiwyg này
+      tag-welcome-to-this-html-wysiwyg-editor: Chào mừng đến với trình soạn thảo HTML wysiwyg này
       tag-click-here-to-paste-or-edit-raw-html: Nhấp vào đây để dán hoặc chỉnh sửa HTML thô
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:
@@ -2656,7 +2656,7 @@ tools:
       label-your-html-to-format-can-paste-from-clipboard: "Định dạng HTML của bạn (có thể dán từ bảng tạm):"
       label-output-prettified-html: "Đầu ra HTML được làm đẹp:"
   html-to-markdown:
-    title: Html để đánh dấu
+    title: HTML để đánh dấu
     description: Chuyển đổi HTML (từ clipboard) sang Markdown
     texts:
       placeholder-your-html-content: Nội dung HTML của bạn...

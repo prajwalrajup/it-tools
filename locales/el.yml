@@ -615,12 +615,12 @@ tools:
     description: Διαφυγή ή κατάργηση διαφυγής οντοτήτων HTML (αντικαταστήστε
       χαρακτήρες όπως <,>, &, " και \' με την έκδοσή τους HTML)
     texts:
-      title-escape-html-entities: Οντότητες html διαφυγής
+      title-escape-html-entities: Οντότητες HTML διαφυγής
       label-your-string: "Η συμβολοσειρά σας:"
       placeholder-the-string-to-escape: Το νήμα για να ξεφύγεις
       label-your-string-escaped: "Η συμβολοσειρά σας διαφεύγει:"
       placeholder-your-string-escaped: Η συμβολοσειρά σας διαφεύγει
-      title-unescape-html-entities: Οντότητες html Unescape
+      title-unescape-html-entities: Οντότητες HTML Unescape
       label-your-escaped-string: "Η συμβολοσειρά διαφυγής σας:"
       placeholder-the-string-to-unescape: Η συμβολοσειρά για να ξεφύγεις
       label-your-string-unescaped: "Η συμβολοσειρά σας δεν έχει χαρακτήρα διαφυγής:"
@@ -763,10 +763,10 @@ tools:
       δημιουργεί αμέσως τον πηγαίο κώδικα του περιεχομένου.
     texts:
       placeholder-your-html-content: Το περιεχόμενό σας σε μορφή Html...
-      label-your-html-to-convert-can-paste-from-clipboard: "Το Html σας για μετατροπή (μπορεί να επικολληθεί από το πρόχειρο):"
+      label-your-html-to-convert-can-paste-from-clipboard: "Το HTML σας για μετατροπή (μπορεί να επικολληθεί από το πρόχειρο):"
       label-minify: "Σμίκρυνση:"
       tag-hey: Γεια!
-      tag-welcome-to-this-html-wysiwyg-editor: Καλώς ορίσατε σε αυτόν τον επεξεργαστή html wysiwyg
+      tag-welcome-to-this-html-wysiwyg-editor: Καλώς ορίσατε σε αυτόν τον επεξεργαστή HTML wysiwyg
       tag-click-here-to-paste-or-edit-raw-html: Κάντε κλικ εδώ για επικόλληση ή επεξεργασία ακατέργαστου html
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:
@@ -2154,18 +2154,18 @@ tools:
       label-your-html-to-clean-can-paste-from-clipboard: "Το HTML σας για καθαρισμό (μπορεί να επικολληθεί από το πρόχειρο):"
       label-output-cleaned-html: "Καθαρισμένο HTML εξόδου:"
   html-prettifier:
-    title: Html Prettifier
+    title: HTML Prettifier
     description: Βελτιστοποίηση κώδικα HTML
     texts:
       placeholder-your-html-content: Το περιεχόμενό σας HTML...
       label-your-html-to-format-can-paste-from-clipboard: "HTML για μορφοποίηση (μπορεί να επικολληθεί από το πρόχειρο):"
       label-output-prettified-html: "Έξοδος με προμορφοποιημένη HTML:"
   html-to-markdown:
-    title: Html σε markdown
+    title: HTML σε markdown
     description: Μετατροπή HTML (είτε από το πρόχειρο) σε Markdown
     texts:
       placeholder-your-html-content: Το περιεχόμενό σας σε μορφή Html...
-      label-your-html-to-convert-can-paste-from-clipboard: "Το Html σας για μετατροπή (μπορεί να επικολληθεί από το πρόχειρο):"
+      label-your-html-to-convert-can-paste-from-clipboard: "Το HTML σας για μετατροπή (μπορεί να επικολληθεί από το πρόχειρο):"
       label-output-markdown: "Μείωση παραγωγής:"
       label-heading-style: "Στυλ επικεφαλίδων:"
       label-emphasis-style: "Στυλ έμφασης:"

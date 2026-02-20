@@ -982,7 +982,7 @@ tools:
     description: İçeriğin kaynak kodunu anında üreten, çevrimiçi, özelliklerle dolu
       WYSIWYG HTML düzenleyicisi.
     texts:
-      placeholder-your-html-content: Html içeriğiniz...
+      placeholder-your-html-content: HTML içeriğiniz...
       label-your-html-to-convert-can-paste-from-clipboard: "Dönüştürülecek Html'iniz (panodan yapıştırabilirsiniz):"
       label-minify: "Küçült:"
       tag-hey: Hey!
@@ -2339,7 +2339,7 @@ tools:
       label-your-html-to-clean-can-paste-from-clipboard: "Temizlenecek HTML'niz (panodan yapıştırabilirsiniz):"
       label-output-cleaned-html: "Çıktı temizlenmiş HTML:"
   html-prettifier:
-    title: Html Güzelleştirici
+    title: HTML Güzelleştirici
     description: HTML kodunu güzelleştir
     texts:
       placeholder-your-html-content: HTML içeriğiniz...
@@ -2349,7 +2349,7 @@ tools:
     title: Html'den Markdown'a
     description: HTML'yi (panodan) Markdown'a dönüştürün
     texts:
-      placeholder-your-html-content: Html içeriğiniz...
+      placeholder-your-html-content: HTML içeriğiniz...
       label-your-html-to-convert-can-paste-from-clipboard: "Dönüştürülecek Html'iniz (panodan yapıştırabilirsiniz):"
       label-output-markdown: "Çıktı işaretlemesi:"
       label-heading-style: "Başlık Stili:"
@@ -3081,7 +3081,7 @@ tools:
       title-recipients: Alıcılar
       label-subject: Ders
       title-plain-content: Düz İçerik
-      title-html-content: Html İçeriği
+      title-html-content: HTML İçeriği
       title-rtf-content: RTF İçeriği
       title-attachments: Ekler
       label-message-id: Mesaj Kimliği
@@ -5521,7 +5521,7 @@ tools:
       label-bcc: Gizli bilgi
       label-reply-to: Yanıtla
       title-plain-content: Düz İçerik
-      title-html-content: Html İçeriği
+      title-html-content: HTML İçeriği
       title-attachments: Ekler
       label-message-id: Mesaj Kimliği
       label-in-reply-to: Cevap Olarak

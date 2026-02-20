@@ -997,12 +997,12 @@ tools:
     description: Éalú nó dí-éalaigh aonáin HTML (cuir a leagan HTML in ionad
       carachtair mar <,>, &, " agus \')
     texts:
-      title-escape-html-entities: Eintitis html éalaithe
+      title-escape-html-entities: Eintitis HTML éalaithe
       label-your-string: "Do shreangán:"
       placeholder-the-string-to-escape: An teaghrán le héalú
       label-your-string-escaped: "D’éalaigh do shreangán:"
       placeholder-your-string-escaped: D’éalaigh do shreang
-      title-unescape-html-entities: Eintitis html dí-éalaithe
+      title-unescape-html-entities: Eintitis HTML dí-éalaithe
       label-your-escaped-string: "Do theaghrán éalaithe:"
       placeholder-the-string-to-unescape: An teaghrán le dí-éalú
       label-your-string-unescaped: "Do shreangán gan éalú:"
@@ -1194,11 +1194,11 @@ tools:
       an ábhair láithreach.
     texts:
       placeholder-your-html-content: D&#39;ábhar Html...
-      label-your-html-to-convert-can-paste-from-clipboard: "Do Html le tiontú (is féidir é a ghreamú ón ngearrthaisce):"
+      label-your-html-to-convert-can-paste-from-clipboard: "Do HTML le tiontú (is féidir é a ghreamú ón ngearrthaisce):"
       label-minify: "Laghdaigh:"
       tag-hey: Haigh!
-      tag-welcome-to-this-html-wysiwyg-editor: Fáilte chuig an eagarthóir html wysiwyg seo
-      tag-click-here-to-paste-or-edit-raw-html: Cliceáil anseo chun html amh a ghreamú nó a chur in eagar
+      tag-welcome-to-this-html-wysiwyg-editor: Fáilte chuig an eagarthóir HTML wysiwyg seo
+      tag-click-here-to-paste-or-edit-raw-html: Cliceáil anseo chun HTML amh a ghreamú nó a chur in eagar
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:
     title: YAML go TOML
@@ -2842,11 +2842,11 @@ tools:
       label-your-html-to-format-can-paste-from-clipboard: "Do HTML le formáidiú (is féidir é a ghreamú ón ngearrthaisce):"
       label-output-prettified-html: "Aschur HTML réamhdhéanta:"
   html-to-markdown:
-    title: Html le marcáil síos
+    title: HTML le marcáil síos
     description: Tiontaigh HTML (ón ghearrthaisce) go Markdown
     texts:
       placeholder-your-html-content: D&#39;ábhar Html...
-      label-your-html-to-convert-can-paste-from-clipboard: "Do Html le tiontú (is féidir é a ghreamú ón ngearrthaisce):"
+      label-your-html-to-convert-can-paste-from-clipboard: "Do HTML le tiontú (is féidir é a ghreamú ón ngearrthaisce):"
       label-output-markdown: "Laghdú ar aschur:"
       label-heading-style: "Stíl Ceannteidil:"
       label-emphasis-style: "Stíl Béime:"

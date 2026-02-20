@@ -6352,8 +6352,8 @@ tools:
       tag-skip-ascii-characters: Sauter les personnages ASCII
       title-text-to-unicode: Texte à Unicode
       label-enter-unicode-to-convert-to-text: Entrez Unicode pour convertir en texte
-      label-html-decimal-amp-160: Décimal html (
-      label-html-hexadecimal-amp-xa0: Html hexadécimal (
+      label-html-decimal-amp-160: Décimal HTML (
+      label-html-hexadecimal-amp-xa0: HTML hexadécimal (
       label-python-u00a0-u-100a0: Python (\\ u00a0; \\ u {'{'} 100a0 {'}'})
       label-utf-16-with-surrogates: UTF 16 (avec substituts)
       placeholder-the-text-representation-of-your-unicode-will-be-here: La représentation de texte de votre Unicode sera là

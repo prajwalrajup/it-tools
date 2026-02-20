@@ -771,7 +771,7 @@ tools:
       label-your-html-to-convert-can-paste-from-clipboard: "Seu HTML para converter (pode colar da área de transferência):"
       label-minify: "Minificar:"
       tag-hey: Ei!
-      tag-welcome-to-this-html-wysiwyg-editor: Bem-vindo a este editor html wysiwyg
+      tag-welcome-to-this-html-wysiwyg-editor: Bem-vindo a este editor HTML wysiwyg
       tag-click-here-to-paste-or-edit-raw-html: Clique aqui para colar ou editar o HTML bruto
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:

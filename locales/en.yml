@@ -588,12 +588,12 @@ tools:
     description: Escape or unescape HTML entities (replace characters like <,>, &, "
       and \' with their HTML version)
     texts:
-      title-escape-html-entities: Escape html entities
+      title-escape-html-entities: Escape HTML entities
       label-your-string: "Your string :"
       placeholder-the-string-to-escape: The string to escape
       label-your-string-escaped: "Your string escaped :"
       placeholder-your-string-escaped: Your string escaped
-      title-unescape-html-entities: Unescape html entities
+      title-unescape-html-entities: Unescape HTML entities
       label-your-escaped-string: "Your escaped string :"
       placeholder-the-string-to-unescape: The string to unescape
       label-your-string-unescaped: "Your string unescaped :"
@@ -665,7 +665,7 @@ tools:
       label-sentences-per-paragraph: Sentences per paragraph
       label-words-per-sentence: Words per sentence
       label-start-with-lorem-ipsum: Start with lorem ipsum ?
-      label-as-html: As html ?
+      label-as-html: As HTML ?
       placeholder-your-lorem-ipsum: Your lorem ipsum...
       tag-copy: Copy
       tag-refresh: Refresh
@@ -727,11 +727,11 @@ tools:
     description: Online, feature-rich WYSIWYG HTML editor which generates the source
       code of the content immediately.
     texts:
-      placeholder-your-html-content: Your Html content...
-      label-your-html-to-convert-can-paste-from-clipboard: "Your Html to convert (can paste from clipboard):"
+      placeholder-your-html-content: Your HTML content...
+      label-your-html-to-convert-can-paste-from-clipboard: "Your HTML to convert (can paste from clipboard):"
       label-minify: "Minify:"
       tag-hey: Hey!
-      tag-welcome-to-this-html-wysiwyg-editor: Welcome to this html wysiwyg editor
+      tag-welcome-to-this-html-wysiwyg-editor: Welcome to this HTML wysiwyg editor
       tag-click-here-to-paste-or-edit-raw-html: Click here to paste or edit raw html
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:
@@ -2072,25 +2072,25 @@ tools:
       tag-download-file: Download file
       tag-copy: Copy
   html-cleaner:
-    title: Html cleaner
+    title: HTML cleaner
     description: Clean HTML
     texts:
       placeholder-your-html-content: Your HTML content...
       label-your-html-to-clean-can-paste-from-clipboard: "Your HTML to clean (can paste from clipboard):"
       label-output-cleaned-html: "Output cleaned HTML:"
   html-prettifier:
-    title: Html Prettifier
+    title: HTML Prettifier
     description: Prettify HTML code
     texts:
       placeholder-your-html-content: Your HTML content...
       label-your-html-to-format-can-paste-from-clipboard: "Your HTML to format (can paste from clipboard):"
       label-output-prettified-html: "Output prettified HTML:"
   html-to-markdown:
-    title: Html to markdown
+    title: HTML to markdown
     description: Convert HTML (either from clipboard) to Markdown
     texts:
-      placeholder-your-html-content: Your Html content...
-      label-your-html-to-convert-can-paste-from-clipboard: "Your Html to convert (can paste from clipboard):"
+      placeholder-your-html-content: Your HTML content...
+      label-your-html-to-convert-can-paste-from-clipboard: "Your HTML to convert (can paste from clipboard):"
       label-output-markdown: "Output markdown:"
       label-heading-style: "Headings Style:"
       label-emphasis-style: "Emphasis Style:"
@@ -2802,7 +2802,7 @@ tools:
       title-recipients: Recipients
       label-subject: Subject
       title-plain-content: Plain Content
-      title-html-content: Html Content
+      title-html-content: HTML Content
       title-rtf-content: RTF Content
       title-attachments: Attachments
       label-message-id: Message Id
@@ -5283,7 +5283,7 @@ tools:
       label-bcc: Bcc
       label-reply-to: Reply-To
       title-plain-content: Plain Content
-      title-html-content: Html Content
+      title-html-content: HTML Content
       title-attachments: Attachments
       label-message-id: Message Id
       label-in-reply-to: In Reply To

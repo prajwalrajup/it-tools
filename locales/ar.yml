@@ -1102,7 +1102,7 @@ tools:
       label-your-html-to-convert-can-paste-from-clipboard: "ملف HTML الذي تريد تحويله (يمكنك لصقه من الحافظة):"
       label-minify: "تصغير:"
       tag-hey: يا!
-      tag-welcome-to-this-html-wysiwyg-editor: مرحبًا بك في محرر html wysiwyg هذا
+      tag-welcome-to-this-html-wysiwyg-editor: مرحبًا بك في محرر HTML wysiwyg هذا
       tag-click-here-to-paste-or-edit-raw-html: انقر هنا للصق أو تحرير HTML الخام
       label-xhtmlfy: "XHtml:"
   yaml-to-toml:

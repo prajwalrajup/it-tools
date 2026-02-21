@@ -231,6 +231,7 @@
     "jszip": "^3.10.1",
     "jwt-decode": "^4.0.0",
     "korean-unpacker": "^1.0.3",
+    "langs": "^2.0.0",
     "libmime": "^5.3.7",
     "libphonenumber-js": "^1.12.33",
     "lodash": "^4.17.21",

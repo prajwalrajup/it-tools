@@ -8,6 +8,10 @@ const { t } = useI18n();
 
 const status = ref<'idle' | 'done' | 'error' | 'processing'>('idle');
 const file = ref<File | null>(null);
+const usePassword = ref(false);
+const password = ref('');
+const fileBuffer = ref<ArrayBuffer | null>(null);
+const isPasswordError = ref(false);
 
 const base64OutputPDF = ref('');
 const fileName = ref('');
@@ -23,27 +27,40 @@ const qpdfCommand = ref('');
 
 async function onPDFFileUploaded(uploadedFile: File) {
   file.value = uploadedFile;
-  const fileBuffer = await uploadedFile.arrayBuffer();
-
   fileName.value = `decrypted_${uploadedFile.name}`;
+  fileBuffer.value = await uploadedFile.arrayBuffer();
+  isPasswordError.value = false;
+  processFile();
+}
+
+async function processFile() {
+  if (!fileBuffer.value) {
+    return;
+  }
+
   status.value = 'processing';
   try {
-    const outPdfBuffer = await callMainWithInOutPdf(fileBuffer,
-      [
-        '--decrypt',
-        '--warning-exit-0',
-        '--verbose',
-        'in.pdf',
-        'out.pdf',
-      ],
-      0);
+    const args = ['--decrypt'];
+    if (usePassword.value) {
+      args.push(`--password=${password.value}`);
+    }
+    args.push('--warning-exit-0');
+    args.push('--verbose');
+    args.push('in.pdf');
+    args.push('out.pdf');
+    const outPdfBuffer = await callMainWithInOutPdf(fileBuffer.value, args, 0);
     base64OutputPDF.value = `data:application/pdf;base64,${Base64.fromUint8Array(outPdfBuffer)}`;
     status.value = 'done';
-
     download();
+    fileBuffer.value = null;
+    usePassword.value = false;
+    password.value = '';
+    isPasswordError.value = false;
   }
   catch (e) {
     status.value = 'error';
+    const errorLog = logs.value.join('\n').toLowerCase();
+    isPasswordError.value = errorLog.includes('password') || errorLog.includes('encrypted');
   }
 }
 
@@ -72,6 +89,32 @@ async function callMainWithInOutPdf(data: ArrayBuffer, args: string[], expected_
     <div style="flex: 0 0 100%">
       <div mx-auto max-w-600px>
         <c-file-upload :title="t('tools.pdf-unlock.texts.title-drag-and-drop-a-pdf-file-here-or-click-to-select-a-file')" accept=".pdf" @file-upload="onPDFFileUploaded" />
+      </div>
+    </div>
+
+    <div v-if="isPasswordError">
+      <n-checkbox v-model:checked="usePassword" mb-2 mt-3>
+        {{ t('tools.pdf-unlock.texts.label-password') }}
+      </n-checkbox>
+
+      <n-form-item
+        v-if="usePassword"
+        :label="t('tools.pdf-unlock.texts.label-password')"
+        label-placement="left"
+        mb-1
+        mt-2
+      >
+        <n-input
+          v-model:value="password"
+          type="password"
+          :placeholder="t('tools.pdf-unlock.texts.placeholder-password')"
+        />
+      </n-form-item>
+
+      <div mt-3 flex justify-center>
+        <c-button @click="processFile()">
+          {{ t('tools.pdf-unlock.texts.tag-decrypt-pdf') }}
+        </c-button>
       </div>
     </div>
 

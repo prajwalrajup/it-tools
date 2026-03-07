@@ -3860,8 +3860,8 @@ tools:
       title-converted-data: Converted data
       tag-convert: Convert
   firewalld-generator:
-    title: FW command line generator
-    description: Generate fw command lines
+    title2: firewalld command line generator
+    description2: Generate firewalld command lines
     texts:
       label-service: Service
       label-port: Port

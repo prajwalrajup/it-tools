@@ -45,6 +45,7 @@
     "@date-fns/utc": "^2.1.1",
     "@dice-roller/rpg-dice-roller": "^5.5.1",
     "@faker-js/faker": "^10.2.0",
+    "@finegym/fitness-calc": "^1.0.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",

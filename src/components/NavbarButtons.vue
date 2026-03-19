@@ -7,18 +7,18 @@ const { isDarkTheme } = toRefs(styleStore);
 </script>
 
 <template>
-  <c-tooltip :tooltip="$t('home.nav.github')" position="bottom">
+  <!-- <c-tooltip :tooltip="$t('home.nav.github')" position="bottom">
     <c-button
       circle
       variant="text"
-      href="https://github.com/prajwalrajup/it-tools"
+      href="https://github.com/"
       target="_blank"
       rel="noopener noreferrer"
       :aria-label="$t('home.nav.githubRepository')"
     >
       <n-icon size="25" :component="IconBrandGithub" />
     </c-button>
-  </c-tooltip>
+  </c-tooltip> -->
 
   <!-- <c-tooltip :tooltip="$t('home.nav.twitterX')" position="bottom">
     <c-button

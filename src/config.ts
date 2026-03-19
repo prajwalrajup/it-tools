@@ -53,6 +53,20 @@ export const config = figue({
       default: false,
     },
   },
+  googleAnalytics: {
+    isEnabled: {
+      doc: 'Is Google Analytics enabled',
+      format: 'boolean',
+      default: false,
+      env: 'VITE_GA_ENABLED',
+    },
+    measurementId: {
+      doc: 'Google Analytics measurement ID (e.g. G-XXXXXXXXXX)',
+      format: 'string',
+      default: '',
+      env: 'VITE_GA_MEASUREMENT_ID',
+    },
+  },
   showBanner: {
     doc: 'Show the banner',
     format: 'boolean',

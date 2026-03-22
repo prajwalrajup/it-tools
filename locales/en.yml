@@ -1525,6 +1525,8 @@ tools:
       tag-certificate-signing-request: Certificate Signing Request
       tag-public-key: Public key
       tag-private-key: Private key
+      label-rsa-bits: 'RSA Bits:'
+      bits-should-be-256-less-than-bits-less-than-16384-and-be-a-multiple-of-8: Bits should be 256 <= bits <= 16384 and be a multiple of 8
   css-prettifier:
     title: Css prettifier
     description: CSS Prettify

@@ -11,15 +11,13 @@ import { config } from '@/config';
 import { useTheme } from '../ui/c-link/c-link.theme';
 
 const base = import.meta.env.BASE_URL ?? '/';
-const homeCustomMarkdown = computedAsync(async () => {
-  try {
-    const remoteCustomHomeMarkdownResponse = await fetch(`${base}home.custom.md`);
-    if (remoteCustomHomeMarkdownResponse.ok) {
-      return await remoteCustomHomeMarkdownResponse.text();
-    }
+
+const homeCustomMarkdown = ref('');
+
+fetch(`${base}home.custom.md`).then((r) => {
+  if (r.ok) {
+    r.text().then(t => homeCustomMarkdown.value = t);
   }
-  catch {}
-  return '';
 });
 
 const toolStore = useToolStore();

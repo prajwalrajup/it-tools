@@ -1977,7 +1977,7 @@ tools:
     description: 将HEIC转换为JPEG或PNG的转换器
     texts:
       label-jpeg: JPEG
-      label-png: 巴布亚新几内亚
+      label-png: PNG
       label-output-format: 输出格式
       title-drag-and-drop-a-heic-file-here-or-click-to-select-a-file: 将HEIC文件拖放到此处，或点击选择文件
   hex-file-converter:
@@ -4590,7 +4590,7 @@ tools:
       tag-download-current: 下载当前
       tag-apply-download-all: 应用并下载全部
       tag-upload-logo: 上传Logo
-      tag-png: 巴布亚新几内亚
+      tag-png: PNG
       tag-jpeg: JPEG
       title-settings: 设置
   pomodoro-timer:
@@ -6159,12 +6159,12 @@ tools:
       label-left-image-url: 左图网址：
       placeholder-enter-left-image-url: 输入左侧图片网址
       label-right-image-url: 右图网址：
-      placeholder-enter-right-image-url: 输入正确的图片网址
+      placeholder-enter-right-image-url: 输入右侧图片网址
       label-upload-left-image: 上传左侧图片：
-      label-upload-right-image: 上传正确的图片：
+      label-upload-right-image: 上传右侧图片：
       tag-compare: 比较
       tag-upload-left: 上传左侧
-      tag-upload-right: 上传权利
+      tag-upload-right: 上传右侧
   logrotate-generator:
     title: Apache LogRotate 生成器
     description: 生成 Apache .log 轮换配置

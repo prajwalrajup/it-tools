@@ -4417,8 +4417,6 @@ tools:
       title-converted-data: Dati convertiti
       tag-convert: Convertire
   firewalld-generator:
-    title: Generatore di riga di comando FW
-    description: Generare righe di comando fw
     texts:
       label-service: Servizio
       label-port: Porta

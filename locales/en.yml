@@ -3888,8 +3888,8 @@ tools:
       title-converted-data: Converted data
       tag-convert: Convert
   firewalld-generator:
-    title2: firewalld command line generator
-    description2: Generate firewalld command lines
+    title: firewalld command line generator
+    description: Generate firewalld command lines
     texts:
       label-service: Service
       label-port: Port
@@ -4787,6 +4787,9 @@ tools:
     physics: Physics
     cheatsheets: Cheatsheets
     forensic: Forensic
+    finance: Finance
+    default: Default
+    toml: TOML
   websocket-tester:
     title: Websocket tester
     description: Allows to test WebSocket connections
@@ -7811,6 +7814,8 @@ tools:
       tag-esc: ESC
       tag-exit-dead-pixel-mode: ': Exit Dead Pixel Mode'
       tag-start-dead-pixel: Start Dead Pixel
+    title: Dead Pixel Tester
+    description: Tool to check if a pixel on your screen is dead or not.
   UnitsConverter:
     texts:
       exclude-si-prefixes: Exclude SI Prefixes
@@ -8570,6 +8575,8 @@ tools:
       texts:
         must-set-one-of-messages-or-function: Must set one of messages | function
         function-must-set-messages: Function must set messages
+  dead-pixel-tester:
+    title: Dead Pixel Tester
 collapsibleToolMenu:
   text:
     expanding: Expanding...

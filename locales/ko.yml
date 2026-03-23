@@ -4106,8 +4106,6 @@ tools:
       title-converted-data: 변환된 데이터
       tag-convert: 전환하다
   firewalld-generator:
-    title: FW 명령줄 생성기
-    description: fw 명령줄 생성
     texts:
       label-service: 서비스
       label-port: 포트

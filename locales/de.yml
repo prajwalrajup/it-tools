@@ -4586,8 +4586,6 @@ tools:
       title-converted-data: Konvertierte Daten
       tag-convert: Konvertieren
   firewalld-generator:
-    title: FW-Befehlszeilengenerator
-    description: Generieren Sie fw-Befehlszeilen
     texts:
       label-service: Service
       label-port: Hafen

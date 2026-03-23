@@ -3896,8 +3896,6 @@ tools:
       title-converted-data: Datos convertidos
       tag-convert: Convertir
   firewalld-generator:
-    title: Generador de línea de comandos FW
-    description: Generar líneas de comando fw
     texts:
       label-service: Servicio
       label-port: Puerto

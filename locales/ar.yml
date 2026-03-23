@@ -4363,8 +4363,6 @@ tools:
       title-converted-data: البيانات المحولة
       tag-convert: يتحول
   firewalld-generator:
-    title: مولد سطر أوامر البرامج الثابتة
-    description: إنشاء أسطر أوامر البرامج الثابتة
     texts:
       label-service: خدمة
       label-port: ميناء

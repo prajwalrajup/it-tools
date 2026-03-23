@@ -4111,8 +4111,6 @@ tools:
       title-converted-data: Dönüştürülen veriler
       tag-convert: Dönüştürmek
   firewalld-generator:
-    title: FW komut satırı oluşturucu
-    description: fw komut satırları oluşturun
     texts:
       label-service: Hizmet
       label-port: Liman

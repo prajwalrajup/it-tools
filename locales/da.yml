@@ -4313,8 +4313,6 @@ tools:
       title-converted-data: Konverterede data
       tag-convert: Konvertere
   firewalld-generator:
-    title: FW kommandolinjegenerator
-    description: Generer fw-kommandolinjer
     texts:
       label-service: Service
       label-port: Havn

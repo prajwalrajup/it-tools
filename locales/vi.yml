@@ -4373,8 +4373,6 @@ tools:
       title-converted-data: Dữ liệu đã chuyển đổi
       tag-convert: Chuyển thành
   firewalld-generator:
-    title: Trình tạo dòng lệnh FW
-    description: Tạo dòng lệnh fw
     texts:
       label-service: Dịch vụ
       label-port: Cảng

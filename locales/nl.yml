@@ -4369,8 +4369,6 @@ tools:
       title-converted-data: Geconverteerde gegevens
       tag-convert: Overzetten
   firewalld-generator:
-    title: FW-opdrachtregelgenerator
-    description: Genereer fw-opdrachtregels
     texts:
       label-service: Dienst
       label-port: Haven

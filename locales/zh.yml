@@ -3693,8 +3693,6 @@ tools:
       title-converted-data: 转换后数据
       tag-convert: 转换
   firewalld-generator:
-    title: 防火墙命令生成器
-    description: 生成firewall-cmd命令行
     texts:
       label-service: 服务
       label-port: 端口

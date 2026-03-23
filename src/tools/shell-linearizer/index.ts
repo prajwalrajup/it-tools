@@ -10,5 +10,5 @@ export const tool = defineTool({
   component: () => import('./shell-linearizer.vue'),
   icon: Terminal2,
   createdAt: new Date('2026-02-14'),
-  category: 'Default',
+  category: 'Network',
 });

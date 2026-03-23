@@ -3955,8 +3955,6 @@ tools:
       title-converted-data: Μετατραπέντα δεδομένα
       tag-convert: Μετατρέπω
   firewalld-generator:
-    title: Γεννήτρια γραμμής εντολών FW
-    description: Δημιουργία γραμμών εντολών fw
     texts:
       label-service: Υπηρεσία
       label-port: Λιμάνι

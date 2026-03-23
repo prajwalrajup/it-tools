@@ -5109,8 +5109,6 @@ tools:
       title-converted-data: Sonraí tiontaithe
       tag-convert: Tiontaigh
   firewalld-generator:
-    title: Gineadóir líne ordaithe FW
-    description: Gin línte ordaithe fw
     texts:
       label-service: Seirbhís
       label-port: Calafort

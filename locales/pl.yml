@@ -3865,8 +3865,6 @@ tools:
       title-converted-data: Przekonwertowane dane
       tag-convert: Konwertować
   firewalld-generator:
-    title: Generator wiersza poleceń oprogramowania sprzętowego
-    description: Generuj wiersze poleceń oprogramowania sprzętowego
     texts:
       label-service: Praca
       label-port: Port

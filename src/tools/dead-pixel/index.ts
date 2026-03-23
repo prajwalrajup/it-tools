@@ -1,11 +1,11 @@
 import { DeviceDesktop } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Dead pixel',
+  name: t('tools.dead-pixel.title'),
   path: '/dead-pixel',
-  description:
-    'Tool to check if a pixel on your screen is dead or not.',
+  description: t('tools.dead-pixel.description'),
   keywords: ['dead', 'pixel'],
   component: () => import('./dead-pixel.vue'),
   icon: DeviceDesktop,

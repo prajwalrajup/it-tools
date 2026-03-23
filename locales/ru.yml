@@ -5046,8 +5046,6 @@ tools:
       title-converted-data: Преобразованные данные
       tag-convert: Конвертировать
   firewalld-generator:
-    title: Генератор командной строки FW
-    description: Генерация командных строк fw
     texts:
       label-service: Услуга
       label-port: Порт

@@ -5018,8 +5018,6 @@ tools:
       title-converted-data: Конвертовані дані
       tag-convert: Конвертувати
   firewalld-generator:
-    title: Генератор командного рядка FW
-    description: Генерація командних рядків fw
     texts:
       label-service: Сервіс
       label-port: Порт

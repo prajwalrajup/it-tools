@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { bech32, bech32m } from 'bech32';
+
+const { t } = useI18n();
 
 // Shared state
 const encodingVariant = ref<'bech32' | 'bech32m'>('bech32');
@@ -40,7 +43,7 @@ function wordsToHex(words: number[]): string {
 function hexToWords(hex: string): number[] {
   const clean = hex.toLowerCase();
   if (!/^[0-9a-f]+$/.test(clean) || clean.length % 2 !== 0) {
-    throw new Error('Invalid hex payload');
+    throw new Error(t('tools.bech32.texts.invalid-hex-payload'));
   }
 
   return bech32.toWords(clean.match(/.{2}/g)!.map(b => Number.parseInt(b, 16)));
@@ -155,7 +158,13 @@ function exportCsv() {
     return;
   }
 
-  const header = ['Input', 'HRP', 'Variant', 'Hex', 'Status'];
+  const header = [
+    t('tools.bech32.texts.input'),
+    t('tools.bech32.texts.hrp'),
+    t('tools.bech32.texts.variant'),
+    t('tools.bech32.texts.hex'),
+    t('tools.bech32.texts.status'),
+  ];
   const rows = batchRows.value.map(r => [
     r.input,
     r.hrp,
@@ -185,41 +194,41 @@ function exportCsv() {
   <div>
     <n-tabs type="line" animated>
       <!-- DECODE TAB -->
-      <n-tab-pane name="decode" tab="Decode">
+      <n-tab-pane name="decode" :tab="t('tools.bech32.texts.tab-decode')">
         <c-input-text
           v-model:value="bechInput"
           label-position="left"
-          label="Bech32(m) string:"
-          placeholder="Bech32 / Bech32m string"
+          :label="t('tools.bech32.texts.label-bech32-m-string')"
+          :placeholder="t('tools.bech32.texts.placeholder-bech32-bech32m-string')"
           mb-1
         />
 
         <n-space justify="center" align="center" mb-1>
           <n-switch v-model:value="autoDetect">
             <template #checked>
-              Auto-detect
+              {{ t('tools.bech32.texts.tag-auto-detect') }}
             </template>
             <template #unchecked>
-              Manual
+              {{ t('tools.bech32.texts.tag-manual') }}
             </template>
           </n-switch>
           <c-select
             v-model:value="encodingVariant"
             label-position="left"
-            label="Variant:"
+            :label="t('tools.bech32.texts.label-variant')"
             :disabled="autoDetect"
             :options="[
-              { label: 'Bech32', value: 'bech32' },
-              { label: 'Bech32m', value: 'bech32m' },
+              { label: t('tools.bech32.texts.label-bech32'), value: 'bech32' },
+              { label: t('tools.bech32.texts.label-bech32m'), value: 'bech32m' },
             ]"
             style="width: 160px"
           />
           <n-switch v-model:value="checksumOnly">
             <template #checked>
-              Checksum only
+              {{ t('tools.bech32.texts.tag-checksum-only') }}
             </template>
             <template #unchecked>
-              Full decode
+              {{ t('tools.bech32.texts.tag-full-decode') }}
             </template>
           </n-switch>
         </n-space>
@@ -234,10 +243,10 @@ function exportCsv() {
         </n-space>
 
         <n-alert v-if="checksumValid === true" type="success" mb-2>
-          Checksum valid
+          {{ t('tools.bech32.texts.tag-checksum-valid') }}
         </n-alert>
         <n-alert v-if="checksumValid === false" type="error" mb-2>
-          Checksum invalid
+          {{ t('tools.bech32.texts.tag-checksum-invalid') }}
         </n-alert>
 
         <c-alert v-if="decodeError">
@@ -245,37 +254,37 @@ function exportCsv() {
         </c-alert>
 
         <div v-if="decodedHex">
-          <input-copyable v-model:value="decodedHrp" label-width="110px" label-position="left" label="HRP:" readonly placeholder="HRP" />
-          <input-copyable v-model:value="decodedHex" label-width="110px" label-position="left" label="Payload:" readonly placeholder="Hex payload" />
-          <input-copyable v-model:value="detectedVariant" label-width="110px" label-position="left" label="Variant:" readonly placeholder="Variant" />
+          <input-copyable v-model:value="decodedHrp" label-width="110px" label-position="left" :label="t('tools.bech32.texts.label-hrp')" readonly :placeholder="t('tools.bech32.texts.placeholder-hrp')" />
+          <input-copyable v-model:value="decodedHex" label-width="110px" label-position="left" :label="t('tools.bech32.texts.label-payload')" readonly :placeholder="t('tools.bech32.texts.placeholder-hex-payload')" />
+          <input-copyable v-model:value="detectedVariant" label-width="110px" label-position="left" :label="t('tools.bech32.texts.label-variant')" readonly :placeholder="t('tools.bech32.texts.placeholder-variant')" />
         </div>
       </n-tab-pane>
 
       <!-- ENCODE TAB -->
-      <n-tab-pane name="encode" tab="Encode">
-        <c-input-text v-model:value="hrp" label-position="left" label="HRP:" label-width="110px" placeholder="HRP" mb-1 />
+      <n-tab-pane name="encode" :tab="t('tools.bech32.texts.tab-encode')">
+        <c-input-text v-model:value="hrp" label-position="left" :label="t('tools.bech32.texts.label-hrp')" label-width="110px" :placeholder="t('tools.bech32.texts.placeholder-hrp')" mb-1 />
         <c-input-text
           v-model:value="hexPayload"
           label-position="left" label-width="110px"
-          label="Payload:"
-          placeholder="Hex payload"
+          :label="t('tools.bech32.texts.label-payload')"
+          :placeholder="t('tools.bech32.texts.placeholder-hex-payload')"
           mb-1
         />
 
         <c-select
           v-model:value="encodingVariant"
           label-position="left" label-width="110px"
-          label="Variant:"
+          :label="t('tools.bech32.texts.label-variant')"
           :options="[
-            { label: 'Bech32', value: 'bech32' },
-            { label: 'Bech32m', value: 'bech32m' },
+            { label: t('tools.bech32.texts.label-bech32'), value: 'bech32' },
+            { label: t('tools.bech32.texts.label-bech32m'), value: 'bech32m' },
           ]"
           style="width: 160px"
         />
 
         <n-space justify="center">
           <n-button type="primary" @click="encode">
-            Encode
+            {{ t('tools.bech32.texts.tag-encode') }}
           </n-button>
         </n-space>
 
@@ -284,26 +293,26 @@ function exportCsv() {
         </c-alert>
 
         <div v-else>
-          <input-copyable v-model:value="bechOutput" label="Encoded bech32 string:" readonly placeholder="bech32 string" />
+          <input-copyable v-model:value="bechOutput" :label="t('tools.bech32.texts.label-encoded-bech32-string')" readonly :placeholder="t('tools.bech32.texts.placeholder-bech32-string')" />
         </div>
       </n-tab-pane>
 
       <!-- BATCH TAB -->
-      <n-tab-pane name="batch" tab="Batch">
+      <n-tab-pane name="batch" :tab="t('tools.bech32.texts.tab-batch')">
         <c-input-text
           v-model:value="batchInput"
-          label="Bech32 strings (one per line):"
+          :label="t('tools.bech32.texts.label-bech32-strings-one-per-line')"
           multiline
           rows="5"
-          placeholder="One Bech32 string per line"
+          :placeholder="t('tools.bech32.texts.placeholder-one-bech32-string-per-line')"
           mb-2
         />
         <n-space justify="center" mb-2>
           <n-button type="primary" @click="batchConvert">
-            Convert
+            {{ t('tools.bech32.texts.tag-convert') }}
           </n-button>
         </n-space>
-        <n-card v-if="batchRows.length" title="Results">
+        <n-card v-if="batchRows.length" :title="t('tools.bech32.texts.title-results')">
           <n-data-table
             :columns="[
               { title: 'Input', key: 'input' },
@@ -319,7 +328,7 @@ function exportCsv() {
           />
           <n-space justify="center">
             <n-button @click="exportCsv">
-              Export CSV
+              {{ t('tools.bech32.texts.tag-export-csv') }}
             </n-button>
           </n-space>
         </n-card>

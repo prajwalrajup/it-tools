@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const state = reactive({
   action: 'allow',
   direction: 'in',
@@ -13,21 +16,21 @@ const state = reactive({
 });
 
 const actionOptions = [
-  { label: 'Allow', value: 'allow' },
-  { label: 'Deny', value: 'deny' },
-  { label: 'Reject', value: 'reject' },
-  { label: 'Limit', value: 'limit' },
+  { label: t('tools.ufw-generator.texts.label-allow'), value: 'allow' },
+  { label: t('tools.ufw-generator.texts.label-deny'), value: 'deny' },
+  { label: t('tools.ufw-generator.texts.label-reject'), value: 'reject' },
+  { label: t('tools.ufw-generator.texts.label-limit'), value: 'limit' },
 ];
 
 const directionOptions = [
-  { label: 'Incoming', value: 'in' },
-  { label: 'Outgoing', value: 'out' },
+  { label: t('tools.ufw-generator.texts.label-incoming'), value: 'in' },
+  { label: t('tools.ufw-generator.texts.label-outgoing'), value: 'out' },
 ];
 
 const protocolOptions = [
-  { label: 'TCP', value: 'tcp' },
-  { label: 'UDP', value: 'udp' },
-  { label: 'Any', value: 'any' },
+  { label: t('tools.ufw-generator.texts.label-tcp'), value: 'tcp' },
+  { label: t('tools.ufw-generator.texts.label-udp'), value: 'udp' },
+  { label: t('tools.ufw-generator.texts.label-any'), value: 'any' },
 ];
 
 const ufwCommand = computed(() => {
@@ -50,7 +53,7 @@ const ufwCommand = computed(() => {
       parts.push(state.port);
     }
     else {
-      throw new Error('Missing port');
+      throw new Error(t('tools.ufw-generator.texts.missing-port'));
     }
 
     // protocol
@@ -94,48 +97,48 @@ const ufwCommand = computed(() => {
 <template>
   <div>
     <NForm label-placement="left" label-width="120">
-      <NFormItem label="Action:">
+      <NFormItem :label="t('tools.ufw-generator.texts.label-action')">
         <NSelect v-model:value="state.action" :options="actionOptions" />
       </NFormItem>
 
-      <NFormItem label="Direction:">
+      <NFormItem :label="t('tools.ufw-generator.texts.label-direction')">
         <NSelect v-model:value="state.direction" :options="directionOptions" />
       </NFormItem>
 
-      <NFormItem label="Protocol:">
+      <NFormItem :label="t('tools.ufw-generator.texts.label-protocol')">
         <NSelect v-model:value="state.protocol" :options="protocolOptions" />
       </NFormItem>
 
-      <NFormItem label="Port:">
-        <NInput v-model:value="state.port" placeholder="80" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-port')">
+        <NInput v-model:value="state.port" :placeholder="t('tools.ufw-generator.texts.placeholder-80')" />
       </NFormItem>
 
-      <NFormItem label="Port to (range):">
-        <NInput v-model:value="state.portTo" placeholder="443" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-port-to-range')">
+        <NInput v-model:value="state.portTo" :placeholder="t('tools.ufw-generator.texts.placeholder-443')" />
       </NFormItem>
 
-      <NFormItem label="From IP:">
-        <NInput v-model:value="state.fromIp" placeholder="192.168.1.10" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-from-ip')">
+        <NInput v-model:value="state.fromIp" :placeholder="t('tools.ufw-generator.texts.placeholder-192-168-1-10')" />
       </NFormItem>
 
-      <NFormItem label="To IP:">
-        <NInput v-model:value="state.toIp" placeholder="10.0.0.5" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-to-ip')">
+        <NInput v-model:value="state.toIp" :placeholder="t('tools.ufw-generator.texts.placeholder-10-0-0-5')" />
       </NFormItem>
 
-      <NFormItem label="Interface:">
-        <NInput v-model:value="state.interface" placeholder="eth0" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-interface')">
+        <NInput v-model:value="state.interface" :placeholder="t('tools.ufw-generator.texts.placeholder-eth0')" />
       </NFormItem>
 
-      <NFormItem label="Logging:">
+      <NFormItem :label="t('tools.ufw-generator.texts.label-logging')">
         <NSwitch v-model:value="state.log" />
       </NFormItem>
 
-      <NFormItem label="Comment:">
-        <NInput v-model:value="state.comment" placeholder="Optional comment" />
+      <NFormItem :label="t('tools.ufw-generator.texts.label-comment')">
+        <NInput v-model:value="state.comment" :placeholder="t('tools.ufw-generator.texts.placeholder-optional-comment')" />
       </NFormItem>
     </NForm>
 
-    <n-card v-if="ufwCommand" title="Generated Command">
+    <n-card v-if="ufwCommand" :title="t('tools.ufw-generator.texts.title-generated-command')">
       <textarea-copyable :value="ufwCommand" />
     </n-card>
   </div>

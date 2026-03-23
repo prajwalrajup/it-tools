@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Firetruck } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'UFW Command Generator',
+  name: t('tools.ufw-generator.title'),
   path: '/ufw-generator',
-  description: 'Generate UFW command lines',
+  description: t('tools.ufw-generator.description'),
   keywords: ['ufw', 'firewall', 'generator'],
   component: () => import('./ufw-generator.vue'),
   icon: Firetruck,

@@ -106,7 +106,7 @@ const linkTheme = useTheme();
                 :options="{ linkify: true }"
               />
               <template v-else>
-                Runs entirely in your browser. No external requests.
+                {{ $t('tools.tool.layout.text.runs-entirely-in-your-browser-no-external-requests') }}
               </template>
             </n-tooltip>
           </n-h1>

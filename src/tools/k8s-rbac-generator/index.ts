@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { ShieldChevron } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Kubernetes RBAC Generator',
+  name: t('tools.k8s-rbac-generator.title'),
   path: '/k8s-rbac-generator',
-  description: 'Generate k8s RBAC policy YAML',
+  description: t('tools.k8s-rbac-generator.description'),
   keywords: ['k8s', 'kubernetes', 'rbac', 'policy', 'generator'],
   component: () => import('./k8s-rbac-generator.vue'),
   icon: ShieldChevron,

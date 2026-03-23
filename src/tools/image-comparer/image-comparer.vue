@@ -55,7 +55,7 @@ function renderViewer() {
 <template>
   <NCard :title="t('tools.image-comparer.texts.title-image-compare-viewer')" style="max-width: 800px; margin: auto;">
     <NTabs type="segment">
-      <NTabPane name="url" tab="Compare by URL">
+      <NTabPane name="url" :tab="t('tools.image-comparer.text.compare-by-url')">
         <NForm label-placement="left" label-width="150px">
           <NFormItem :label="t('tools.image-comparer.texts.label-left-image-url')">
             <NInput v-model:value="leftUrl" :placeholder="t('tools.image-comparer.texts.placeholder-enter-left-image-url')" />
@@ -71,7 +71,7 @@ function renderViewer() {
         </NForm>
       </NTabPane>
 
-      <NTabPane name="upload" tab="Compare by Upload">
+      <NTabPane name="upload" :tab="t('tools.image-comparer.text.compare-by-upload')">
         <NForm label-placement="left">
           <n-space justify="space-evenly">
             <NFormItem :label="t('tools.image-comparer.texts.label-upload-left-image')">

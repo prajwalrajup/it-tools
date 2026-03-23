@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import YAML, { Scalar, YAMLSeq } from 'yaml';
+
+const { t } = useI18n();
 
 const RESOURCE_REGISTRY: Record<string, string> = {
   // core
@@ -89,9 +92,9 @@ const subjects = reactive<
 ]);
 
 const subjectKinds = [
-  { label: 'User', value: 'User' },
-  { label: 'Group', value: 'Group' },
-  { label: 'ServiceAccount', value: 'ServiceAccount' },
+  { label: t('tools.k8s-rbac-generator.texts.label-user'), value: 'User' },
+  { label: t('tools.k8s-rbac-generator.texts.label-group'), value: 'Group' },
+  { label: t('tools.k8s-rbac-generator.texts.label-serviceaccount'), value: 'ServiceAccount' },
 ];
 
 function addRule() {
@@ -235,30 +238,30 @@ const bindingYaml = computed(() => {
 <template>
   <div>
     <NForm label-placement="left" label-width="120px">
-      <NFormItem label="Role Name:">
+      <NFormItem :label="t('tools.k8s-rbac-generator.texts.label-role-name')">
         <NInput v-model:value="meta.roleName" />
       </NFormItem>
 
-      <NFormItem label="Role Type">
+      <NFormItem :label="t('tools.k8s-rbac-generator.texts.label-role-type')">
         <NSwitch v-model:value="meta.clusterRole">
           <template #checked>
-            ClusterRole (Global)
+            {{ t('tools.k8s-rbac-generator.texts.tag-clusterrole-global') }}
           </template>
           <template #unchecked>
-            Role (Namespaced)
+            {{ t('tools.k8s-rbac-generator.texts.tag-role-namespaced') }}
           </template>
         </NSwitch>
       </NFormItem>
 
-      <NFormItem v-if="!meta.clusterRole" label="Namespace:">
+      <NFormItem v-if="!meta.clusterRole" :label="t('tools.k8s-rbac-generator.texts.label-namespace')">
         <NInput v-model:value="meta.namespace" />
       </NFormItem>
     </NForm>
 
-    <NCard title="Rules" size="small" segmented mb-1>
+    <NCard :title="t('tools.k8s-rbac-generator.texts.title-rules')" size="small" segmented mb-1>
       <NSpace vertical>
         <NButton tertiary type="primary" @click="addRule">
-          + Add Rule
+          {{ t('tools.k8s-rbac-generator.texts.tag-add-rule') }}
         </NButton>
 
         <NCard
@@ -269,30 +272,30 @@ const bindingYaml = computed(() => {
         >
           <NSpace vertical>
             <NForm label-placement="left" label-width="120px">
-              <NFormItem label="Resources">
+              <NFormItem :label="t('tools.k8s-rbac-generator.texts.label-resources')">
                 <NSelect
                   v-model:value="rule.resources"
                   :options="RESOURCE_OPTIONS"
                   multiple
-                  placeholder="Select resources (supports *)"
+                  :placeholder="t('tools.k8s-rbac-generator.texts.placeholder-select-resources-supports')"
                   @update:value="() => updateRule(idx)"
                 />
               </NFormItem>
 
-              <NFormItem label="Resource Names (optional)">
+              <NFormItem :label="t('tools.k8s-rbac-generator.texts.label-resource-names-optional')">
                 <NDynamicInput
                   v-model:value="rule.resourceNames"
-                  placeholder="Specific Resources Names"
+                  :placeholder="t('tools.k8s-rbac-generator.texts.placeholder-specific-resources-names')"
                 />
               </NFormItem>
 
-              <NFormItem label="Verbs">
+              <NFormItem :label="t('tools.k8s-rbac-generator.texts.label-verbs')">
                 <NSelect
                   v-model:value="rule.verbs"
                   filterable
                   multiple
                   tag
-                  placeholder="Select verbs (supports *)"
+                  :placeholder="t('tools.k8s-rbac-generator.texts.placeholder-select-verbs-supports')"
                   :options="VERB_OPTIONS"
                   @update:value="() => updateRule(idx)"
                 />
@@ -300,17 +303,17 @@ const bindingYaml = computed(() => {
             </NForm>
 
             <NButton type="error" tertiary @click="removeRule(idx)">
-              Remove Rule
+              {{ t('tools.k8s-rbac-generator.texts.tag-remove-rule') }}
             </NButton>
           </NSpace>
         </NCard>
       </NSpace>
     </NCard>
 
-    <NCard title="Subjects" size="small" segmented>
+    <NCard :title="t('tools.k8s-rbac-generator.texts.title-subjects')" size="small" segmented>
       <NSpace vertical>
         <NButton tertiary type="primary" @click="addSubject">
-          + Add Subject
+          {{ t('tools.k8s-rbac-generator.texts.tag-add-subject') }}
         </NButton>
 
         <NCard
@@ -323,7 +326,7 @@ const bindingYaml = computed(() => {
             <NForm label-placement="top">
               <NGrid :cols="3" :x-gap="16">
                 <NGi>
-                  <n-form-item label="Kind">
+                  <n-form-item :label="t('tools.k8s-rbac-generator.texts.label-kind')">
                     <n-select
                       v-model:value="sub.kind"
                       :options="subjectKinds"
@@ -332,13 +335,13 @@ const bindingYaml = computed(() => {
                 </NGi>
 
                 <NGi>
-                  <n-form-item label="Name">
+                  <n-form-item :label="t('tools.k8s-rbac-generator.texts.label-name')">
                     <n-input v-model:value="sub.name" />
                   </n-form-item>
                 </NGi>
 
                 <NGi v-if="sub.kind === 'ServiceAccount'">
-                  <n-form-item label="Namespace">
+                  <n-form-item :label="t('tools.k8s-rbac-generator.texts.label-namespace')">
                     <n-input v-model:value="sub.namespace" />
                   </n-form-item>
                 </NGi>
@@ -346,20 +349,20 @@ const bindingYaml = computed(() => {
             </NForm>
 
             <NButton type="error" tertiary @click="removeSubject(idx)">
-              Remove Subject
+              {{ t('tools.k8s-rbac-generator.texts.tag-remove-subject') }}
             </NButton>
           </NSpace>
         </NCard>
       </NSpace>
     </NCard>
 
-    <NCard title="Output YAML">
+    <NCard :title="t('tools.k8s-rbac-generator.texts.title-output-yaml')">
       <NTabs type="segment">
-        <NTabPane name="role" tab="Role YAML">
+        <NTabPane name="role" :tab="t('tools.k8s-rbac-generator.texts.tab-role-yaml')">
           <textarea-copyable :value="roleYaml" language="yaml" />
         </NTabPane>
 
-        <NTabPane name="binding" tab="RoleBinding YAML">
+        <NTabPane name="binding" :tab="t('tools.k8s-rbac-generator.texts.tab-rolebinding-yaml')">
           <textarea-copyable :value="bindingYaml" language="yaml" />
         </NTabPane>
       </NTabs>

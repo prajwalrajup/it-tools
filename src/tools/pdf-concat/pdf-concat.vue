@@ -80,7 +80,7 @@ async function callMainWithManyInOutPdf(input_files: Array<ArrayBuffer>, args: s
   }
   const ret = mod.callMain(args);
   if (expected_exitcode !== ret) {
-    throw new Error('Process run failed');
+    throw new Error(t('tools.pdf-compressor.texts.process-run-failed'));
   }
   return mod.FS.readFile('out.pdf');
 }
@@ -154,7 +154,7 @@ async function callMainWithManyInOutPdf(input_files: Array<ArrayBuffer>, args: s
 
     <div mt-3 flex justify-center>
       <c-alert v-if="status === 'error'" type="error">
-        An error occured processing {{ fileName }}
+        {{ $t('tools.file-type.texts.an-error-occured-processing') }} <span>{{ fileName }}</span>
       </c-alert>
       <n-spin
         v-if="status === 'processing'"

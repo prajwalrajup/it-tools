@@ -175,7 +175,7 @@ interface UploadEvents {
     </details>
 
     <NTabs v-model:value="activeTab" type="segment">
-      <NTabPane name="fontname" tab="By Font Name">
+      <NTabPane name="fontname" :tab="t('tools.font-compare.text.by-font-name')">
         <NGrid :cols="2" :x-gap="24">
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NSelect
@@ -192,7 +192,7 @@ interface UploadEvents {
         </NGrid>
       </NTabPane>
 
-      <NTabPane name="fonturl" tab="By Font URL">
+      <NTabPane name="fonturl" :tab="t('tools.font-compare.text.by-font-url')">
         <NGrid :cols="2" :x-gap="24">
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NInput
@@ -209,7 +209,7 @@ interface UploadEvents {
         </NGrid>
       </NTabPane>
 
-      <NTabPane name="fontfile" tab="By Font File">
+      <NTabPane name="fontfile" :tab="t('tools.font-compare.text.by-font-file')">
         <NGrid :cols="2" :x-gap="24">
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NUpload
@@ -227,7 +227,7 @@ interface UploadEvents {
           </NGi>
         </NGrid>
       </NTabPane>
-      <NTabPane name="inlinecss" tab="By Inline CSS">
+      <NTabPane name="inlinecss" :tab="t('tools.font-compare.text.by-inline-css')">
         <NGrid :cols="2" :x-gap="24">
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NInput
@@ -250,7 +250,7 @@ interface UploadEvents {
           </NGi>
         </NGrid>
       </NTabPane>
-      <NTabPane name="cssurl" tab="By CSS URL">
+      <NTabPane name="cssurl" :tab="t('tools.font-compare.text.by-css-url')">
         <NGrid :cols="2" :x-gap="24">
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NInput

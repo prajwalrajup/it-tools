@@ -38,7 +38,8 @@
     "script:extract:desc": "node ./scripts/extract-tools-desc.mjs",
     "script:extract:strings": "node ./scripts/extract-tools-strings.mjs",
     "script:translate-missing": "node ./scripts/translate-missings.mjs -e ./locales/en.yml -t ./locales/*.yml",
-    "vue-i18n-extract": "vue-i18n-extract report --vueFiles 'src/**/*.?(ts|vue)' --languageFiles 'locales/*.yml'"
+    "vue-i18n-extract": "vue-i18n-extract report --vueFiles 'src/**/*.?(ts|vue)' --languageFiles 'locales/*.yml'",
+    "precommit": "pnpm install --ignore-scripts && pnpm lint --fix && pnpm typecheck"
   },
   "dependencies": {
     "@chenfengyuan/vue-barcode": "^2.0.2",

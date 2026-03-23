@@ -31,9 +31,9 @@ const resultsDisplay = computed(() => {
 });
 
 const columns = [
-  { title: 'Coordinate System', key: 'system' },
-  { title: 'Decimal Format (lng, lat)', key: 'decimal' },
-  { title: 'DMS Format (lng, lat)', key: 'dms' },
+  { title: t('tools.geo-coordinates-converter.text.coordinate-system'), key: 'system' },
+  { title: t('tools.geo-coordinates-converter.text.decimal-format-lng-lat'), key: 'decimal' },
+  { title: t('tools.geo-coordinates-converter.text.dms-format-lng-lat'), key: 'dms' },
 ];
 
 function convertSingle() {
@@ -112,7 +112,7 @@ function toDMS(deg: number) {
     </n-radio-group>
 
     <n-tabs type="card" mb-1>
-      <n-tab-pane name="single" tab="Single Lat/Lng Converter">
+      <n-tab-pane name="single" :tab="t('tools.geo-coordinates-converter.text.single-lat-lng-converter')">
         <n-space justify="center">
           <n-form-item :label="t('tools.geo-coordinates-converter.texts.label-latitude')" label-placement="left">
             <n-input-number-i18n v-model:value="inputLatitude" />
@@ -127,7 +127,7 @@ function toDMS(deg: number) {
           </n-button>
         </n-space>
       </n-tab-pane>
-      <n-tab-pane name="batch" tab="Batch Lat/Lng Converter">
+      <n-tab-pane name="batch" :tab="t('tools.geo-coordinates-converter.text.batch-lat-lng-converter')">
         <c-input-text
           v-model:value="inputCSV"
           :label="t('tools.geo-coordinates-converter.texts.label-csv-content-lng-lat')"
@@ -157,7 +157,7 @@ function toDMS(deg: number) {
           :disabled="resultsData.length === 0"
           @click="downloadCsv"
         >
-          Download {{ resultsData.length }} Results CSV
+          {{ $t('tools.geo-coordinates-converter.text.download-results-csv') }}
         </n-button>
       </n-space>
     </c-card>

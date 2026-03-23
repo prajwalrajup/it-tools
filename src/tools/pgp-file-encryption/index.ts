@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { CloudLock } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'PGP File Encryption',
+  name: t('tools.pgp-file-encryption.title'),
   path: '/pgp-file-encryption',
-  description: 'Encrypt and decrypt files using PGP',
+  description: t('tools.pgp-file-encryption.description'),
   keywords: ['pgp', 'file', 'encryption'],
   component: () => import('./pgp-file-encryption.vue'),
   icon: CloudLock,

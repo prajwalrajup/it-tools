@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { ZoomMoney } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Bech32 Encoder/Decoder',
+  name: t('tools.bech32.title'),
   path: '/bech32',
-  description: 'Encode/Decode/Validate betch32(m)',
+  description: t('tools.bech32.description'),
   keywords: ['bech32', 'crypto', 'encode', 'decode', 'bitcoin', 'address', 'segwit'],
   component: () => import('./bech32.vue'),
   icon: ZoomMoney,

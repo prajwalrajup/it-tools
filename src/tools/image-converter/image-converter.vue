@@ -116,7 +116,7 @@ async function onFileUploaded(uploadedFile: File) {
       });
 
       if (decodedImage == null) {
-        throw new Error('Invalid Image file!');
+        throw new Error(t('tools.image-converter.texts.invalid-image-file'));
       };
 
       const outConfig = outputFormats[outputFormatValue as (keyof typeof outputFormats)];
@@ -173,7 +173,7 @@ async function onFileUploaded(uploadedFile: File) {
 
     <div mt-3 flex justify-center>
       <c-alert v-if="status === 'error'" type="error">
-        An error occured processing {{ fileName }}
+        {{ $t('tools.image-converter.texts.an-error-occured-processing') }} <span>{{ fileName }}</span>
       </c-alert>
       <n-spin
         v-if="status === 'processing'"

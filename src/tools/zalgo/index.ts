@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Artboard } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Zalgo Generator/Banner',
+  name: t('tools.zalgo.title'),
   path: '/zalgo',
-  description: 'Generate Zalgo text and clean zalgo generated text',
+  description: t('tools.zalgo.description'),
   keywords: ['zalgo', 'text', 'generation'],
   component: () => import('./zalgo.vue'),
   icon: Artboard,

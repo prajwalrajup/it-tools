@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Braces } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'ObjGen to JSON',
+  name: t('tools.objgen-json.title'),
   path: '/objgen-json',
-  description: 'Generate xomplex JSON from TOML like syntax',
+  description: t('tools.objgen-json.description'),
   keywords: ['objgen', 'json', 'toml'],
   component: () => import('./objgen-json.vue'),
   icon: Braces,

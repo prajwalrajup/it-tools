@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { onMounted, ref } from 'vue';
 import type { BackgroundRemovalPipeline, ProgressInfo } from '@huggingface/transformers';
 import { RawImage, pipeline } from '@huggingface/transformers';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const inputImage = ref<File | null>(null);
 const inputUrl = ref<string | null>(null);
@@ -14,25 +17,25 @@ const webgpuAvailable = ref(false);
 
 const selectedModel = useQueryParamOrStorage({ name: 'model', storageName: 'rmbg:m', defaultValue: 'rmbg' });
 const modelOptions = [
-  { label: 'RMBG‑1.4 (CPU/WASM)', value: 'rmbg' },
-  { label: 'MODNet (WebGPU)', value: 'modnet' },
+  { label: t('tools.remove-background.texts.label-rmbg-1-4-cpu-wasm'), value: 'rmbg' },
+  { label: t('tools.remove-background.texts.label-modnet-webgpu'), value: 'modnet' },
 ];
 
 const backgroundMode = useQueryParamOrStorage({ name: 'bgmode', storageName: 'rmbg:bgm', defaultValue: 'transparent' });
 const backgroundOptions = [
-  { label: 'Transparent', value: 'transparent' },
-  { label: 'Solid Color', value: 'color' },
-  { label: 'Pattern', value: 'pattern' },
-  { label: 'Blurred Original', value: 'blur' },
-  { label: 'Adjust Contrast/Brightness', value: 'adjust' },
+  { label: t('tools.remove-background.texts.label-transparent'), value: 'transparent' },
+  { label: t('tools.remove-background.texts.label-solid-color'), value: 'color' },
+  { label: t('tools.remove-background.texts.label-pattern'), value: 'pattern' },
+  { label: t('tools.remove-background.texts.label-blurred-original'), value: 'blur' },
+  { label: t('tools.remove-background.texts.label-adjust-contrast-brightness'), value: 'adjust' },
 ];
 
 const backgroundColor = useQueryParamOrStorage({ name: 'model', storageName: 'rmbg:bg', defaultValue: '#ffffff' });
 const patternName = useQueryParamOrStorage({ name: 'pattern', storageName: 'rmbg:pa', defaultValue: 'stripes' });
 const patternOptions = [
-  { label: 'Diagonal Stripes', value: 'stripes' },
-  { label: 'Dots', value: 'dots' },
-  { label: 'Checkerboard', value: 'checker' },
+  { label: t('tools.remove-background.texts.label-diagonal-stripes'), value: 'stripes' },
+  { label: t('tools.remove-background.texts.label-dots'), value: 'dots' },
+  { label: t('tools.remove-background.texts.label-checkerboard'), value: 'checker' },
 ];
 
 const blurAmount = useQueryParamOrStorage({ name: 'blur', storageName: 'rmbg:bl', defaultValue: 12 });
@@ -247,7 +250,7 @@ function downloadResult() {
 <template>
   <div>
     <c-file-upload
-      title="Drag and drop an image or click to select"
+      :title="t('tools.remove-background.texts.title-drag-and-drop-an-image-or-click-to-select')"
       paste-image
       accept="image/*"
       mb-3
@@ -255,34 +258,34 @@ function downloadResult() {
     />
 
     <n-form label-placement="left">
-      <n-form-item v-if="webgpuAvailable" label="Model:">
+      <n-form-item v-if="webgpuAvailable" :label="t('tools.remove-background.texts.label-model')">
         <n-select
           v-model:value="selectedModel"
           :options="modelOptions"
         />
       </n-form-item>
 
-      <n-form-item label="Model:">
+      <n-form-item :label="t('tools.remove-background.texts.label-model')">
         <n-select
           v-model:value="backgroundMode"
           :options="backgroundOptions"
         />
       </n-form-item>
 
-      <n-form-item v-if="backgroundMode === 'color'" label="Model:">
+      <n-form-item v-if="backgroundMode === 'color'" :label="t('tools.remove-background.texts.label-model')">
         <n-color-picker
           v-model:value="backgroundColor"
         />
       </n-form-item>
 
-      <n-form-item v-if="backgroundMode === 'pattern'" label="Pattern:">
+      <n-form-item v-if="backgroundMode === 'pattern'" :label="t('tools.remove-background.texts.label-pattern')">
         <n-select
           v-model:value="patternName"
           :options="patternOptions"
         />
       </n-form-item>
 
-      <n-form-item v-if="backgroundMode === 'blur'" label="Blur:">
+      <n-form-item v-if="backgroundMode === 'blur'" :label="t('tools.remove-background.texts.label-blur')">
         <n-slider
           v-model:value="blurAmount"
           :min="0"
@@ -291,11 +294,11 @@ function downloadResult() {
       </n-form-item>
 
       <div v-if="backgroundMode === 'adjust'">
-        <n-form-item label="Contrast:">
+        <n-form-item :label="t('tools.remove-background.texts.label-contrast')">
           <n-slider v-model:value="contrast" :min="0.5" :max="2" :step="0.01" />
         </n-form-item>
 
-        <n-form-item label="Brightness:">
+        <n-form-item :label="t('tools.remove-background.texts.label-brightness')">
           <n-slider v-model:value="brightness" :min="0.5" :max="2" :step="0.01" />
         </n-form-item>
       </div>
@@ -316,7 +319,7 @@ function downloadResult() {
           :disabled="!inputImage"
           @click="removeBackground"
         >
-          Apply Background
+          {{ t('tools.remove-background.texts.tag-apply-background') }}
         </n-button>
       </n-spin>
     </n-space>
@@ -327,16 +330,16 @@ function downloadResult() {
 
     <n-space v-if="outputUrl" justify="center">
       <n-button @click="downloadResult">
-        Download Result
+        {{ t('tools.remove-background.texts.tag-download-result') }}
       </n-button>
     </n-space>
 
     <n-space justify="center" mr-1>
-      <NCard v-if="inputUrl" title="Original">
+      <NCard v-if="inputUrl" :title="t('tools.remove-background.texts.title-original')">
         <n-image :src="inputUrl" width="260" />
       </NCard>
 
-      <NCard v-if="outputUrl" title="Result">
+      <NCard v-if="outputUrl" :title="t('tools.remove-background.texts.title-result')">
         <n-image :src="outputUrl" width="260" />
       </NCard>
     </n-space>

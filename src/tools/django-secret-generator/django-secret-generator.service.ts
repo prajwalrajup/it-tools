@@ -1,3 +1,5 @@
+import { translate as t } from '@/plugins/i18n.plugin';
+
 const RAND_MAX = 2 ** 8;
 
 const CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'.split('');
@@ -5,7 +7,7 @@ const CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'.split('');
 export function generateRandomValue(min: number, max: number): number {
   const generatorMax = max - min;
   if (generatorMax > RAND_MAX) {
-    throw new Error('Generating range is too large');
+    throw new Error(t('tools.django-secret-generator.service.texts.generating-range-is-too-large'));
   }
 
   let randomValue: number;

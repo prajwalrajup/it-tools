@@ -1,10 +1,11 @@
+import { translate as t } from '@/plugins/i18n.plugin';
 import { Terminal2 } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Shell Commands Formatter',
+  name: t('tools.shell-formatter.title'),
   path: '/shell-formatter',
-  description: 'Format shell commands as multiline shell commands split on arguments',
+  description: t('tools.shell-formatter.description'),
   keywords: ['shell', 'multiline', 'formatter'],
   component: () => import('./shell-formatter.vue'),
   icon: Terminal2,

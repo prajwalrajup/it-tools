@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import * as openpgp from 'openpgp';
+
+const { t } = useI18n();
 
 const message = useMessage();
 
@@ -162,50 +165,50 @@ function downloadBlob(blob: Blob | null, filename: string) {
 
 <template>
   <div>
-    <NCard title="1. Select a file" mb-1>
+    <NCard :title="t('tools.pgp-file-encryption.texts.title-1-select-a-file')" mb-1>
       <c-file-upload
-        title="Drag and drop a file or click to select"
+        :title="t('tools.pgp-file-encryption.texts.title-drag-and-drop-a-file-or-click-to-select')"
         mb-1
         @file-upload="onUpload"
       />
       <NSpace v-if="file" justify="center">
-        <NText>Selected file:</NText>
+        <NText>{{ t('tools.pgp-file-encryption.texts.tag-selected-file') }}</NText>
         <NText strong>
           {{ file?.name }}
         </NText>
       </NSpace>
     </NCard>
 
-    <NCard title="2. Public key (for encryption)" mb-1>
+    <NCard :title="t('tools.pgp-file-encryption.texts.title-2-public-key-for-encryption')" mb-1>
       <c-input-text v-model:value="publicKeyArmored" multiline rows="6" />
     </NCard>
 
-    <NCard title="3. Private key + passphrase (for decryption)">
+    <NCard :title="t('tools.pgp-file-encryption.texts.title-3-private-key-passphrase-for-decryption')">
       <c-input-text v-model:value="privateKeyArmored" multiline rows="6" mb-1 />
-      <NFormItem label="Passphrase:" label-placement="left">
-        <NInput v-model:value="passphrase" type="password" show-password-on="click" placeholder="Passphrase" />
+      <NFormItem :label="t('tools.pgp-file-encryption.texts.label-passphrase')" label-placement="left">
+        <NInput v-model:value="passphrase" type="password" show-password-on="click" :placeholder="t('tools.pgp-file-encryption.texts.placeholder-passphrase')" />
       </NFormItem>
     </NCard>
 
     <!-- Actions -->
     <NSpace justify="center" mb-1>
       <NButton :disabled="!file || !publicKeyArmored" type="primary" :loading="loadingEncrypt" mr-2 @click="encryptStream">
-        Encrypt (stream)
+        {{ t('tools.pgp-file-encryption.texts.tag-encrypt-stream') }}
       </NButton>
 
       <NButton :disabled="!file || !privateKeyArmored" type="primary" :loading="loadingDecrypt" @click="decryptStream">
-        Decrypt (stream)
+        {{ t('tools.pgp-file-encryption.texts.tag-decrypt-stream') }}
       </NButton>
     </NSpace>
 
     <!-- Progress -->
     <div v-if="loadingEncrypt" mb-1 text-center>
-      <NText>Encrypting…</NText>
+      <NText>{{ t('tools.pgp-file-encryption.texts.tag-encrypting') }}</NText>
       <NProgress type="line" :percentage="encryptProgress" />
     </div>
 
     <div v-if="loadingDecrypt" mb-1 text-center>
-      <NText>Decrypting…</NText>
+      <NText>{{ t('tools.pgp-file-encryption.texts.tag-decrypting') }}</NText>
       <NProgress type="line" :percentage="decryptProgress" />
     </div>
 
@@ -215,22 +218,22 @@ function downloadBlob(blob: Blob | null, filename: string) {
 
     <div v-if="encryptedBlob">
       <NAlert type="success" mb-1>
-        Encrypted file ready.
+        {{ t('tools.pgp-file-encryption.texts.tag-encrypted-file-ready') }}
       </NAlert>
       <NSpace justify="center">
         <NButton size="small" @click="downloadBlob(encryptedBlob, `${file?.name || 'file'}.pgp`)">
-          Download encrypted
+          {{ t('tools.pgp-file-encryption.texts.tag-download-encrypted') }}
         </NButton>
       </NSpace>
     </div>
 
     <div v-if="decryptedBlob">
       <NAlert type="success" mb-1>
-        Decrypted file ready.
+        {{ t('tools.pgp-file-encryption.texts.tag-decrypted-file-ready') }}
       </NAlert>
       <NSpace justify="center">
         <NButton size="small" @click="downloadBlob(decryptedBlob, `decrypted-${((file?.name || 'file').replace(/\.pgp$/, ''))}`)">
-          Download decrypted
+          {{ t('tools.pgp-file-encryption.texts.tag-download-decrypted') }}
         </NButton>
       </NSpace>
     </div>

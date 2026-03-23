@@ -142,10 +142,10 @@ const themeVars = useThemeVars();
   <div class="top-controls" mb-12px ml-12px>
     <c-button :disabled="isToggling" @click="toggleAllCategories">
       <span v-if="isToggling">
-        {{ areAllCollapsed ? 'Expanding...' : 'Collapsing...' }}
+        {{ areAllCollapsed ? $t('collapsibleToolMenu.text.expanding') : $t('collapsibleToolMenu.text.collapsing') }}
       </span>
       <span v-else>
-        {{ areAllCollapsed ? 'Expand All Tools' : 'Collapse All Tools' }}
+        {{ areAllCollapsed ? $t('collapsibleToolMenu.text.expand-all-tools') : $t('collapsibleToolMenu.text.collapse-all-tools') }}
       </span>
     </c-button>
   </div>

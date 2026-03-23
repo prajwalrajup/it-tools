@@ -121,7 +121,7 @@ function getColorHex(color: string) {
   <n-card :title="t('tools.resistor-calculator.texts.title-resistor-converter')" style="max-width: 700px; margin: auto;">
     <n-tabs type="line" animated>
       <!-- Bands → Notation -->
-      <n-tab-pane name="bands-to-notation" tab="Bands → Notation">
+      <n-tab-pane name="bands-to-notation" :tab="t('tools.resistor-calculator.text.bands-notation')">
         <n-select v-model:value="bandCount" mb-1 :options="bandOptions" :label="t('tools.resistor-calculator.texts.label-band-count')" style="margin-bottom: 10px" />
         <n-input v-model:value="bandsInput" :placeholder="t('tools.resistor-calculator.texts.placeholder-e-g-red-violet-brown-gold')" />
         <n-p mb-2>
@@ -186,7 +186,7 @@ function getColorHex(color: string) {
       </n-tab-pane>
 
       <!-- Notation → Bands -->
-      <n-tab-pane name="notation-to-bands" tab="Notation → Bands">
+      <n-tab-pane name="notation-to-bands" :tab="t('tools.resistor-calculator.text.notation-bands')">
         <n-input v-model:value="notationInput" :placeholder="t('tools.resistor-calculator.texts.placeholder-e-g-2k7ω-5-or-2k7-5')" mb-2 />
         <n-select v-model:value="notationBandCount" mb-1 :options="bandOptions" :label="t('tools.resistor-calculator.texts.label-band-count')" style="margin-bottom: 10px" />
         <n-space justify="center" mb-1>
@@ -248,7 +248,7 @@ function getColorHex(color: string) {
       </n-tab-pane>
 
       <!-- Number → Notation -->
-      <n-tab-pane name="number-to-notation" tab="Number → Notation">
+      <n-tab-pane name="number-to-notation" :tab="t('tools.resistor-calculator.text.number-notation')">
         <n-input-number v-model:value="numberInput" :placeholder="t('tools.resistor-calculator.texts.placeholder-e-g-2700')" mb-1 />
         <n-select v-model:value="tolerance" :options="toleranceOptions" :label="t('tools.resistor-calculator.texts.label-tolerance')" mb-1 />
         <n-space justify="center" mb-1>
@@ -263,7 +263,7 @@ function getColorHex(color: string) {
       </n-tab-pane>
 
       <!-- Notation → Number -->
-      <n-tab-pane name="notation-to-number" tab="Notation → Number">
+      <n-tab-pane name="notation-to-number" :tab="t('tools.resistor-calculator.text.notation-number')">
         <n-input v-model:value="notationToNumberInput" :placeholder="t('tools.resistor-calculator.texts.placeholder-e-g-2k7ω-5-or-2k7-5')" />
         <n-space justify="center" mb-1>
           <n-button @click="convertNotationToNumber">

@@ -17,7 +17,7 @@ async function generateIcon(file: File) {
   });
 
   if (decodedImage == null) {
-    throw new Error('Invalid PNG file!');
+    throw new Error(t('tools.favicon-generator.texts.invalid-png-file'));
   };
 
   return encodeIcoImages({

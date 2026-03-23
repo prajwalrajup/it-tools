@@ -9,8 +9,8 @@ const { t } = useI18n();
 
 const toolStore = useToolStore();
 
-const desc = 'Collection of handy online tools for developers, with great UX. IT Tools is a free and open-source collection of handy online tools for developers & people working in IT.';
-const title = 'About - IT Tools';
+const desc = t('about.text.collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it');
+const title = t('about.text.about-it-tools');
 useHead({
   title,
   meta: [

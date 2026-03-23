@@ -20,9 +20,11 @@ fetch(`${base}home.custom.md`).then((r) => {
   }
 });
 
+const { t } = useI18n();
+
 const toolStore = useToolStore();
-const desc = 'Collection of handy online tools for developers, with great UX. IT Tools is a free and open-source collection of handy online tools for developers & people working in IT.';
-const title = 'IT Tools - Handy online tools for developers';
+const desc = t('home.page.text.collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it');
+const title = t('home.page.text.it-tools-handy-online-tools-for-developers');
 
 useHead({
   title,
@@ -57,7 +59,6 @@ useHead({
     },
   ],
 });
-const { t } = useI18n();
 
 const favoriteTools = computed(() => toolStore.favoriteTools);
 

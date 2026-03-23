@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import Jasypt from 'jasypt';
+
+const { t } = useI18n();
 
 const mode = ref<'encrypt' | 'decrypt'>('encrypt');
 const password = ref('');
@@ -36,34 +39,34 @@ function run() {
 <template>
   <div>
     <NForm label-placement="left" label-width="160px">
-      <NFormItem label="Mode:">
+      <NFormItem :label="t('tools.jasypt-string-encryption.texts.label-mode')">
         <NRadioGroup v-model:value="mode" size="small">
           <NRadioButton value="encrypt">
-            Encrypt
+            {{ t('tools.jasypt-string-encryption.texts.tag-encrypt') }}
           </NRadioButton>
           <NRadioButton value="decrypt">
-            Decrypt
+            {{ t('tools.jasypt-string-encryption.texts.tag-decrypt') }}
           </NRadioButton>
         </NRadioGroup>
       </NFormItem>
 
-      <NFormItem label="Password (Secret Key):">
+      <NFormItem :label="t('tools.jasypt-string-encryption.texts.label-password-secret-key')">
         <NInput
           v-model:value="password"
           type="password"
           show-password-on="click"
-          placeholder="Enter Jasypt password (salt / secret key)"
+          :placeholder="t('tools.jasypt-string-encryption.texts.placeholder-enter-jasypt-password-salt-secret-key')"
         />
       </NFormItem>
 
-      <NFormItem :label="isEncryptMode ? 'Plain Text:' : 'Jasypt Encrypted String:'">
+      <NFormItem :label="isEncryptMode ? t('tools.jasypt-string-encryption.texts.plain-text') : t('tools.jasypt-string-encryption.texts.jasypt-encrypted-string')">
         <NInput
           v-model:value="inputText"
           type="textarea"
           rows="6"
           :placeholder="isEncryptMode
-            ? 'Text to encrypt (e.g. DB password)'
-            : 'Encrypted value (e.g. ENC(...)) or raw Jasypt string'"
+            ? t('tools.jasypt-string-encryption.texts.text-to-encrypt-e-g-db-password')
+            : t('tools.jasypt-string-encryption.texts.encrypted-value-e-g-enc-or-raw-jasypt-string')"
         />
       </NFormItem>
 
@@ -77,10 +80,10 @@ function run() {
         {{ error }}
       </c-alert>
 
-      <NCard v-if="outputRaw" title="Results">
-        <input-copyable label="Decoded:" label-position="left" :value="outputRaw" mb-1 />
-        <input-copyable v-if="isEncryptMode" label="Raw:" label-position="left" :value="outputRaw" mb-1 />
-        <input-copyable v-if="isEncryptMode" label="ENC Form:" label-position="left" :value="outputEncSyntax" />
+      <NCard v-if="outputRaw" :title="t('tools.jasypt-string-encryption.texts.title-results')">
+        <input-copyable :label="t('tools.jasypt-string-encryption.texts.label-decoded')" label-position="left" :value="outputRaw" mb-1 />
+        <input-copyable v-if="isEncryptMode" :label="t('tools.jasypt-string-encryption.texts.label-raw')" label-position="left" :value="outputRaw" mb-1 />
+        <input-copyable v-if="isEncryptMode" :label="t('tools.jasypt-string-encryption.texts.label-enc-form')" label-position="left" :value="outputEncSyntax" />
       </NCard>
     </NForm>
   </div>

@@ -2869,6 +2869,11 @@ tools:
       placeholder-passphrase: Passphrase...
       tag-copy: Copy
       tag-refresh: Refresh
+      cannot-generate-a-passphrase-of-minlen-value-maxlen-value-characters-please-retry:
+        "# Cannot generate a passphrase of [{0} - {1}] characters with current
+        settings, try to change words count"
+      words-words: Words ({0})
+      label-min-passphrase-len: "Min passphrase len:"
   paste-as-markdown:
     title: Paste as Markdown
     description: Paste cells/tables and links from clipboard content as Markdown
